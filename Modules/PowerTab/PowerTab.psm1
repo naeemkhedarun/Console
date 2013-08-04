@@ -187,7 +187,7 @@ Import-Module "PowerTab" -ArgumentList "$(Join-Path $SetupConfigurationPath $Con
 ################ End of PowerTab Initialization Code ##########################
 
 "@
-        if (-not (Select-String "Start of PowerTab Initialization Code" $PROFILE)) {
+        if ((Test-Path $PROFILE) -and -not (Select-String "Start of PowerTab Initialization Code" $PROFILE)) {
             $Answer = $Host.UI.PromptForChoice($Resources.setup_wizard_update_profile_caption, $Resources.setup_wizard_update_profile_message, $YesNoChoices, 1)
 
             if ($Answer) {
