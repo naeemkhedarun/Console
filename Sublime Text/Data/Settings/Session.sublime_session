@@ -1,0 +1,461 @@
+{
+	"folder_history":
+	[
+	],
+	"last_window_id": 2,
+	"settings":
+	{
+		"new_window_height": 575.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 311.0,
+				"selected_items":
+				[
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 400.0
+			},
+			"console":
+			{
+				"height": 125.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/PowerTab.psd1",
+				"/C/Users/Paul/AppData/Local/Temp/7zO76C5.tmp/AndroidManifest.xml",
+				"/D/Dropbox/Documents/Software/Credentials Manager (2.7.0)/Raven.Server.exe.config",
+				"/E/Sites/SR.txt",
+				"/D/Dropbox/Desktop/password manager.txt",
+				"/D/Dropbox/Documents/GitHub/CredentialsManager/Releases/Raven.Server.exe.config",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/XML.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/Preferences.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/Default/Preferences.sublime-settings",
+				"/D/Dropbox/Documents/GitHub/CredentialsManager/Releases/Server (2.0.2375)/Raven.Server.exe.config",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/todo.txt",
+				"/C/SpecRun.SpecFlow.1.1.0/content/Default.srprofile.pp",
+				"/C/SpecRun.SpecFlow.1.1.0/content/App.config.transform",
+				"/C/SpecRun.Runner.1.1.0/changelog.txt",
+				"/C/SpecFlow.1.9.0/content/App.config.transform",
+				"/C/1",
+				"/C/Users/paulm/Documents/Dropbox/Android/Upgrade Process.txt",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Windows Azure Powershell.ps1",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Hook Modules and Binaries.ps1",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Import Visual Studio Environment.ps1",
+				"/C/Users/paulm/Desktop/BuildFramework-F&E-AlmFE_1.0.13213.6/_DeploymentRuntime/buildframework/framework/modules/deploy/Invoke-DeploymentAction.ps1",
+				"/C/Users/paulm/Desktop/BuildFramework-FE-AlmFE_1.0.13213.6/_DeploymentRuntime/buildframework/framework/modules/deploy/Run-CompositeModule.ps1",
+				"/C/Users/paulm/Desktop/BuildFramework-F&E-AlmFE_1.0.13213.6/_DeploymentRuntime/buildframework/framework/modules/deploy/Run-CompositeModule.ps1",
+				"/C/Users/paulm/Documents/include.ps1",
+				"/C/TFS/CI/BuildAndDeploy/Src/buildframework/framework/cmdlets/TFS/Get-BuildInfo.ps1",
+				"/C/TFS/CI/BuildAndDeploy/Src/tfs/TfsWorkflowProcesses/TfsBuildChainTemplate.xaml",
+				"/D/Dropbox/Desktop/console-todo.txt",
+				"/D/Dropbox/Desktop/sublime.txt",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Misc Helpers.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Hook Modules and Binaries.ps1",
+				"/C/Windows/System32/WindowsPowerShell/v1.0/Examples/profile.ps1",
+				"/D/Dropbox/Documents/WindowsPowerShell/profile.ps1",
+				"/D/Dropbox/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Import Default Modules.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Import Visual Studio Environment.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Setup PSDrives.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Update Help.ps1",
+				"/D/Dropbox/Desktop/AsosBuildTools/GetAsosPoshUtils.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/ConEmu Shell Integration.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Sublime Text.ps1",
+				"/D/Local/Chrome/Extensions/ejojpehdfakifebljejpakjejhpaggna/1.0_0/script.js",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/TabExpansionUtil.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/PowerTab.psm1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/PowerTabConfig.xml",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/install.bat",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Profile Hook.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Profile.psm1",
+				"/D/Dropbox/Documents/Software/Installation",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Files/4.",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Primary",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Apps/Console/Modules/Profile/PowerTabConfig.xml",
+				"/D/Dropbox/Documents/WindowsPowerShell/PowerTabConfig.xml",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/ConsoleLib.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Keyboard Shortcut.ps1",
+				"/E/General.txt",
+				"/D/Dropbox/Documents/Photos/-",
+				"/C/Users/Paul/AppData/Local/Temp/7zOE8BD.tmp/AndroidManifest.xml",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Files/4.",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Primary",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Apps/Console/install.bat",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/Apps/Console/Modules/PowerTab/about_PowerTab_usage.help.txt",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/Primary",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/Files/4.",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/about_PowerTab_usage.help.txt",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/PowerShell Remoting.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Pscx/Pscx.UserPreferences.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Custom Prompt.ps1",
+				"/D/Dropbox/Desktop/Z To Investigate/Register.reg",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Shell Integration.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/Default/Default (Windows).sublime-keymap",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/Package Control.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/Package Control/Package Control.sublime-settings",
+				"/D/Dropbox/Desktop/Z To Investigate/Sublime Text 2 (2.0.2)/Data/Packages/Default/Preferences.sublime-settings",
+				"/D/Dropbox/Desktop/Z To Investigate/Sublime Text 2 (2.0.2)/Data/Packages/User/Package Control.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Register.reg",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Sublime Text 2 (2.0.2)/Data/Packages/Default/Default (Windows).sublime-keymap"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"xml",
+					" -NoLogo",
+					"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\",
+					"powershell.exe",
+					"export-",
+					"false",
+					"-type",
+					"-value",
+					"-force",
+					"HKCR",
+					"Open ConEmu"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"",
+					"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo",
+					"-Type",
+					"-Value",
+					"-Force",
+					"Sublime Text"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"replace":
+			{
+				"height": 62.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true
+		},
+		"new_window_width": 987.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 311.0,
+				"selected_items":
+				[
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 400.0
+			},
+			"console":
+			{
+				"height": 125.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/PowerTab.psd1",
+				"/C/Users/Paul/AppData/Local/Temp/7zO76C5.tmp/AndroidManifest.xml",
+				"/D/Dropbox/Documents/Software/Credentials Manager (2.7.0)/Raven.Server.exe.config",
+				"/E/Sites/SR.txt",
+				"/D/Dropbox/Desktop/password manager.txt",
+				"/D/Dropbox/Documents/GitHub/CredentialsManager/Releases/Raven.Server.exe.config",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/XML.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/Preferences.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/Default/Preferences.sublime-settings",
+				"/D/Dropbox/Documents/GitHub/CredentialsManager/Releases/Server (2.0.2375)/Raven.Server.exe.config",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/todo.txt",
+				"/C/SpecRun.SpecFlow.1.1.0/content/Default.srprofile.pp",
+				"/C/SpecRun.SpecFlow.1.1.0/content/App.config.transform",
+				"/C/SpecRun.Runner.1.1.0/changelog.txt",
+				"/C/SpecFlow.1.9.0/content/App.config.transform",
+				"/C/1",
+				"/C/Users/paulm/Documents/Dropbox/Android/Upgrade Process.txt",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Windows Azure Powershell.ps1",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Hook Modules and Binaries.ps1",
+				"/C/Users/paulm/Documents/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Import Visual Studio Environment.ps1",
+				"/C/Users/paulm/Desktop/BuildFramework-F&E-AlmFE_1.0.13213.6/_DeploymentRuntime/buildframework/framework/modules/deploy/Invoke-DeploymentAction.ps1",
+				"/C/Users/paulm/Desktop/BuildFramework-FE-AlmFE_1.0.13213.6/_DeploymentRuntime/buildframework/framework/modules/deploy/Run-CompositeModule.ps1",
+				"/C/Users/paulm/Desktop/BuildFramework-F&E-AlmFE_1.0.13213.6/_DeploymentRuntime/buildframework/framework/modules/deploy/Run-CompositeModule.ps1",
+				"/C/Users/paulm/Documents/include.ps1",
+				"/C/TFS/CI/BuildAndDeploy/Src/buildframework/framework/cmdlets/TFS/Get-BuildInfo.ps1",
+				"/C/TFS/CI/BuildAndDeploy/Src/tfs/TfsWorkflowProcesses/TfsBuildChainTemplate.xaml",
+				"/D/Dropbox/Desktop/console-todo.txt",
+				"/D/Dropbox/Desktop/sublime.txt",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Misc Helpers.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Hook Modules and Binaries.ps1",
+				"/C/Windows/System32/WindowsPowerShell/v1.0/Examples/profile.ps1",
+				"/D/Dropbox/Documents/WindowsPowerShell/profile.ps1",
+				"/D/Dropbox/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Import Default Modules.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Import Visual Studio Environment.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Setup PSDrives.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Update Help.ps1",
+				"/D/Dropbox/Desktop/AsosBuildTools/GetAsosPoshUtils.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/ConEmu Shell Integration.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Sublime Text.ps1",
+				"/D/Local/Chrome/Extensions/ejojpehdfakifebljejpakjejhpaggna/1.0_0/script.js",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/TabExpansionUtil.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/PowerTab.psm1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/PowerTabConfig.xml",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/install.bat",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Profile Hook.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Profile.psm1",
+				"/D/Dropbox/Documents/Software/Installation",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Files/4.",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Primary",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Apps/Console/Modules/Profile/PowerTabConfig.xml",
+				"/D/Dropbox/Documents/WindowsPowerShell/PowerTabConfig.xml",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/ConsoleLib.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Keyboard Shortcut.ps1",
+				"/E/General.txt",
+				"/D/Dropbox/Documents/Photos/-",
+				"/C/Users/Paul/AppData/Local/Temp/7zOE8BD.tmp/AndroidManifest.xml",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Files/4.",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Primary",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Apps/Console/install.bat",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/Apps/Console/Modules/PowerTab/about_PowerTab_usage.help.txt",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/Primary",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/Files/4.",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/PowerTab/about_PowerTab_usage.help.txt",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/PowerShell Remoting.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Pscx/Pscx.UserPreferences.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Modules/Profile/Custom Prompt.ps1",
+				"/D/Dropbox/Desktop/Z To Investigate/Register.reg",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Install/Shell Integration.ps1",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/Default/Default (Windows).sublime-keymap",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/User/Package Control.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Sublime Text/Data/Packages/Package Control/Package Control.sublime-settings",
+				"/D/Dropbox/Desktop/Z To Investigate/Sublime Text 2 (2.0.2)/Data/Packages/Default/Preferences.sublime-settings",
+				"/D/Dropbox/Desktop/Z To Investigate/Sublime Text 2 (2.0.2)/Data/Packages/User/Package Control.sublime-settings",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Console/Register.reg",
+				"/D/Dropbox/Documents/Software/Installation Files/4. Primary Apps/Sublime Text 2 (2.0.2)/Data/Packages/Default/Default (Windows).sublime-keymap"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"xml",
+					" -NoLogo",
+					"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\",
+					"powershell.exe",
+					"export-",
+					"false",
+					"-type",
+					"-value",
+					"-force",
+					"HKCR",
+					"Open ConEmu"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"",
+					"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo",
+					"-Type",
+					"-Value",
+					"-Force",
+					"Sublime Text"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"position": "0,2,3,-1,-1,-1,-1,807,275,173,1278",
+			"replace":
+			{
+				"height": 62.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"window_id": 1
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
