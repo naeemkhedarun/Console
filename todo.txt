@@ -9,9 +9,10 @@
 4 - put in an update mechanism from github
 	that simple http client as a powershell module
 	able to have a one liner like at work?
+get my new script from gareth, can he install remote access stuff on my pc?
+look at what causes most slow down
 
-
-
+auto admin?
 'remote' to run exe on another machine using psexec
 re-write VSCleanup.exe in powershell 
 chocolatey - http://www.hanselman.com/blog/IsTheWindowsUserReadyForAptget.aspx
