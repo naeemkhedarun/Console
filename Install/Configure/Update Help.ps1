@@ -1,2 +1,0 @@
-"Updating help..."
-Update-Help
