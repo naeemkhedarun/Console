@@ -17,9 +17,9 @@ $allPreRequisitesMet = $true
 function _genericCheck {
     param($filter, $description, $downloadUrl)
     
-    Write-Host "Checking for: $description..."
-    if (& $filter) {
-        Write-Host "$description not installed, please downnload from: $downloadUrl"
+    Write-InstallMessage "Checking for: $description"
+    if (-not (& $filter)) {
+        Write-InstallMessage "$description not installed, please downnload from: $downloadUrl"
         $script:allPreRequisitesMet = $false
     }
 }
@@ -27,13 +27,19 @@ function _genericCheck {
 function _checkForInstall {
     param($name, $description, $downloadUrl)
 
-    _genericCheck { $null -eq ($installedPrograms | ? { $_ -like $name }) } $description $downloadUrl
+    _genericCheck { $null -ne ($installedPrograms | ? { $_ -like $name }) } $description $downloadUrl
+}
+
+function _checkForFile {
+    param($file, $description, $downloadUrl)
+
+    _genericCheck { Test-Path $file } $description $downloadUrl
 }
 
 function _checkForSnapin {
     param($name, $description, $downloadUrl)
 
-    _genericCheck { $null -eq (Get-PSSnapin -Registered | ? { $_.Name -eq $name }) } $description $downloadUrl
+    _genericCheck { $null -ne (Get-PSSnapin -Registered | ? { $_.Name -eq $name }) } $description $downloadUrl
 }
 
 _checkForInstall    "GitHub" `
@@ -48,8 +54,12 @@ _checkForInstall    "Windows Azure Powershell - *" `
                     "Windows Azure PowerShell" `
                     "https://github.com/WindowsAzure/azure-sdk-tools"
 
-_checkForSnapin     "Microsoft.TeamFoundation.PowerShell" `
-                    "Microsoft Team Foundation Server 2012 Power Tools" `
-                    "http://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f"
+_checkForFile       (Join-Path $InstallPath "Console\ConEmu\clink\clink.bat") `
+                    "Clink" `
+                    "https://code.google.com/p/clink/"
+
+#_checkForSnapin     "Microsoft.TeamFoundation.PowerShell" `
+#                    "Microsoft Team Foundation Server 2012 Power Tools" `
+#                    "http://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f"
 
 return $allPreRequisitesMet
