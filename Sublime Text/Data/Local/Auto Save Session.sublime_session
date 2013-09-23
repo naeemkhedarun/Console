@@ -238,6 +238,18 @@
 					]
 				]
 			},
+			"buffers":
+			[
+				{
+					"contents": "5/8\" 25g - orange\n1.25\" 23g - blue\n1.5\" 21g - green\n\n\n28g 1/2%\n\n\n31g = insulin\n",
+					"settings":
+					{
+						"buffer_size": 79,
+						"line_ending": "Windows",
+						"name": "5/8\" 25g - orange"
+					}
+				}
+			],
 			"build_system": "",
 			"command_palette":
 			{
@@ -352,6 +364,42 @@
 				"whole_word": false,
 				"wrap": true
 			},
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 79,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										62,
+										62
+									]
+								],
+								"settings":
+								{
+									"auto_name": "5/8\" 25g - orange",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
+					]
+				}
+			],
 			"incremental_find":
 			{
 				"height": 23.0
@@ -383,7 +431,8 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0,2,3,-32000,-32000,-1,-1,652,-234,113,422",
+			"position": "0,0,1,-32000,-32000,-1,-1,608,627,69,1283",
+			"project": "",
 			"replace":
 			{
 				"height": 42.0
@@ -425,7 +474,8 @@
 			"template_settings":
 			{
 			},
-			"window_id": 3
+			"window_id": 3,
+			"workspace_name": ""
 		}
 	],
 	"workspaces":
