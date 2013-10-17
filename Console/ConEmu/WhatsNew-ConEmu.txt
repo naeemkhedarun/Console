@@ -15,6 +15,78 @@ http://code.google.com/p/conemu-maximus5/wiki/Awards
 *****************
 
 
+2013.09.23
+[*] Issue 1234: Tasks menu changes (Win+N, button [+])
+    * by default - does not expand to submenus, RClick on task - show submenu with task commands;
+    * Shift+Click on [+] arrow - creates submenus for tasks, RClick on task - run all task commands;
+    * also, user may set new hotkey for «Show create new console popup menu with task submenus».
+[%] Issue 1238: Running particular command from task submenus - was ignored «/dir ...» switch.
+[*] Vista and higher: Default console font - «Consolas» (if ClearType is enabled in system).
+[*] Vista and higher: Default tab and status bars font - «Segoe UI».
+[*] Default(!) font height (console, tab and status bars) takes into account monitor DPI (e.g. 150%).
+[%] Issue 1240: Window size wasn't saved on exit (sizing by grip in status bar).
+
+
+2013.09.21
+[%] Issue 1242: DPI aware dialogs and font inconsistency.
+[%] App distinct palette settings was ignored when starting GuiMacro: shell("new_console:In","powershell").
+[%] Crash in ConEmuC when attaching wide buffer consoles.
+[*] Some improvements on Default Terminal feature (to be continued).
+
+
+2013.09.18
+[%] Issue 1239: Regression: commands with redirection fails in Far Manager.
+[%] Issue 1137: Don't warn about Ctrl+Tab duplicate if internal Ctrl+Tab processing is disabled.
+[%] Regression: «Activate split on mouse over» was not working.
+[*] Issue 1125: Default terminal not activated when starting cmd from Windows 7 start menu Ctrl+Shift+Enter.
+
+
+2013.09.17
+[%] Issue 1211: Redirection heuristic disabled. If one needs redirection in root command -
+    call "cmd /c your-command-line".
+[%] Issue 1228: In some cases ConEmu fails to display DBCS characters with «ANSI X3.64» enabled.
+    Need to rewrite ANSI processor... Temporary workaround was created.
+[%] Issue 1220: When starting "far /co" plugin ConEmu background fails to initialize.
+[%] Issue 1230: Far plugin ConEmu background stops viewer autoupdating.
+[%] When starting "far /w" plugin ConEmu background fails to draw icons.
+[+] You may force Far Manager background plugins to update using Far macro.
+    This may be useful for minimizing lags after Ctrl-O, Ctrl-O for example.
+    Plugin.Call("4b675d80-1d4a-4ea9-8436-fdc23f2fc14b", 99)
+[*] Some clarifications in «ConEmu received wrong version packet» message.
+[%] Some fixes in padding painting.
+[*] Update Windows 7 jump list controls are moved to «Task bar» settings page.
+[*] Far Manager tab templates are moved to «Far Manager» settings page.
+
+
+2013.09.13
+[%] Issue 1229: Special prefix symbols '>' and '*' (task item) was not stripped when starting new console from task menu.
+[%] Some changes in color palette processing.
+[+] New switch "-new_console:P:PaletteName" allows set fixed color palette for specified tab.
+    Example: ConEmu /cmd cmd -new_console:P:^<PowerShell^>
+
+
+2013.09.12
+[+] Show icons in tab bar. By default, root application (your shell) icon is displayed.
+    Also, you may specify any special icon when starting tab with -new_console switch.
+[+] New switch "-new_console:C:IconFile" set icon for a tab. Example:
+    ConEmu.exe /cmd C:\GIT\git-bash.bat -cur_console:C:C\GIT\etc\git.ico
+[*] Changes in «Win+N» popup menu (plus sign on toolbar).
+    Tasks menu items are true submenu now. When task contains more than one item,
+    «All task tabs» sub-item appears to run all task tabs.
+    You may quickly run all task tabs with RightClick on Task menu item itself
+    (don't wait for submenu appears).
+    Also, if you define more than 10 tasks, all sequent tasks are available
+    via «More tasks» submenus.
+[*] Default terminal: ConEmuHk.dll will be reloaded after updating to new ConEmu build
+    (logoff/logon is not needed anymore).
+[*] Switch tabs by clicking over tab in fullscreen mode (actually, when caption is hidden).
+[%] Saving start command line history was disabled by default (130827). Enabled now.
+[+] Do you want to get your cmd.exe prompt bottom aligned? On ConEmu startup and after "cls"?
+    It is possible, run this file as your shell:
+    cmd.exe /k ClsEx.cmd
+
+
+
 2013.08.27
 [!] New search sequence for ConEmu.xml file:
     * %APPDATA%\ConEmu.xml

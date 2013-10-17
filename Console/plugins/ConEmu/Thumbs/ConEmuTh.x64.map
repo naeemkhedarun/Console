@@ -1,6 +1,6 @@
  ConEmuTh.x64
 
- Timestamp is 521d3668 (Wed Aug 28 03:29:44 2013)
+ Timestamp is 5240b6f2 (Tue Sep 24 01:47:30 2013)
 
  Preferred load address is 0000000180000000
 
@@ -137,20 +137,20 @@
  0001:00004aa8       ?CheckFarPanelsW1900@@YA_NXZ 0000000180005aa8 f   ConEmuTh1900.obj
  0001:00004b04       ?SettingsLoadW1900@@YAHPEB_WPEAK@Z 0000000180005b04 f   ConEmuTh1900.obj
  0001:00004bd0       ?SettingsSaveW1900@@YAXPEB_WPEAK@Z 0000000180005bd0 f   ConEmuTh1900.obj
- 0001:00004cb0       ?SettingsLoadOtherW1900@@YAXXZ 0000000180005cb0 f   ConEmuTh1900.obj
- 0001:00004cb0       ?OnItemReady@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 0000000180005cb0 f   ImgCache.obj
+ 0001:00004cb0       ?OnThreadStopped@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXXZ 0000000180005cb0 f   ImgCache.obj
+ 0001:00004cb0       ?SettingsLoadOtherW2800@@YAXXZ 0000000180005cb0 f   ConEmuTh2800.obj
+ 0001:00004cb0       ?ApplyChanges@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@AEBQEAU2@@Z 0000000180005cb0 f   ImgCache.obj
+ 0001:00004cb0       ?LoadPanelItemInfoA@@YAXPEAUCeFullPanelInfo@@_J@Z 0000000180005cb0 f   ConEmuThA.obj
  0001:00004cb0       ?FreeItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEBQEAUIMAGE_CACHE_INFO@@@Z 0000000180005cb0 f   ImgCache.obj
  0001:00004cb0       _initp_misc_winxfltr       0000000180005cb0 f   libcmt:winxfltr.obj
- 0001:00004cb0       ?LoadPanelItemInfoA@@YAXPEAUCeFullPanelInfo@@_J@Z 0000000180005cb0 f   ConEmuThA.obj
- 0001:00004cb0       ?ApplyChanges@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@AEBQEAU2@@Z 0000000180005cb0 f   ImgCache.obj
- 0001:00004cb0       ?SettingsLoadOtherW2800@@YAXXZ 0000000180005cb0 f   ConEmuTh2800.obj
- 0001:00004cb0       ?OnThreadStopped@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXXZ 0000000180005cb0 f   ImgCache.obj
+ 0001:00004cb0       ?OnItemReady@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 0000000180005cb0 f   ImgCache.obj
  0001:00004cb0       ?OnItemFailed@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 0000000180005cb0 f   ImgCache.obj
+ 0001:00004cb0       ?SettingsLoadOtherW1900@@YAXXZ 0000000180005cb0 f   ConEmuTh1900.obj
  0001:00004cb4       GetGlobalInfoW             0000000180005cb4 f   ConEmuTh2800.obj
  0001:00004d6c       ?GetPluginInfoW2800@@YAXPEAX@Z 0000000180005d6c f   ConEmuTh2800.obj
  0001:00004ddc       ?SetStartupInfoW2800@@YAXPEAX@Z 0000000180005ddc f   ConEmuTh2800.obj
- 0001:00004f18       ?OpenW1900@@YAPEAXPEBX@Z   0000000180005f18 f   ConEmuTh1900.obj
  0001:00004f18       ?OpenW2800@@YAPEAXPEBX@Z   0000000180005f18 f   ConEmuTh2800.obj
+ 0001:00004f18       ?OpenW1900@@YAPEAXPEBX@Z   0000000180005f18 f   ConEmuTh1900.obj
  0001:00004f84       ?ProcessSynchroEventW3@@YA_JPEAX@Z 0000000180005f84 f   ConEmuTh2800.obj
  0001:00004f9c       ?ExitFARW2800@@YAXXZ       0000000180005f9c f   ConEmuTh2800.obj
  0001:00004fd8       ?ShowMessageW2800@@YAHPEB_WH@Z 0000000180005fd8 f   ConEmuTh2800.obj
@@ -222,10 +222,10 @@
  0001:0000ae68       ?LoadThumbnail@CImgCache@@QEAAHPEAUIMAGE_CACHE_INFO@@@Z 000000018000be68 f   ImgCache.obj
  0001:0000b580       ?IsStopRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAA_NAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000c580 f i ImgCache.obj
  0001:0000b590       ?ProcessItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAJAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000c590 f i ImgCache.obj
- 0001:0000b598       ?IsTerminationRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NXZ 000000018000c598 f i ImgCache.obj
  0001:0000b598       ?IsTerminationRequested@CImgLoader@@UEAA_NXZ 000000018000c598 f i ImgCache.obj
- 0001:0000b5a0       __set_flsgetvalue          000000018000c5a0 f i libcmt:tidtable.obj
+ 0001:0000b598       ?IsTerminationRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NXZ 000000018000c598 f i ImgCache.obj
  0001:0000b5a0       ?OnThreadStarted@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAJXZ 000000018000c5a0 f i ImgCache.obj
+ 0001:0000b5a0       __set_flsgetvalue          000000018000c5a0 f i libcmt:tidtable.obj
  0001:0000b5a4       ?CopyItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXPEBQEAUIMAGE_CACHE_INFO@@PEAPEAU2@@Z 000000018000c5a4 f i ImgCache.obj
  0001:0000b5c4       ?IsEqual@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NAEBQEAUIMAGE_CACHE_INFO@@_J01@Z 000000018000c5c4 f i ImgCache.obj
  0001:0000b5e4       ?CheckHighPriority@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000c5e4 f i ImgCache.obj
@@ -282,8 +282,8 @@
  0001:0000ff18       ?CommonShutdown@@YAXXZ     0000000180010f18 f   Common.obj
  0001:0000ff40       ?HeapInitialize@@YA_NXZ    0000000180010f40 f   Memory.obj
  0001:0000ff78       ?HeapDeinitialize@@YAXXZ   0000000180010f78 f   Memory.obj
- 0001:0000ff9c       ?xf_malloc@@YAPEAX_K@Z     0000000180010f9c f   Memory.obj
  0001:0000ff9c       ??2@YAPEAX_K@Z             0000000180010f9c f   Memory.obj
+ 0001:0000ff9c       ?xf_malloc@@YAPEAX_K@Z     0000000180010f9c f   Memory.obj
  0001:0000ffb0       ?xf_calloc@@YAPEAX_K0@Z    0000000180010fb0 f   Memory.obj
  0001:0000ffcc       ?xf_free@@YAXPEAX@Z        0000000180010fcc f   Memory.obj
  0001:0000fff4       ??3@YAXPEAX@Z              0000000180010ff4 f   Memory.obj
@@ -313,8 +313,8 @@
  0001:00011030       GetFileVersionInfoSizeW    0000000180012030 f   version:VERSION.dll
  0001:00011038       wcsrchr                    0000000180012038 f   libcmt:wcsrchr.obj
  0001:00011080       memset                     0000000180012080 f   libcmt:memset.obj
- 0001:00011180       memmove                    0000000180012180     libcmt:memcpy.obj
  0001:00011180       memcpy                     0000000180012180 f   libcmt:memcpy.obj
+ 0001:00011180       memmove                    0000000180012180     libcmt:memcpy.obj
  0001:000114d0       memcmp                     00000001800124d0 f   libcmt:memcmp.obj
  0001:00011598       wcschr                     0000000180012598 f   libcmt:wcschr.obj
  0001:000115b8       __C_specific_handler       00000001800125b8 f   libcmt:chandler.obj
@@ -724,8 +724,8 @@
  0002:000016d0       ??_C@_1BI@MPDCNJBA@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAv?$AAr?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 00000001800196d0     WinObjects.obj
  0002:000016e8       ??_C@_1BK@HHKNEJDC@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAe?$AAs?$AAs?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 00000001800196e8     WinObjects.obj
  0002:00001704       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 0000000180019704     WinObjects.obj
- 0002:00001708       _pRawDllMain               0000000180019708     libcmt:dllcrt0.obj
  0002:00001708       _pDefaultRawDllMain        0000000180019708     libcmt:dllcrt0.obj
+ 0002:00001708       _pRawDllMain               0000000180019708     libcmt:dllcrt0.obj
  0002:00001710       ??_C@_0P@MIGLKIOC@CorExitProcess?$AA@ 0000000180019710     libcmt:crt0dat.obj
  0002:00001720       ??_C@_1BI@BGOHAHKC@?$AAm?$AAs?$AAc?$AAo?$AAr?$AAe?$AAe?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 0000000180019720     libcmt:crt0dat.obj
  0002:00001740       _XcptActTab                0000000180019740     libcmt:winxfltr.obj

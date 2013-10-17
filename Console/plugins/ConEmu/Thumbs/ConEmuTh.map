@@ -1,6 +1,6 @@
  ConEmuTh
 
- Timestamp is 521d355b (Wed Aug 28 03:25:15 2013)
+ Timestamp is 5240b5ae (Tue Sep 24 01:42:06 2013)
 
  Preferred load address is 10000000
 
@@ -67,8 +67,8 @@
  0001:00000b33       ?FreeItem@CePluginPanelItem@@QAEXXZ 10001b33 f   ConEmuTh.obj
  0001:00000b48       ??0?$MFileMapping@UPanelViewSetMapping@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
  0001:00000b48       ??0?$MFileMapping@Utag_DetectedDialog@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
- 0001:00000b6c       ?ClosePtr@?$MFileMapping@UPanelViewSetMapping@@@@QAEXXZ 10001b6c f i ConEmuTh.obj
  0001:00000b6c       ?ClosePtr@?$MFileMapping@Utag_DetectedDialog@@@@QAEXXZ 10001b6c f i ConEmuTh.obj
+ 0001:00000b6c       ?ClosePtr@?$MFileMapping@UPanelViewSetMapping@@@@QAEXXZ 10001b6c f i ConEmuTh.obj
  0001:00000b83       ?StringCchCopyW@@YGJPA_WIPB_W@Z 10001b83 f i ConEmuTh.obj
  0001:00000bea       _DllMain@12                10001bea f   ConEmuTh.obj
  0001:00000c71       ?ReloadResourcesW@@YIXXZ   10001c71 f   ConEmuTh.obj
@@ -77,8 +77,8 @@
  0001:00000f3d       ?IsThumbnailsActive@@YIPAUCeFullPanelInfo@@H@Z 10001f3d f   ConEmuTh.obj
  0001:0000110e       ?SettingsLoadOther@@YIXPB_W@Z 1000210e f   ConEmuTh.obj
  0001:00001208       ?SetFrom@?$MFileMapping@Utag_DetectedDialog@@@@QAE_NPBUtag_DetectedDialog@@H@Z 10002208 f i ConEmuTh.obj
- 0001:00001258       ?CloseMap@?$MFileMapping@UPanelViewSetMapping@@@@QAEXXZ 10002258 f i ConEmuTh.obj
  0001:00001258       ?CloseMap@?$MFileMapping@Utag_DetectedDialog@@@@QAEXXZ 10002258 f i ConEmuTh.obj
+ 0001:00001258       ?CloseMap@?$MFileMapping@UPanelViewSetMapping@@@@QAEXXZ 10002258 f i ConEmuTh.obj
  0001:0000128c       ?ProcessConsoleInput@@YIHHPAU_INPUT_RECORD@@KPAK@Z 1000228c f   ConEmuTh.obj
  0001:0000152f       ?UpdateEnvVar@@YIXH@Z      1000252f f   ConEmuTh.obj
  0001:0000154f       ?InitName@?$MFileMapping@Utag_DetectedDialog@@@@QAEPB_WPB_WKK@Z 1000254f f i ConEmuTh.obj
@@ -126,8 +126,8 @@
  0001:00002d0b       ?FarColor_3_2@@YIEABUFarColor@@@Z 10003d0b f i ConEmuTh1900.obj
  0001:00002d99       ?GetPluginInfoW1900@@YIXPAX@Z 10003d99 f   ConEmuTh1900.obj
  0001:00002dea       ?SetStartupInfoW1900@@YIXPAX@Z 10003dea f   ConEmuTh1900.obj
- 0001:00002ed8       ?OpenW1900@@YIPAXPBX@Z     10003ed8 f   ConEmuTh1900.obj
  0001:00002ed8       ?OpenW2800@@YIPAXPBX@Z     10003ed8 f   ConEmuTh2800.obj
+ 0001:00002ed8       ?OpenW1900@@YIPAXPBX@Z     10003ed8 f   ConEmuTh1900.obj
  0001:00002f30       ?ExitFARW1900@@YIXXZ       10003f30 f   ConEmuTh1900.obj
  0001:00002f5f       ?ShowMessageW1900@@YIHPB_WH@Z 10003f5f f   ConEmuTh1900.obj
  0001:00002fcf       ?ShowMessageW1900@@YIHHH@Z 10003fcf f   ConEmuTh1900.obj
@@ -221,8 +221,8 @@
  0001:00008ce9       ??0?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAE@XZ 10009ce9 f i ImgCache.obj
  0001:00008d23       ?IsStopRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@UAE_NABQAUIMAGE_CACHE_INFO@@@Z 10009d23 f i ImgCache.obj
  0001:00008d34       ?ProcessItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEJAAPAUIMAGE_CACHE_INFO@@J@Z 10009d34 f i ImgCache.obj
- 0001:00008d3c       ?OnItemReady@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
  0001:00008d3c       ?OnItemFailed@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
+ 0001:00008d3c       ?OnItemReady@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
  0001:00008d3c       ?ApplyChanges@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@ABQAU2@@Z 10009d3c f i ImgCache.obj
  0001:00008d3f       ?IsTerminationRequested@CImgLoader@@UAE_NXZ 10009d3f f i ImgCache.obj
  0001:00008d3f       ?IsTerminationRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NXZ 10009d3f f i ImgCache.obj
@@ -356,8 +356,8 @@
  0001:0000e4b9       __abnormal_termination     1000f4b9 f   libcmt:exsup.obj
  0001:0000e4dc       __NLG_Notify1              1000f4dc f   libcmt:exsup.obj
  0001:0000e4e5       __NLG_Notify               1000f4e5 f   libcmt:exsup.obj
- 0001:0000e4fc       __NLG_Dispatch2            1000f4fc     libcmt:exsup.obj
  0001:0000e4fc       __NLG_Dispatch             1000f4fc     libcmt:exsup.obj
+ 0001:0000e4fc       __NLG_Dispatch2            1000f4fc     libcmt:exsup.obj
  0001:0000e504       __NLG_Call                 1000f504 f   libcmt:exsup.obj
  0001:0000e506       __NLG_Return2              1000f506     libcmt:exsup.obj
  0001:0000e5d0       __ValidateEH3RN            1000f5d0 f   libcmt:eh3valid.obj
@@ -397,10 +397,10 @@
  0001:0000fad6       __RTC_Terminate            10010ad6 f   libcmt:_initsect_.obj
  0001:0000fafc       __heap_init                10010afc f   libcmt:heapinit.obj
  0001:0000fb2c       __heap_term                10010b2c f   libcmt:heapinit.obj
- 0001:0000fba0       ?SettingsLoadOtherW1900@@YIXXZ 10010ba0 f   ConEmuTh1900.obj
  0001:0000fba0       __initp_misc_winxfltr      10010ba0 f   libcmt:winxfltr.obj
- 0001:0000fba0       ?OnThreadStopped@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXXZ 10010ba0 f   ImgCache.obj
  0001:0000fba0       ?SettingsLoadOtherW2800@@YIXXZ 10010ba0 f   ConEmuTh2800.obj
+ 0001:0000fba0       ?SettingsLoadOtherW1900@@YIXXZ 10010ba0 f   ConEmuTh1900.obj
+ 0001:0000fba0       ?OnThreadStopped@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXXZ 10010ba0 f   ImgCache.obj
  0001:0000fba0       ?LoadPanelItemInfoA@@YIXPAUCeFullPanelInfo@@H@Z 10010ba0 f   ConEmuThA.obj
  0001:0000fba1       __XcptFilter               10010ba1 f   libcmt:winxfltr.obj
  0001:0000fd01       ___CppXcptFilter           10010d01 f   libcmt:winxfltr.obj
