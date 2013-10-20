@@ -1,5 +1,5 @@
 ﻿TOPIC
-    PowerShell Community Extensions (version 3.0.0.0)
+    PowerShell Community Extensions (version 3.1.0.0)
 
 SHORT DESCRIPTION
     Describes the Windows PowerShell Community Extensions (PSCX) module and 
@@ -14,10 +14,10 @@ LONG DESCRIPTION
     create some of those cmdlets and make them available to the community.
         
 POWERSHELL COMPATIBILITY
-    PSCX 3.0 is compiled against .NET 4.0 and consequently works only in 
-	Windows PowerShell 3.0. If you need Windows PowerShell 2.0 support,
-    download PSCX 2.1.  If you need Windows PowerShell 1.0 support, download
-    PSCX 1.2.
+    PSCX 3.1 is compiled against .NET 4.0 and consequently works only in 
+    Windows PowerShell 3.0 and above. If you need Windows PowerShell 2.0 
+    support, download PSCX 2.1.  If you need Windows PowerShell 1.0 support, 
+    download PSCX 1.2.
     
 PREFERENCE VARIABLES
     Previous versions of PSCX used global variables to store preference 
@@ -521,6 +521,13 @@ FUNCTIONS
     Invoke-Method (call)
         Function to call a single method on an incoming stream of piped objects. 
         
+    Invoke-NullCoalescing (??)
+        Similar to the C# ?? operator e.g. name = value ?? String.Empty 
+        
+    Invoke-Ternary (?:)
+        Similar to the C# ? : operator e.g. name = (value != null) ? String.Empty 
+        : value 
+        
     less
         Less provides better paging of output from cmdlets. 
         
@@ -571,8 +578,8 @@ PSCX ALIASES
     Get-Command -Module Pscx* -CommandType Alias
     The current PSCX defined aliases are listed below:
 
-    ?:            : alias for Invoke-Ternary filter
-    ??            : alias for Invoke-NullCoalescing filter
+    ?:            : alias for Invoke-Ternary function
+    ??            : alias for Invoke-NullCoalescing function
     call          : alias for Invoke-Method function
     cvxml         : alias for Convert-Xml cmdlet
     e             : alias for Edit-File function

@@ -1,35 +1,17 @@
-Invoke-InstallStep "Configuring Console Shell Integration" {
-	New-Item "HKCU:\Software\Classes\Directory\Background\shell\Open Console" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\Directory\Background\shell\Open Console" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\Directory\Background\shell\Open Console\command" -Value """$conEmuExecutable""" -Type String -Force | Out-Null
-
-	New-Item "HKCU:\Software\Classes\*\shell\Open Console" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\*\shell\Open Console" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\*\shell\Open Console\command" -Value """$conEmuExecutable""" -Type String -Force | Out-Null
-
-	New-Item "HKCU:\Software\Classes\Folder\shell\Open Console" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\Folder\shell\Open Console" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\Folder\shell\Open Console\command" -Value """$conEmuExecutable""" -Type String -Force | Out-Null
-
-	New-Item "HKCU:\Software\Classes\Drive\shell\Open Console" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\Drive\shell\Open Console" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\Drive\shell\Open Console\command" -Value """$conEmuExecutable""" -Type String -Force | Out-Null
-}
-
-Invoke-InstallStep "Configuring Console Embedded Shell Integration" {
-	New-Item "HKCU:\Software\Classes\Directory\Background\shell\Open Console (Embedded)" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\Directory\Background\shell\Open Console (Embedded)" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\Directory\Background\shell\Open Console (Embedded)\command" -Value """$conEmuExecutable"" /inside" -Type String -Force | Out-Null
-
-	New-Item "HKCU:\Software\Classes\*\shell\Open Console (Embedded)" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\*\shell\Open Console (Embedded)" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\*\shell\Open Console (Embedded)\command" -Value """$conEmuExecutable"" /inside" -Type String -Force | Out-Null
-
-	New-Item "HKCU:\Software\Classes\Folder\shell\Open Console (Embedded)" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\Folder\shell\Open Console (Embedded)" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\Folder\shell\Open Console (Embedded)\command" -Value """$conEmuExecutable"" /inside" -Type String -Force | Out-Null
-
-	New-Item "HKCU:\Software\Classes\Drive\shell\Open Console (Embedded)" -Force | Out-Null
-	New-ItemProperty "HKCU:\Software\Classes\Drive\shell\Open Console (Embedded)" "Icon" -Value "$conEmuIcon" -Type String -Force | Out-Null
-	New-Item "HKCU:\Software\Classes\Drive\shell\Open Console (Embedded)\command" -Value """$conEmuExecutable"" /inside" -Type String -Force | Out-Null
+@(
+	@{Name = "Open PowerShell";					Command = """$conEmuExecutable"" /cmd powershell.exe -cur_console:n";	Icon = $conEmuPowerShellIcon; },
+	@{Name = "Open PowerShell (Administrator)";	Command = """$conEmuExecutable"" /cmd powershell.exe -cur_console:na";	Icon = $conEmuPowerShellIcon; },
+	@{Name = "Open Command";					Command = """$conEmuExecutable"" /cmd cmd.exe -cur_console:n";			Icon = $conEmuCommandIcon; },
+	@{Name = "Open Command (Administrator)";	Command = """$conEmuExecutable"" /cmd cmd.exe -cur_console:na";			Icon = $conEmuCommandIcon;}
+) | % {
+	$link = $_
+	Invoke-InstallStep "Configuring '$($link.Name)' Shell Integration" {
+		@("*", "Directory\Background", "Folder", "Drive") | % { 
+			# -cur_console:n + directory\background and *
+			# folder + drive = target
+			New-Item "HKCU:\Software\Classes\$_\shell\$($link.Name)" -Force | Out-Null
+			New-ItemProperty "HKCU:\Software\Classes\$_\shell\$($link.Name)" "Icon" -Value $link.Icon -Type String -Force | Out-Null
+			New-Item "HKCU:\Software\Classes\$_\shell\$($link.Name)\command" -Value $link.Command -Type String -Force | Out-Null
+		}
+	}
 }

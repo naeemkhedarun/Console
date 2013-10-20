@@ -114,6 +114,13 @@ filter New-HashObject {
 .PARAMETER FalseBlock
     This block gets evaluated and its contents are returned from the function if the Conditon
     scriptblock evaluates to $false.
+.PARAMETER InputObject
+    Specifies the input object. Invoke-Ternary injects the InputObject into each scriptblock
+    provided via the Condition, TrueBlock and FalseBlock parameters.
+.EXAMPLE
+    C:\PS> $toolPath = ?: {[IntPtr]::Size -eq 4} {"$env:ProgramFiles(x86)\Tools"} {"$env:ProgramFiles\Tools"}}
+    Each input number is evaluated to see if it is > 5.  If it is then "Greater than 5" is
+    displayed otherwise "Less than or equal to 5" is displayed.
 .EXAMPLE
     C:\PS> 1..10 | ?: {$_ -gt 5} {"Greater than 5";$_} {"Less than or equal to 5";$_}
     Each input number is evaluated to see if it is > 5.  If it is then "Greater than 5" is
@@ -122,18 +129,42 @@ filter New-HashObject {
     Aliases:  ?:
     Author:   Karl Prosser
 #>
-filter Invoke-Ternary {
-    param([scriptblock]$Condition  = $(throw "Parameter '-condition' (position 1) is required"), 
-          [scriptblock]$TrueBlock  = $(throw "Parameter '-trueBlock' (position 2) is required"), 
-          [scriptblock]$FalseBlock = $(throw "Parameter '-falseBlock' (position 3) is required"))
+function Invoke-Ternary { 
+    param(
+        [Parameter(Mandatory, Position=0)]
+        [scriptblock]
+        $Condition,
 
-    $module = $ExecutionContext.SessionState.Module;
-    
-    if (& $module.NewBoundScriptBlock($Condition)) { 
-        & $module.NewBoundScriptBlock($TrueBlock)
-    } 
-    else { 
-        & $module.NewBoundScriptBlock($FalseBlock)
+        [Parameter(Mandatory, Position=1)]
+        [scriptblock]
+        $TrueBlock,
+
+        [Parameter(Mandatory, Position=2)]
+        [scriptblock]
+        $FalseBlock,
+
+        [Parameter(ValueFromPipeline, ParameterSetName='InputObject')]
+        [psobject]
+        $InputObject
+    ) 
+        
+    Process { 
+        if ($pscmdlet.ParameterSetName -eq 'InputObject') {
+            Foreach-Object $Condition -input $InputObject | Foreach { 
+                if ($_) { 
+                    Foreach-Object $TrueBlock -InputObject $InputObject 
+                }
+                else {
+                    Foreach-Object $FalseBlock -InputObject $InputObject 
+                }
+            }
+        }
+        elseif (&$Condition) {
+            &$TrueBlock
+        } 
+        else {
+            &$FalseBlock
+        }
     }
 }
 
@@ -155,6 +186,9 @@ filter Invoke-Ternary {
 .PARAMETER AlternateExpr
     This block gets evaluated and its contents are returned from the function if the Conditon
     scriptblock evaluates to $true.
+.PARAMETER InputObject
+    Specifies the input object. Invoke-NullCoalescing injects the InputObject into each 
+    scriptblock provided via the PrimaryExpr and AlternateExpr parameters.
 .EXAMPLE
     C:\PS> $LogDir = ?? {$env:LogDir} {"$env:windir\System32\LogFiles"}
     $LogDir is set to the value of $env:LogDir unless it doesn't exist, in which case it 
@@ -163,23 +197,51 @@ filter Invoke-Ternary {
     Aliases:  ??
     Author:   Keith Hill
 #>
-filter Invoke-NullCoalescing {
-    param([scriptblock]$PrimaryExpr   = $(throw "Parameter '-primaryExpr' (position 1) required"), 
-          [scriptblock]$AlternateExpr = $(throw "Parameter '-alternateExpr' (position 2) required"))
-          
-    $module = $ExecutionContext.SessionState.Module;
+function Invoke-NullCoalescing { 
+    param(
+        [Parameter(Mandatory, Position=0)]
+        [AllowNull()]
+        [scriptblock]
+        $PrimaryExpr,
 
-    if ($primaryExpr -ne $null) {
-        $result = & $module.NewBoundScriptBlock($primaryExpr)
-        if ($result -ne $null -and "$result" -ne '') {
-            $result
+        [Parameter(Mandatory, Position=1)]
+        [scriptblock]
+        $AlternateExpr,
+
+        [Parameter(ValueFromPipeline, ParameterSetName='InputObject')]
+        [psobject]
+        $InputObject
+    ) 
+        
+    Process { 
+        if ($pscmdlet.ParameterSetName -eq 'InputObject') {
+            if ($PrimaryExpr -eq $null) {
+                Foreach-Object $AlternateExpr -InputObject $InputObject
+            }
+            else {
+                $result = Foreach-Object $PrimaryExpr -input $InputObject
+                if ($result -eq $null) {
+                    Foreach-Object $AlternateExpr -InputObject $InputObject
+                }
+                else {
+                    $result
+                }
+            }
         }
         else {
-            & $module.NewBoundScriptBlock($alternateExpr)
+            if ($PrimaryExpr -eq $null) {
+                &$AlternateExpr
+            }
+            else {
+                $result = &$PrimaryExpr
+                if ($result -eq $null) {
+                    &$AlternateExpr
+                }
+                else {
+                    $result
+                }
+            }
         }
-    }
-    else {
-        & $module.NewBoundScriptBlock($alternateExpr)
     }
 }
 
@@ -1965,26 +2027,41 @@ function Show-Tree
                - FIXED miscalculation of shortest unique name (aliases count as unique names),
                  this caused some parameter names to be thrown out (like "Object")
                - CHANGED code style cleanup
+  Version 2.7  - November 28, 2012 - By Joel Bennett http://poshcode.org/3794
+               - Added * indicator on default parameter set.
+  Version 2.8  - August 27, 2013 - By Joel Bennett (This Version)
+               - Added SetName filter 
+               - Add * on the short name in the aliases list (to distinguish it from real aliases)
+               - FIXED PowerShell 4 Bugs:
+               - Added PipelineVariable to CommonParameters
+               - FIXED PowerShell 3 Bugs:
+               - Don't add to the built-in Aliases anymore, it changes the command!
 #>
 function Get-Parameter {
-    [CmdletBinding()]
-    param(
+    [CmdletBinding(DefaultParameterSetName="ParameterName")]
+    param ( 
+        # The name of the command to get parameters for
         [Parameter(Position = 1, Mandatory = $true, ValueFromPipelineByPropertyName = $true)]
-        [Alias("Name")]
         [string[]]$CommandName,
 
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
+        # The parameter name to filter by (allows Wilcards)
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName=$true, ParameterSetName="FilterNames")]
         [string[]]$ParameterName = "*",
 
+        # The ParameterSet name to filter by (allows wildcards)
+        [Parameter(ValueFromPipelineByPropertyName=$true, ParameterSetName="FilterSets")]
+        [string[]]$SetName = "*",
+
+        # The name of the module which contains the command (this is for scoping)
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         $ModuleName,
 
-        [switch]
-        $Force
+        # Forces including the CommonParameters in the output
+        [switch]$Force
     )
 
     begin {
-        $PropertySet = @( "Name",
+            $PropertySet = @( "Name",
             @{n="Position";e={if($_.Position -lt 0){"Named"}else{$_.Position}}},
             "Aliases", 
             @{n="Short";e={$_.Name}},
@@ -1995,8 +2072,8 @@ function Get-Parameter {
             @{n="Provider";e={$_.DynamicProvider}},
             @{n="ValueFromPipeline";e={$_.ValueFromPipeline}},
             @{n="ValueFromPipelineByPropertyName";e={$_.ValueFromPipelineByPropertyName}}
-        )
-        function Join-Object {
+            )
+            function Join-Object {
             Param(
                 [Parameter(Position=0)]
                 $First
@@ -2019,10 +2096,10 @@ function Get-Parameter {
 
     process {
         foreach ($cmd in $CommandName) {
-        if ($ModuleName) {$cmd = "$ModuleName\$cmd"}
-        $commands = @(Get-Command $cmd)
+            if ($ModuleName) {$cmd = "$ModuleName\$cmd"}
+            $commands = @(Get-Command $cmd)
 
-        foreach ($command in $commands) {
+            foreach ($command in $commands) {
             # resolve aliases (an alias can point to another alias)
             while ($command.CommandType -eq "Alias") {
                 $command = @(Get-Command ($command.definition))[0]
@@ -2037,57 +2114,73 @@ function Get-Parameter {
 
                 [Array]$MoreParameters = (Get-Command $command -Args $drive).Parameters.Values
                 [Array]$Dynamic = $MoreParameters | Where-Object {$_.IsDynamic}
-                foreach ($p in $MoreParameters | Where-Object{!$Parameters.ContainsKey($_.Name)}) {$Parameters.($p.Name) = $p}
+                foreach ($p in $MoreParameters | Where-Object{!$Parameters.ContainsKey($_.Name)}) {$Parameters.($p.Name) = $p | Select *}
                     # Write-Verbose "Drive: $Drive | Parameters: $($Parameters.Count)"
                     if ($dynamic) {
                         foreach ($d in $dynamic) {
-                            if (Get-Member -InputObject $Parameters.($d.Name) -Name DynamicProvider) {
-                                Write-Debug ("ADD:" + $d.Name + " " + $provider.Name)
-                                $Parameters.($d.Name).DynamicProvider += $provider.Name
-                            } else {
-                                Write-Debug ("CREATE:" + $d.Name + " " + $provider.Name)
-                                $Parameters.($d.Name) = $Parameters.($d.Name) | Add-Member NoteProperty DynamicProvider @($provider.Name) -Passthru
-                            }
+                        if (Get-Member -InputObject $Parameters.($d.Name) -Name DynamicProvider) {
+                            Write-Debug ("ADD:" + $d.Name + " " + $provider.Name)
+                            $Parameters.($d.Name).DynamicProvider += $provider.Name
+                        } else {
+                            Write-Debug ("CREATE:" + $d.Name + " " + $provider.Name)
+                            $Parameters.($d.Name) = $Parameters.($d.Name) | Select *, @{ n="DynamicProvider";e={ @($provider.Name) } }
                         }
+                        } 
                     }
                 }
 
                 ## Calculate the shortest distinct parameter name -- do this BEFORE removing the common parameters or else.
                 $Aliases = $Parameters.Values | Select-Object -ExpandProperty Aliases  ## Get defined aliases
+                $ParameterNames = $Parameters.Keys + $Aliases
                 foreach ($p in $($Parameters.Keys)) {
-                    $shortest = "^"
-                    foreach ($char in [char[]]$p) {             
-                        $shortest += $char
-                        $Matches = (($Parameters.Keys + $Aliases) -match $Shortest).Count
-                        Write-Debug "$($shortest.SubString(1)) $Matches"
-                        if ($Matches -eq 1) {
-                            $Parameters.$p = $Parameters.$p | Add-Member NoteProperty Aliases ($Parameters.$p.Aliases + @($shortest.SubString(1).ToLower($PSUICulture))) -Force -Passthru
+                    $short = "^"
+                    $aliases = @($p) + @($Parameters.$p.Aliases) | sort { $_.Length }
+                    $shortest = "^" + @($aliases)[0]
+
+                    foreach($name in $aliases) {
+                        $short = "^"
+                        foreach ($char in [char[]]$name) {         
+                        $short += $char
+                        $mCount = ($ParameterNames -match $short).Count
+                        if ($mCount -eq 1 ) {
+                            if($short.Length -lt $shortest.Length) {
+                                $shortest = $short
+                            }
                             break
                         }
+                        }
+                    }
+                    if($shortest.Length -lt @($aliases)[0].Length +1){
+                        # Overwrite the Aliases with this new value
+                        $Parameters.$p = $Parameters.$p | Add-Member NoteProperty Aliases ($Parameters.$p.Aliases + @("$($shortest.SubString(1))*")) -Force -Passthru
                     }
                 }
 
-                Write-Verbose "Parameters: $($Parameters.Count)`n $($Parameters | ft | out-string)"
-
+                # Write-Verbose "Parameters: $($Parameters.Count)`n $($Parameters | ft | out-string)"
+                $CommonParameters = "ErrorAction", "WarningAction", "Verbose", "Debug", "ErrorVariable", "WarningVariable", "OutVariable", "OutBuffer", "PipelineVariable"
+    
                 foreach ($paramset in @($command.ParameterSets | Select-Object -ExpandProperty "Name")) {
+                    $paramset = $paramset | Add-Member -Name IsDefault -MemberType NoteProperty -Value ($paramset -eq $command.DefaultParameterSet) -PassThru
                     foreach ($parameter in $Parameters.Keys | Sort-Object) {
-                        Write-Verbose "Parameter: $Parameter"
-                        if (!$Force -and ($Parameters.$Parameter.Aliases -match '^(vb|db|ea|wa|ev|wv|ov|ob|wi|cf)$')) {continue}
+                        # Write-Verbose "Parameter: $Parameter"
+                        if (!$Force -and ($CommonParameters -contains $Parameter)) {continue}
                         if ($Parameters.$Parameter.ParameterSets.ContainsKey($paramset) -or $Parameters.$Parameter.ParameterSets.ContainsKey("__AllParameterSets")) {
-                            if ($Parameters.$Parameter.ParameterSets.ContainsKey($paramset)) {
-                                $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.$paramSet 
-                            } else {
-                                $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.__AllParameterSets
-                            }
-
-                            Write-Output $Output | Select-Object $PropertySet | ForEach-Object {
-                                    $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadata")
-                                    $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadataEx")
-                                    Write-Verbose "$(($_.PSTypeNames.GetEnumerator()) -join ", ")"
-                                    $_
-                                } |
-                                Add-Member ScriptMethod ToString { $this.Name } -Force -Passthru |
-                                Where-Object {$(foreach($pn in $ParameterName) {$_ -like $Pn}) -contains $true}
+                        if ($Parameters.$Parameter.ParameterSets.ContainsKey($paramset)) {
+                            $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.$paramSet 
+                        } else {
+                            $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.__AllParameterSets
+                        }
+    
+                        Write-Output $Output | Select-Object $PropertySet | ForEach-Object {
+                                $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadata")
+                                $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadataEx")
+                                # Write-Verbose "$(($_.PSTypeNames.GetEnumerator()) -join ", ")"
+                                $_
+                            } |
+                            Add-Member ScriptMethod ToString { $this.Name } -Force -Passthru |
+                            Where-Object {$(foreach($pn in $ParameterName) {$_ -like $Pn}) -contains $true} |
+                            Where-Object {$(foreach($sn in $SetName) {$_.ParameterSet -like $sn}) -contains $true}
+    
                         }
                     }
                 }
@@ -2108,16 +2201,16 @@ function Get-Parameter {
     Pop-EnvironmentBlock.
 .PARAMETER VisualStudioVersion
     The version of Visual Studio to import environment variables for. Valid 
-    values are 2008, 2010 and 2012.
+    values are 2008, 2010, 2012 and 2013
 .PARAMETER Architecure
     Selects the desired architecture to configure the environment for. 
-	Defaults to x86 if running in 32-bit PowerShell, otherwise defaults to 
-	amd64.
+    Defaults to x86 if running in 32-bit PowerShell, otherwise defaults to 
+    amd64.  Other valid values are: arm, x86_arm, x86_amd64
 .EXAMPLE
     C:\PS> Import-VisualStudioVars 2010
 
     Sets up the environment variables to use the VS 2010 compilers. Defaults 
-	to x86 if running in 32-bit PowerShell, otherwise defaults to amd64.
+    to x86 if running in 32-bit PowerShell, otherwise defaults to amd64.
 .EXAMPLE
     C:\PS> Import-VisualStudioVars 2012 arm
 
@@ -2128,12 +2221,12 @@ function Import-VisualStudioVars
     param
     (
         [Parameter(Mandatory = $true, Position = 0)]
-        [ValidateSet('2008', '2010', '2012')]
+        [ValidateSet('2008', '2010', '2012', '2013')]
         [string]
         $VisualStudioVersion,
 
-	[Parameter(Position = 1)]
-	[string]
+    [Parameter(Position = 1)]
+    [string]
         $Architecture = $(if ($Pscx:Is64BitProcess) {'amd64'} else {'x86'})
     )
  
@@ -2154,6 +2247,11 @@ function Import-VisualStudioVars
             '2012' {
                 Push-EnvironmentBlock -Description "Before importing VS 2012 $Architecture environment variables"
                 Invoke-BatchFile "${env:VS110COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
+            }
+ 
+            '2013' {
+                Push-EnvironmentBlock -Description "Before importing VS 2013 $Architecture environment variables"
+                Invoke-BatchFile "${env:VS120COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
             }
  
             default {
@@ -2186,8 +2284,8 @@ function Import-VisualStudioVars
     that is set in the registry.
 .PARAMETER Architecture
     Starts PowerShell with the desired architecture: x86, x64 or same 
-	architecture as the launching PowerShell process.
-	Valid values are: x86, x64 and Same.
+    architecture as the launching PowerShell process.
+    Valid values are: x86, x64 and Same.
 .PARAMETER NoLogo
     Hides the copyright banner at startup.
 .PARAMETER NoExit
@@ -2256,7 +2354,7 @@ function Import-VisualStudioVars
     interpreted as the command arguments.
 
     To write a string that runs a Windows PowerShell command, use the format:
-	"& {<command>}"
+    "& {<command>}"
     where the quotation marks indicate a string and the invoke operator (&)
     causes the command to be executed.
 .EXAMPLE
@@ -2544,172 +2642,172 @@ function Get-ExecutionTime
 Export-ModuleMember -Alias * -Function *
 
 # SIG # Begin signature block
-# MIIfVQYJKoZIhvcNAQcCoIIfRjCCH0ICAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
+# MIIfUwYJKoZIhvcNAQcCoIIfRDCCH0ACAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUL1bZL9vUcGy7ZJJk8HEXu4/N
-# ZHqgghqHMIIGbzCCBVegAwIBAgIQA4uW8HDZ4h5VpUJnkuHIOjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUg/E+oGD8SSiXfWPW4VRnvu1P
+# l+2gghqFMIIGajCCBVKgAwIBAgIQA5/t7ct5W43tMgyJGfA2iTANBgkqhkiG9w0B
 # AQUFADBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYD
 # VQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBBc3N1cmVk
-# IElEIENBLTEwHhcNMTIwNDA0MDAwMDAwWhcNMTMwNDE4MDAwMDAwWjBHMQswCQYD
+# IElEIENBLTEwHhcNMTMwNTIxMDAwMDAwWhcNMTQwNjA0MDAwMDAwWjBHMQswCQYD
 # VQQGEwJVUzERMA8GA1UEChMIRGlnaUNlcnQxJTAjBgNVBAMTHERpZ2lDZXJ0IFRp
 # bWVzdGFtcCBSZXNwb25kZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
-# AQDGf7tj+/F8Q0mIJnRfituiDBM1pYivqtEwyjPdo9B2gRXW1tvhNC0FIG/BofQX
-# Z7dN3iETYE4Jcq1XXniQO7XMLc15uGLZTzHc0cmMCAv8teTgJ+mn7ra9Depw8wXb
-# 82jr+D8RM3kkwHsqfFKdphzOZB/GcvgUnE0R2KJDQXK6DqO+r9L9eNxHlRdwbJwg
-# wav5YWPmj5mAc7b+njHfTb/hvE+LgfzFqEM7GyQoZ8no89SRywWpFs++42Pf6oKh
-# qIXcBBDsREA0NxnNMHF82j0Ctqh3sH2D3WQIE3ome/SXN8uxb9wuMn3Y07/HiIEP
-# kUkd8WPenFhtjzUmWSnGwHTPAgMBAAGjggM6MIIDNjAOBgNVHQ8BAf8EBAMCB4Aw
-# DAYDVR0TAQH/BAIwADAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDCCAcQGA1UdIASC
-# AbswggG3MIIBswYJYIZIAYb9bAcBMIIBpDA6BggrBgEFBQcCARYuaHR0cDovL3d3
-# dy5kaWdpY2VydC5jb20vc3NsLWNwcy1yZXBvc2l0b3J5Lmh0bTCCAWQGCCsGAQUF
-# BwICMIIBVh6CAVIAQQBuAHkAIAB1AHMAZQAgAG8AZgAgAHQAaABpAHMAIABDAGUA
-# cgB0AGkAZgBpAGMAYQB0AGUAIABjAG8AbgBzAHQAaQB0AHUAdABlAHMAIABhAGMA
-# YwBlAHAAdABhAG4AYwBlACAAbwBmACAAdABoAGUAIABEAGkAZwBpAEMAZQByAHQA
-# IABDAFAALwBDAFAAUwAgAGEAbgBkACAAdABoAGUAIABSAGUAbAB5AGkAbgBnACAA
-# UABhAHIAdAB5ACAAQQBnAHIAZQBlAG0AZQBuAHQAIAB3AGgAaQBjAGgAIABsAGkA
-# bQBpAHQAIABsAGkAYQBiAGkAbABpAHQAeQAgAGEAbgBkACAAYQByAGUAIABpAG4A
-# YwBvAHIAcABvAHIAYQB0AGUAZAAgAGgAZQByAGUAaQBuACAAYgB5ACAAcgBlAGYA
-# ZQByAGUAbgBjAGUALjAfBgNVHSMEGDAWgBQVABIrE5iymQftHt+ivlcNK2cCzTAd
-# BgNVHQ4EFgQUJqoP9EMNo5gXpV8S9PiSjqnkhDQwdwYIKwYBBQUHAQEEazBpMCQG
-# CCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wQQYIKwYBBQUHMAKG
-# NWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENB
-# LTEuY3J0MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNv
-# bS9EaWdpQ2VydEFzc3VyZWRJRENBLTEuY3JsMDigNqA0hjJodHRwOi8vY3JsNC5k
-# aWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURDQS0xLmNybDANBgkqhkiG9w0B
-# AQUFAAOCAQEAvCT5g9lmKeYy6GdDbzfLaXlHl4tifmnDitXp13GcjqH52v4k498m
-# bK/g0s0vxJ8yYdB2zERcy+WPvXhnhhPiummK15cnfj2EE1YzDr992ekBaoxuvz/P
-# MZivhUgRXB+7ycJvKsrFxZUSDFM4GS+1lwp+hrOVPNxBZqWZyZVXrYq0xWzxFjOb
-# vvA8rWBrH0YPdskbgkNe3R2oNWZtNV8hcTOgHArLRWmJmaX05mCs7ksBKGyRlK+/
-# +fLFWOptzeUAtDnjsEWFuzG2wym3BFDg7gbFFOlvzmv8m7wkfR2H3aiObVCUNeZ8
-# AB4TB5nkYujEj7p75UsZu62Y9rXC8YkgGDCCBpswggWDoAMCAQICEAoVPQh11uMo
-# zhH2mVCPvBEwDQYJKoZIhvcNAQEFBQAwbzELMAkGA1UEBhMCVVMxFTATBgNVBAoT
-# DERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEuMCwGA1UE
-# AxMlRGlnaUNlcnQgQXNzdXJlZCBJRCBDb2RlIFNpZ25pbmcgQ0EtMTAeFw0xMjA5
-# MTEwMDAwMDBaFw0xMzA5MTgxMjAwMDBaMGcxCzAJBgNVBAYTAlVTMQswCQYDVQQI
-# EwJDTzEVMBMGA1UEBxMMRm9ydCBDb2xsaW5zMRkwFwYDVQQKExA2TDYgU29mdHdh
-# cmUgTExDMRkwFwYDVQQDExA2TDYgU29mdHdhcmUgTExDMIIBIjANBgkqhkiG9w0B
-# AQEFAAOCAQ8AMIIBCgKCAQEAvtSuQar5tMsJw1RaGhLz9ECpar95hZ4d0dHivIK2
-# maFz8QQeSJbqQbouzWJWfgvncWIhfZs9wyJjCdHbW7xVSmK/GPI+mfTky66lP99W
-# dfV6gY0WkBYkFvzTQ0s/P9+qS1PEfAb8CFZYx3Ti8GVSUVSS87/TZm1SS+lnCg4m
-# Rlp+BM9FDaK8IA/UjUjl277qmVnfvB35ey4I81421hsl5uJsZ5ZB+C9PFvkIzhR4
-# Eo7o7R13Erjiryran/aJb77YgjRueC+EZ8rCx+kDq5TsLAzYZQwfgaKXpFlvXdiF
-# vdFD6Hf6j4QonmtwG1RDYS5Vp1O/d2y/aunhKW3Wr94kywIDAQABo4IDOTCCAzUw
-# HwYDVR0jBBgwFoAUe2jOKarAF75JeuHlP9an90WPNTIwHQYDVR0OBBYEFPNABKbs
-# Aid4soPC5f6eM7TdDs50MA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
-# BQcDAzBzBgNVHR8EbDBqMDOgMaAvhi1odHRwOi8vY3JsMy5kaWdpY2VydC5jb20v
-# YXNzdXJlZC1jcy0yMDExYS5jcmwwM6AxoC+GLWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0
-# LmNvbS9hc3N1cmVkLWNzLTIwMTFhLmNybDCCAcQGA1UdIASCAbswggG3MIIBswYJ
-# YIZIAYb9bAMBMIIBpDA6BggrBgEFBQcCARYuaHR0cDovL3d3dy5kaWdpY2VydC5j
-# b20vc3NsLWNwcy1yZXBvc2l0b3J5Lmh0bTCCAWQGCCsGAQUFBwICMIIBVh6CAVIA
-# QQBuAHkAIAB1AHMAZQAgAG8AZgAgAHQAaABpAHMAIABDAGUAcgB0AGkAZgBpAGMA
-# YQB0AGUAIABjAG8AbgBzAHQAaQB0AHUAdABlAHMAIABhAGMAYwBlAHAAdABhAG4A
-# YwBlACAAbwBmACAAdABoAGUAIABEAGkAZwBpAEMAZQByAHQAIABDAFAALwBDAFAA
-# UwAgAGEAbgBkACAAdABoAGUAIABSAGUAbAB5AGkAbgBnACAAUABhAHIAdAB5ACAA
-# QQBnAHIAZQBlAG0AZQBuAHQAIAB3AGgAaQBjAGgAIABsAGkAbQBpAHQAIABsAGkA
-# YQBiAGkAbABpAHQAeQAgAGEAbgBkACAAYQByAGUAIABpAG4AYwBvAHIAcABvAHIA
-# YQB0AGUAZAAgAGgAZQByAGUAaQBuACAAYgB5ACAAcgBlAGYAZQByAGUAbgBjAGUA
-# LjCBggYIKwYBBQUHAQEEdjB0MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdp
-# Y2VydC5jb20wTAYIKwYBBQUHMAKGQGh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNv
-# bS9EaWdpQ2VydEFzc3VyZWRJRENvZGVTaWduaW5nQ0EtMS5jcnQwDAYDVR0TAQH/
-# BAIwADANBgkqhkiG9w0BAQUFAAOCAQEAIK6UA1qKXKbv5fphePINxEahQyZCLaFY
-# OO+Q2jcrnrXofOGqZOLz/M33cJErAOyZQvKANOKybsMlpzmkQpP8jJsNRXuDmEOl
-# bilUkwssxSTHeLfKgfRbB5RMi7RhvWyzhoC+FELHI+99VDJAQzWYwokAsSHohUPj
-# QsEn6sI2ITvxOKgZKurzzFTmFberEA55RoszUKRcP9E0aW6L94ysSpVmzcJxY8ZE
-# ny91ACmlHCSzxjrON/nlikzFtDTRlLr//dAm/XPXNlpEA1gIqS4zqUapRyFP/VhW
-# NgHsjMdwIHpRAgpLPkvobG+TMHobi2IqkzSt5SrrDVcaH7t+RpKlLTCCBqAwggWI
-# oAMCAQICEAf0c2+v70CKH2ZA8mXRCsEwDQYJKoZIhvcNAQEFBQAwZTELMAkGA1UE
-# BhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3LmRpZ2lj
-# ZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNlcnQgQXNzdXJlZCBJRCBSb290IENBMB4X
-# DTExMDIxMDEyMDAwMFoXDTI2MDIxMDEyMDAwMFowbzELMAkGA1UEBhMCVVMxFTAT
-# BgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEu
-# MCwGA1UEAxMlRGlnaUNlcnQgQXNzdXJlZCBJRCBDb2RlIFNpZ25pbmcgQ0EtMTCC
-# ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJx8+aCPCsqJS1OaPOwZIn8M
-# y/dIRNA/Im6aT/rO38bTJJH/qFKT53L48UaGlMWrF/R4f8t6vpAmHHxTL+WD57tq
-# BSjMoBcRSxgg87e98tzLuIZARR9P+TmY0zvrb2mkXAEusWbpprjcBt6ujWL+RCeC
-# qQPD/uYmC5NJceU4bU7+gFxnd7XVb2ZklGu7iElo2NH0fiHB5sUeyeCWuAmV+Uue
-# rswxvWpaQqfEBUd9YCvZoV29+1aT7xv8cvnfPjL93SosMkbaXmO80LjLTBA1/FBf
-# rENEfP6ERFC0jCo9dAz0eotyS+BWtRO2Y+k/Tkkj5wYW8CWrAfgoQebH1GQ7XasC
-# AwEAAaOCA0AwggM8MA4GA1UdDwEB/wQEAwIBBjATBgNVHSUEDDAKBggrBgEFBQcD
-# AzCCAcMGA1UdIASCAbowggG2MIIBsgYIYIZIAYb9bAMwggGkMDoGCCsGAQUFBwIB
-# Fi5odHRwOi8vd3d3LmRpZ2ljZXJ0LmNvbS9zc2wtY3BzLXJlcG9zaXRvcnkuaHRt
-# MIIBZAYIKwYBBQUHAgIwggFWHoIBUgBBAG4AeQAgAHUAcwBlACAAbwBmACAAdABo
-# AGkAcwAgAEMAZQByAHQAaQBmAGkAYwBhAHQAZQAgAGMAbwBuAHMAdABpAHQAdQB0
-# AGUAcwAgAGEAYwBjAGUAcAB0AGEAbgBjAGUAIABvAGYAIAB0AGgAZQAgAEQAaQBn
-# AGkAQwBlAHIAdAAgAEMAUAAvAEMAUABTACAAYQBuAGQAIAB0AGgAZQAgAFIAZQBs
-# AHkAaQBuAGcAIABQAGEAcgB0AHkAIABBAGcAcgBlAGUAbQBlAG4AdAAgAHcAaABp
-# AGMAaAAgAGwAaQBtAGkAdAAgAGwAaQBhAGIAaQBsAGkAdAB5ACAAYQBuAGQAIABh
-# AHIAZQAgAGkAbgBjAG8AcgBwAG8AcgBhAHQAZQBkACAAaABlAHIAZQBpAG4AIABi
-# AHkAIAByAGUAZgBlAHIAZQBuAGMAZQAuMA8GA1UdEwEB/wQFMAMBAf8weQYIKwYB
-# BQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20w
-# QwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2Vy
-# dEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1UdHwR6MHgwOqA4oDaGNGh0dHA6Ly9j
-# cmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwOqA4
-# oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJv
-# b3RDQS5jcmwwHQYDVR0OBBYEFHtozimqwBe+SXrh5T/Wp/dFjzUyMB8GA1UdIwQY
-# MBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0GCSqGSIb3DQEBBQUAA4IBAQCPJ3L2
-# XadkkG25JWDGsBetHvmd7qFQgoTHKlU1rBhCuzbY3lPwkie/M1WvSlq4OA3r9OQ4
-# DY38RegRPAw1V69KXHlBV94JpA8RkxA6fG40gz3xb/l0H4sRKsqbsO/TgJJEQ9El
-# yTkyITHnKYLKxEGIyAeBp/1bIRd+HbqpY2jIctHil1lyQubYp7a6sy7JZK2TwuHl
-# eKm36bs9MZKa3pGJJgoLXj5Oz2HrWmxkBT57q3+mWN0elcdeW8phnTR1pOUHSPhM
-# 0k88EjW7XxFljf1yueiXIKUxh77LAx/LAzlu97I7OJV9cEW4VvWAcoEETIBzoK0t
-# OfUCyOSF1TskL7NsMIIGzTCCBbWgAwIBAgIQBv35A5YDreoACus/J7u6GzANBgkq
-# hkiG9w0BAQUFADBlMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5j
-# MRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMSQwIgYDVQQDExtEaWdpQ2VydCBB
-# c3N1cmVkIElEIFJvb3QgQ0EwHhcNMDYxMTEwMDAwMDAwWhcNMjExMTEwMDAwMDAw
-# WjBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQL
-# ExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBBc3N1cmVkIElE
-# IENBLTEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDogi2Z+crCQpWl
-# gHNAcNKeVlRcqcTSQQaPyTP8TUWRXIGf7Syc+BZZ3561JBXCmLm0d0ncicQK2q/L
-# XmvtrbBxMevPOkAMRk2T7It6NggDqww0/hhJgv7HxzFIgHweog+SDlDJxofrNj/Y
-# MMP/pvf7os1vcyP+rFYFkPAyIRaJxnCI+QWXfaPHQ90C6Ds97bFBo+0/vtuVSMTu
-# HrPyvAwrmdDGXRJCgeGDboJzPyZLFJCuWWYKxI2+0s4Grq2Eb0iEm09AufFM8q+Y
-# +/bOQF1c9qjxL6/siSLyaxhlscFzrdfx2M8eCnRcQrhofrfVdwonVnwPYqQ/MhRg
-# lf0HBKIJAgMBAAGjggN6MIIDdjAOBgNVHQ8BAf8EBAMCAYYwOwYDVR0lBDQwMgYI
-# KwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMI
-# MIIB0gYDVR0gBIIByTCCAcUwggG0BgpghkgBhv1sAAEEMIIBpDA6BggrBgEFBQcC
-# ARYuaHR0cDovL3d3dy5kaWdpY2VydC5jb20vc3NsLWNwcy1yZXBvc2l0b3J5Lmh0
-# bTCCAWQGCCsGAQUFBwICMIIBVh6CAVIAQQBuAHkAIAB1AHMAZQAgAG8AZgAgAHQA
-# aABpAHMAIABDAGUAcgB0AGkAZgBpAGMAYQB0AGUAIABjAG8AbgBzAHQAaQB0AHUA
-# dABlAHMAIABhAGMAYwBlAHAAdABhAG4AYwBlACAAbwBmACAAdABoAGUAIABEAGkA
-# ZwBpAEMAZQByAHQAIABDAFAALwBDAFAAUwAgAGEAbgBkACAAdABoAGUAIABSAGUA
-# bAB5AGkAbgBnACAAUABhAHIAdAB5ACAAQQBnAHIAZQBlAG0AZQBuAHQAIAB3AGgA
-# aQBjAGgAIABsAGkAbQBpAHQAIABsAGkAYQBiAGkAbABpAHQAeQAgAGEAbgBkACAA
-# YQByAGUAIABpAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgAGgAZQByAGUAaQBuACAA
-# YgB5ACAAcgBlAGYAZQByAGUAbgBjAGUALjALBglghkgBhv1sAxUwEgYDVR0TAQH/
-# BAgwBgEB/wIBADB5BggrBgEFBQcBAQRtMGswJAYIKwYBBQUHMAGGGGh0dHA6Ly9v
-# Y3NwLmRpZ2ljZXJ0LmNvbTBDBggrBgEFBQcwAoY3aHR0cDovL2NhY2VydHMuZGln
-# aWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEUm9vdENBLmNydDCBgQYDVR0fBHow
-# eDA6oDigNoY0aHR0cDovL2NybDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJl
-# ZElEUm9vdENBLmNybDA6oDigNoY0aHR0cDovL2NybDQuZGlnaWNlcnQuY29tL0Rp
-# Z2lDZXJ0QXNzdXJlZElEUm9vdENBLmNybDAdBgNVHQ4EFgQUFQASKxOYspkH7R7f
-# or5XDStnAs0wHwYDVR0jBBgwFoAUReuir/SSy4IxLVGLp6chnfNtyA8wDQYJKoZI
-# hvcNAQEFBQADggEBAEZQPsm3KCSnOB22WymvUs9S6TFHq1Zce9UNC0Gz7+x1H3Q4
-# 8rJcYaKclcNQ5IK5I9G6OoZyrTh4rHVdFxc0ckeFlFbR67s2hHfMJKXzBBlVqefj
-# 56tizfuLLZDCwNK1lL1eT7EF0g49GqkUW6aGMWKoqDPkmzmnxPXOHXh2lCVz5Cqr
-# z5x2S+1fwksW5EtwTACJHvzFebxMElf+X+EevAJdqP77BzhPDcZdkbkPZ0XN1oPt
-# 55INjbFpjE/7WeAjD9KqrgB87pxCDs+R1ye3Fu4Pw718CqDuLAhVhSK46xgaTfwq
-# Ia1JMYNHlXdx3LEbS0scEJx3FMGdTy9alQgpECYxggQ4MIIENAIBATCBgzBvMQsw
-# CQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cu
-# ZGlnaWNlcnQuY29tMS4wLAYDVQQDEyVEaWdpQ2VydCBBc3N1cmVkIElEIENvZGUg
-# U2lnbmluZyBDQS0xAhAKFT0IddbjKM4R9plQj7wRMAkGBSsOAwIaBQCgeDAYBgor
-# BgEEAYI3AgEMMQowCKACgAChAoAAMBkGCSqGSIb3DQEJAzEMBgorBgEEAYI3AgEE
-# MBwGCisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBSp
-# 8hyPXTNAv48aFovoF8pXIufAYjANBgkqhkiG9w0BAQEFAASCAQA/BrM8YDLAOhDf
-# H9yREk96A1yn/YGttrTTA8qrKelaBC6V0uCK3bIfrZIC+vz+XUg0TaFnoZy0dL5V
-# ChgGbuX73+KWk//ydAc0Vkm0tW9ifkRAsgxhp8z4PmzCcBGppjDJQ2zyJ7qxxxvz
-# tqR6jkJX5TwS3ZmVz5AtjE0tuVBObu3gr3k4Rlr0PqZcQSNc+EYfgZ7nagyha6j8
-# oQsiMuIRt215UaY9lNYKkgvwbVHIS8ZFtLSW6sgXhUCL/3h2loNzXYs3c7siBhQI
-# olP9gVTcqkVkACOpbZ5LZbNQfDqvSOStAO4O+yDg2dS5njiZV7MixFFv6VnaZmxR
-# mIKpKLY2oYICDzCCAgsGCSqGSIb3DQEJBjGCAfwwggH4AgEBMHYwYjELMAkGA1UE
-# BhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3LmRpZ2lj
-# ZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJlZCBJRCBDQS0xAhADi5bw
-# cNniHlWlQmeS4cg6MAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcN
-# AQcBMBwGCSqGSIb3DQEJBTEPFw0xMjEwMjEwMTUyNTRaMCMGCSqGSIb3DQEJBDEW
-# BBTKojIFUucRYzhLerWZJNie55tD/zANBgkqhkiG9w0BAQEFAASCAQBD3AFxKTem
-# h8zjNnrGOFkV9whvSXk0Pz3jdXGq+z2uOXK156FIyYiIkGPavdIHjMosiU5jeP6V
-# QzJxSigPK1Rx5jfrgJgkqwzhMywJqheWX2/k90Sb8Iyle2nK1Lsf0XQzvY4saDsI
-# V/akca3ymldNwpOWEP+iMtZYISz8GfJT3KpTDjl9+tZUelV7K+lm10OWuCm386iS
-# ANwoKYkBkCguDVXpzco1F1N8PFZHr4ssn/F2nwoJFrOACbJKDfRIAw0/G8frv41D
-# lO4YE8/J9tYyWLuejsen/+TZ1LBq9F4nN5UKC6T7zgfx6hqiJJWqebN2ZH6RC6cX
-# 9ktf+YRNI1Jy
+# AQC6aUqBTW+lFBaqis1nvku/xmmPWBzgeegenVgmmNpc1Hyj+dsrjBI2w/z5ZAax
+# u8KomAoXDeGV60C065ZtmL+mj3nPvIqSe22cGAZR2KUYUzIBJxlh6IRB38bw6Mr+
+# d61f2J57jGBvhVxGvWvnD4DO5wPDfDHPt2VVxvvgmQjkc1r7l9rQTL60tsYPfyaS
+# qbj8OO605DqkSNBM6qlGJ1vPkhGTnBan/tKtHyLFHqzBce+8StsBCUTfmBwtZ7qo
+# igMzyVG19wJNCaRN/oBexddFw30IqgEzzDPYTzAW5P8iMi7rfjvw+R4y65Ul0vL+
+# bVSEutXl1NHdG6+9WXuUhTABAgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
+# DAYDVR0TAQH/BAIwADAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDCCAb8GA1UdIASC
+# AbYwggGyMIIBoQYJYIZIAYb9bAcBMIIBkjAoBggrBgEFBQcCARYcaHR0cHM6Ly93
+# d3cuZGlnaWNlcnQuY29tL0NQUzCCAWQGCCsGAQUFBwICMIIBVh6CAVIAQQBuAHkA
+# IAB1AHMAZQAgAG8AZgAgAHQAaABpAHMAIABDAGUAcgB0AGkAZgBpAGMAYQB0AGUA
+# IABjAG8AbgBzAHQAaQB0AHUAdABlAHMAIABhAGMAYwBlAHAAdABhAG4AYwBlACAA
+# bwBmACAAdABoAGUAIABEAGkAZwBpAEMAZQByAHQAIABDAFAALwBDAFAAUwAgAGEA
+# bgBkACAAdABoAGUAIABSAGUAbAB5AGkAbgBnACAAUABhAHIAdAB5ACAAQQBnAHIA
+# ZQBlAG0AZQBuAHQAIAB3AGgAaQBjAGgAIABsAGkAbQBpAHQAIABsAGkAYQBiAGkA
+# bABpAHQAeQAgAGEAbgBkACAAYQByAGUAIABpAG4AYwBvAHIAcABvAHIAYQB0AGUA
+# ZAAgAGgAZQByAGUAaQBuACAAYgB5ACAAcgBlAGYAZQByAGUAbgBjAGUALjALBglg
+# hkgBhv1sAxUwHwYDVR0jBBgwFoAUFQASKxOYspkH7R7for5XDStnAs0wHQYDVR0O
+# BBYEFGMvyd95knu1I8q74aTuM37j4p36MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
+# Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEuY3JsMDig
+# NqA0hjJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURD
+# QS0xLmNybDB3BggrBgEFBQcBAQRrMGkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
+# LmRpZ2ljZXJ0LmNvbTBBBggrBgEFBQcwAoY1aHR0cDovL2NhY2VydHMuZGlnaWNl
+# cnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcnQwDQYJKoZIhvcNAQEFBQAD
+# ggEBAKt0vUAATHYVJVc90xwD/31FyEUSZucoZWDY3zuz+g3BrDOP9IG5YfGd+5hV
+# 195HQ7qAPfFIzD9nMFYfzvTQTIS9h6SexeEPqAZd0C9uXtwZ6PCH6uBOrz1sII5z
+# b37WhxjghtOa/J7qjHLpQQ+4cbU4LPgpstUcop0b7F8quNw3IOHLu/DQbGyls8uf
+# SvZU4yY0PS64wSsct/bDPf7RLR5Q9JTI+P3uc9tJtRv09f+lkME5FBvY7XEbapj7
+# +kCaRKkpDlVeeLi3pIPDcAHwZkDlrnk04StNA6Et5ttUYhjt1QmLoqrWDMhPGr6Z
+# JXhpmYnUWYne34jw02dedKWdpkQwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
+# ucecMA0GCSqGSIb3DQEBBQUAMG8xCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdp
+# Q2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xLjAsBgNVBAMTJURp
+# Z2lDZXJ0IEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBLTEwHhcNMTMwOTEwMDAw
+# MDAwWhcNMTYwOTE0MTIwMDAwWjBnMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ08x
+# FTATBgNVBAcTDEZvcnQgQ29sbGluczEZMBcGA1UEChMQNkw2IFNvZnR3YXJlIExM
+# QzEZMBcGA1UEAxMQNkw2IFNvZnR3YXJlIExMQzCCASIwDQYJKoZIhvcNAQEBBQAD
+# ggEPADCCAQoCggEBAI/YYNDd/Aw4AcjlGyyL+qjbxgXi1x6uw7Qmsjst/Z1yx0ES
+# BQb29HmGeka3achcbRPgmBTt3Jn6427FDhvKOXhk7dPJ2mFxfv3NACa+Knvq/sz9
+# xClrULvhpyOba8lOgXm5A9zWWBmUgYISVYz0jiS+/jl8x3yEEzplkTYrDsaiFiA0
+# 9HSpKCqvdnhBjIL6MGJeS13rFXjlY5KlfwPJAV5txn4WM8/6cjGRDa550Cg7dygd
+# SyDv7oDH7+AFqKakiE6Z+4yuBGhWQEBFnL9MZvlp3hkGK6Wlqy0Dfg3qkgqggcGx
+# MS+CpdbfXF+pdCbSpuYu4FrCuDb+ae1TbyTiTBECAwEAAaOCAzkwggM1MB8GA1Ud
+# IwQYMBaAFHtozimqwBe+SXrh5T/Wp/dFjzUyMB0GA1UdDgQWBBTpFzY/nfuGUb9f
+# L83BlRNclRNsizAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMw
+# cwYDVR0fBGwwajAzoDGgL4YtaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL2Fzc3Vy
+# ZWQtY3MtMjAxMWEuY3JsMDOgMaAvhi1odHRwOi8vY3JsNC5kaWdpY2VydC5jb20v
+# YXNzdXJlZC1jcy0yMDExYS5jcmwwggHEBgNVHSAEggG7MIIBtzCCAbMGCWCGSAGG
+# /WwDATCCAaQwOgYIKwYBBQUHAgEWLmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3Nz
+# bC1jcHMtcmVwb3NpdG9yeS5odG0wggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5
+# ACAAdQBzAGUAIABvAGYAIAB0AGgAaQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABl
+# ACAAYwBvAG4AcwB0AGkAdAB1AHQAZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAg
+# AG8AZgAgAHQAaABlACAARABpAGcAaQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABh
+# AG4AZAAgAHQAaABlACAAUgBlAGwAeQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwBy
+# AGUAZQBtAGUAbgB0ACAAdwBoAGkAYwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBp
+# AGwAaQB0AHkAIABhAG4AZAAgAGEAcgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABl
+# AGQAIABoAGUAcgBlAGkAbgAgAGIAeQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wgYIG
+# CCsGAQUFBwEBBHYwdDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQu
+# Y29tMEwGCCsGAQUFBzAChkBodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGln
+# aUNlcnRBc3N1cmVkSURDb2RlU2lnbmluZ0NBLTEuY3J0MAwGA1UdEwEB/wQCMAAw
+# DQYJKoZIhvcNAQEFBQADggEBAANu3/2PhW9plSTLJBR7SZBv4XqKxMzAJOw9GzNB
+# uj4ihsyn/cRt1HV/ey7J9vM2mKZ5dZhU6rpb/cRnnKzEHDSSYnaogUDWbnBAw43P
+# 6q6T9xKktrCpWhZRqbCRquix/VZN4dphqkdwpS//b/YnKnHi2da3MB1GqzQw6PQd
+# mCWGHm+/CZWWI6GWZxdnRrDSkpMbkPYwdupQMVFFqQWWl/vJddLSM6bim0GD/XlU
+# sz8hvYdOnOUT9g8+I3SegouqnrAOqu9Yj046iM29/6tkwyOCOKKeVl+uulpXnJRi
+# nRkpczbl0OMMmIakVF1OTG/A/g2PPd6Xp4NDAWIKnsCdh64wggajMIIFi6ADAgEC
+# AhAPqEkGFdcAoL4hdv3F7G29MA0GCSqGSIb3DQEBBQUAMGUxCzAJBgNVBAYTAlVT
+# MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j
+# b20xJDAiBgNVBAMTG0RpZ2lDZXJ0IEFzc3VyZWQgSUQgUm9vdCBDQTAeFw0xMTAy
+# MTExMjAwMDBaFw0yNjAyMTAxMjAwMDBaMG8xCzAJBgNVBAYTAlVTMRUwEwYDVQQK
+# EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xLjAsBgNV
+# BAMTJURpZ2lDZXJ0IEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBLTEwggEiMA0G
+# CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcfPmgjwrKiUtTmjzsGSJ/DMv3SETQ
+# PyJumk/6zt/G0ySR/6hSk+dy+PFGhpTFqxf0eH/Ler6QJhx8Uy/lg+e7agUozKAX
+# EUsYIPO3vfLcy7iGQEUfT/k5mNM7629ppFwBLrFm6aa43Abero1i/kQngqkDw/7m
+# JguTSXHlOG1O/oBcZ3e11W9mZJRru4hJaNjR9H4hwebFHsnglrgJlflLnq7MMb1q
+# WkKnxAVHfWAr2aFdvftWk+8b/HL53z4y/d0qLDJG2l5jvNC4y0wQNfxQX6xDRHz+
+# hERQtIwqPXQM9HqLckvgVrUTtmPpP05JI+cGFvAlqwH4KEHmx9RkO12rAgMBAAGj
+# ggNDMIIDPzAOBgNVHQ8BAf8EBAMCAYYwEwYDVR0lBAwwCgYIKwYBBQUHAwMwggHD
+# BgNVHSAEggG6MIIBtjCCAbIGCGCGSAGG/WwDMIIBpDA6BggrBgEFBQcCARYuaHR0
+# cDovL3d3dy5kaWdpY2VydC5jb20vc3NsLWNwcy1yZXBvc2l0b3J5Lmh0bTCCAWQG
+# CCsGAQUFBwICMIIBVh6CAVIAQQBuAHkAIAB1AHMAZQAgAG8AZgAgAHQAaABpAHMA
+# IABDAGUAcgB0AGkAZgBpAGMAYQB0AGUAIABjAG8AbgBzAHQAaQB0AHUAdABlAHMA
+# IABhAGMAYwBlAHAAdABhAG4AYwBlACAAbwBmACAAdABoAGUAIABEAGkAZwBpAEMA
+# ZQByAHQAIABDAFAALwBDAFAAUwAgAGEAbgBkACAAdABoAGUAIABSAGUAbAB5AGkA
+# bgBnACAAUABhAHIAdAB5ACAAQQBnAHIAZQBlAG0AZQBuAHQAIAB3AGgAaQBjAGgA
+# IABsAGkAbQBpAHQAIABsAGkAYQBiAGkAbABpAHQAeQAgAGEAbgBkACAAYQByAGUA
+# IABpAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgAGgAZQByAGUAaQBuACAAYgB5ACAA
+# cgBlAGYAZQByAGUAbgBjAGUALjASBgNVHRMBAf8ECDAGAQH/AgEAMHkGCCsGAQUF
+# BwEBBG0wazAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEMG
+# CCsGAQUFBzAChjdodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRB
+# c3N1cmVkSURSb290Q0EuY3J0MIGBBgNVHR8EejB4MDqgOKA2hjRodHRwOi8vY3Js
+# My5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURSb290Q0EuY3JsMDqgOKA2
+# hjRodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURSb290
+# Q0EuY3JsMB0GA1UdDgQWBBR7aM4pqsAXvkl64eU/1qf3RY81MjAfBgNVHSMEGDAW
+# gBRF66Kv9JLLgjEtUYunpyGd823IDzANBgkqhkiG9w0BAQUFAAOCAQEAe3IdZP+I
+# yDrBt+nnqcSHu9uUkteQWTP6K4feqFuAJT8Tj5uDG3xDxOaM3zk+wxXssNo7ISV7
+# JMFyXbhHkYETRvqcP2pRON60Jcvwq9/FKAFUeRBGJNE4DyahYZBNur0o5j/xxKqb
+# 9to1U0/J8j3TbNwj7aqgTWcJ8zqAPTz7NkyQ53ak3fI6v1Y1L6JMZejg1NrRx8iR
+# ai0jTzc7GZQY1NWcEDzVsRwZ/4/Ia5ue+K6cmZZ40c2cURVbQiZyWo0KSiOSQOiG
+# 3iLCkzrUm2im3yl/Brk8Dr2fxIacgkdCcTKGCZlyCXlLnXFp9UH/fzl3ZPGEjb6L
+# HrJ9aKOlkLEM/zCCBs0wggW1oAMCAQICEAb9+QOWA63qAArrPye7uhswDQYJKoZI
+# hvcNAQEFBQAwZTELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZ
+# MBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNlcnQgQXNz
+# dXJlZCBJRCBSb290IENBMB4XDTA2MTExMDAwMDAwMFoXDTIxMTExMDAwMDAwMFow
+# YjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQ
+# d3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJlZCBJRCBD
+# QS0xMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6IItmfnKwkKVpYBz
+# QHDSnlZUXKnE0kEGj8kz/E1FkVyBn+0snPgWWd+etSQVwpi5tHdJ3InECtqvy15r
+# 7a2wcTHrzzpADEZNk+yLejYIA6sMNP4YSYL+x8cxSIB8HqIPkg5QycaH6zY/2DDD
+# /6b3+6LNb3Mj/qxWBZDwMiEWicZwiPkFl32jx0PdAug7Pe2xQaPtP77blUjE7h6z
+# 8rwMK5nQxl0SQoHhg26Ccz8mSxSQrllmCsSNvtLOBq6thG9IhJtPQLnxTPKvmPv2
+# zkBdXPao8S+v7Iki8msYZbHBc63X8djPHgp0XEK4aH631XcKJ1Z8D2KkPzIUYJX9
+# BwSiCQIDAQABo4IDejCCA3YwDgYDVR0PAQH/BAQDAgGGMDsGA1UdJQQ0MDIGCCsG
+# AQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwMGCCsGAQUFBwMEBggrBgEFBQcDCDCC
+# AdIGA1UdIASCAckwggHFMIIBtAYKYIZIAYb9bAABBDCCAaQwOgYIKwYBBQUHAgEW
+# Lmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3NzbC1jcHMtcmVwb3NpdG9yeS5odG0w
+# ggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5ACAAdQBzAGUAIABvAGYAIAB0AGgA
+# aQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABlACAAYwBvAG4AcwB0AGkAdAB1AHQA
+# ZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAgAG8AZgAgAHQAaABlACAARABpAGcA
+# aQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABhAG4AZAAgAHQAaABlACAAUgBlAGwA
+# eQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwByAGUAZQBtAGUAbgB0ACAAdwBoAGkA
+# YwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBpAGwAaQB0AHkAIABhAG4AZAAgAGEA
+# cgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABoAGUAcgBlAGkAbgAgAGIA
+# eQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wCwYJYIZIAYb9bAMVMBIGA1UdEwEB/wQI
+# MAYBAf8CAQAweQYIKwYBBQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRwOi8vb2Nz
+# cC5kaWdpY2VydC5jb20wQwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRzLmRpZ2lj
+# ZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1UdHwR6MHgw
+# OqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJ
+# RFJvb3RDQS5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdp
+# Q2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwHQYDVR0OBBYEFBUAEisTmLKZB+0e36K+
+# Vw0rZwLNMB8GA1UdIwQYMBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0GCSqGSIb3
+# DQEBBQUAA4IBAQBGUD7Jtygkpzgdtlspr1LPUukxR6tWXHvVDQtBs+/sdR90OPKy
+# XGGinJXDUOSCuSPRujqGcq04eKx1XRcXNHJHhZRW0eu7NoR3zCSl8wQZVann4+er
+# Ys37iy2QwsDStZS9Xk+xBdIOPRqpFFumhjFiqKgz5Js5p8T1zh14dpQlc+Qqq8+c
+# dkvtX8JLFuRLcEwAiR78xXm8TBJX/l/hHrwCXaj++wc4Tw3GXZG5D2dFzdaD7eeS
+# DY2xaYxP+1ngIw/Sqq4AfO6cQg7PkdcntxbuD8O9fAqg7iwIVYUiuOsYGk38KiGt
+# STGDR5V3cdyxG0tLHBCcdxTBnU8vWpUIKRAmMYIEODCCBDQCAQEwgYMwbzELMAkG
+# A1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3LmRp
+# Z2ljZXJ0LmNvbTEuMCwGA1UEAxMlRGlnaUNlcnQgQXNzdXJlZCBJRCBDb2RlIFNp
+# Z25pbmcgQ0EtMQIQCt5a3rIU5HYOFJEEvbnHnDAJBgUrDgMCGgUAoHgwGAYKKwYB
+# BAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAc
+# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU0DP/
+# aEG28GUqOc560rZ4p1BQjb4wDQYJKoZIhvcNAQEBBQAEggEAWU72y3SqI3t30Qat
+# EIaY+Vtudh3NJKiC5SDncCPH41q4T3V+ILK+pfDuyuB3R+UpqBwfz2/BrQq3IHKr
+# ExN7EtPxpmFARc1Z4LubRJpFb8VtB59vWo2UT2dvduNL8xWJ15jATcrsSpWeiVt/
+# xTdNb3wwU4I4TUqw9BwISOI+3I6k48FMCjgML4TFGKe+vfhP1MALwAsOF0GmWuSK
+# 4+hsxieiIIgfRNuUgyRE+ewLZs2pkPZSAMSW7ogLDy+iVH/hqTbEBuj92AMtSdLO
+# qhRC+58DaPd76CBjNlWOL8EStj4gZZA0FZNdA3RcaKqQGCr7nivffgnyjnIvshyX
+# oGTfFKGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
+# AlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2Vy
+# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQA5/t7ct5
+# W43tMgyJGfA2iTAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
+# ATAcBgkqhkiG9w0BCQUxDxcNMTMxMDE3MTQyNzQwWjAjBgkqhkiG9w0BCQQxFgQU
+# 6rsyWv07wtVgfh8yayIfSQ2K65IwDQYJKoZIhvcNAQEBBQAEggEAOLcwrK5cfiHj
+# O21o7u4J/5CplYXVbE21TIdP4EehapNr5iBFAORQQbs1vySOwVhHf041uzBULlkx
+# NnLPWRectfR4eK+duHKzgLfPPnBJjM7FPNOExU4Gd+YwyXf2GmuT8AU3ExRIE1aX
+# qHMA47iJ8bT70D567XA7s0i1PVAWMw2SF/KS+izOqJJKfJvacHS+C3d265gUDNU1
+# 8u6Z3c3yNAMRci5u+nqXagu0fqYUTO4BZDXdidIzjmruYxHV2uIygJfZQy95W+DU
+# NpQGtw28qDpxqmlfaZz73I6K8skMag+81sRtFYe70kOwunMBfwkxC5uDKQcvtLYC
+# WbX7j/6mXg==
 # SIG # End signature block

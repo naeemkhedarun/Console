@@ -54,12 +54,8 @@ _checkForInstall    "Windows Azure Powershell - *" `
                     "Windows Azure PowerShell" `
                     "https://github.com/WindowsAzure/azure-sdk-tools"
 
-_checkForFile       (Join-Path $InstallPath "Console\ConEmu\clink\clink.bat") `
-                    "Clink" `
-                    "https://code.google.com/p/clink/"
-
-#_checkForSnapin     "Microsoft.TeamFoundation.PowerShell" `
-#                    "Microsoft Team Foundation Server 2012 Power Tools" `
-#                    "http://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f"
+_checkForSnapin     "Microsoft.TeamFoundation.PowerShell" `
+                    "Visual Studio Team Foundation Server 2013 Power Tools" `
+                    "http://visualstudiogallery.msdn.microsoft.com/f017b10c-02b4-4d6d-9845-58a06545627f"
 
 return $allPreRequisitesMet

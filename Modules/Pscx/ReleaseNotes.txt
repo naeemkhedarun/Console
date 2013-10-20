@@ -1,8 +1,8 @@
-PowerShell Community Extensions 3.0 Release Notes
-Sept 15, 2012
+PowerShell Community Extensions 3.1 Release Notes
+October 18, 2013
 
-The primary purpose of the Pscx 3.0 release is to fully support Windows
-PowerShell V3.  This version of Pscx is compiled against .NET 4.0 and
+The primary purpose of the Pscx 3.1 release is to fully support Windows
+PowerShell V3 and V4.  This version of Pscx is compiled against .NET 4.0 and
 takes advantage of PowerShell V3 specific features.  This version of 
 Pscx WILL NOT RUN on PowerShell V2.  
 
@@ -20,7 +20,7 @@ ZIP packages downloaded from the PSCX CodePlex site have proven
 troublesome because many users forget to unblock the ZIP file before 
 extracting the contents.  
 
-Pscx 3.0 is now provided in an Authenticode signed MSI file.
+Pscx 3.1 is now provided in an Authenticode signed MSI file.
 Note: the WIX-based installer prepends the Pscx installation dir to the
 PSModulePath environment variable. This is required so that you can specify
 just the module name 'Pscx' when doing an Import-Module instead of having
@@ -32,7 +32,7 @@ next reboot.
 CODE SIGNED SCRIPTS
 
 All of the Pscx scripts including *.ps1, *.psm1 and *.ps1xml files have been
-code signed for both the 2.1 and 3.0 releases.  This means that you will be
+code signed for both the 2.1 and 3.1 releases.  This means that you will be
 able to run Pscx in a PowerShell session where ExecutionPolicy is set to 
 AllSigned.  You will be prompted to confirm if you want to run code from
 the untrusted publisher 6L6 Software LLC.  If you answer 'A' to always
@@ -41,14 +41,14 @@ execution of Pscx scripts.
 
 UPGRADING FROM EARLIER VERSIONS OF PSCX
 
-Pscx 3.0 does not automatically upgrade Pscx 2.1.  In fact, these two versions 
-of Pscx can live side-by-side.  NOTE: If you install Pscx 2.1 and 3.0 side-by-side,
+Pscx 3.1 does not automatically upgrade Pscx 2.1.  In fact, these two versions 
+of Pscx can live side-by-side.  NOTE: If you install Pscx 2.1 and 3.1 side-by-side,
 you will have to use the -RequiredVersion parameter on Import-Module in order to 
-load Pscx 3.0.  By default, PowerShell searches modules in the order specified by
+load Pscx 3.1.  By default, PowerShell searches modules in the order specified by
 the environment variable PSModuleLoadPath.  PowerShell automatically prepends the
 user's $home\Documents\WindowsPowerShell\Modules dir to this path so PowerShell
 will load Pscx 2.1, assuming you extracted it to your user Modules folder.  In 
-order to load Pscx 3.0 execute:
+order to load Pscx 3.1 execute:
 
 C:\PS> Import-Module Pscx -RequiredVersion 3.0.0.0
 
@@ -71,11 +71,23 @@ C:\PS> Import-Module Pscx -arg ~\Pscx.UserPreferences.ps1
 
 Pscx will now be imported with your preferences.
 
-WINDOWS EXPLORER CONTEXT MENU ITEM - "Open PowerShell Here"
+3.1.0.0 Release Notes:
+ 
+    PowerShell version checking bug fixed with WMI nested module.
+    Import-VisualStudioVars updated to add VS2013 support.
+    Get-Parameter updated to version 2.8 from PoshCode.org.
+    Get-FileTail updated to open file FileShare.Delete perm to allow the file
+        to be deleted while being tailed.
+    Invoke-Ternary / Invoke-NullCoalescing fixed to be able to access variables
+        in intermediate scopes.
+    New-Junction/Symlink/Hardlink - moved PSPath parameter alias from 
+        LiteralPath parameter to TargetPath parameter.  Path passed to 
+        LiteralPath can't exist so makes more sense for pipeline binding
+        DirectoryInfo objects to TargetPath.  You can now do 
+        Get-Item .\foodir | New-Junction foodirJunction.
+    Updated DigiCert digital certificates used for script and MSI signing.
 
-Since Pscx no longer uses an installer, if you want to enable the Windows 
-Explorer context menu item that opens a PowerShell prompt on any drive or 
-folder you will need to execute the Enable-OpenPowerShellHere command.
+3.0.0.0 Release Notes:
 
 NEW CMDLETS
     ConvertTo-Metric
