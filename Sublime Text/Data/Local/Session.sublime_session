@@ -89,6 +89,7 @@
 			},
 			"file_history":
 			[
+				"/D/Dropbox/Home/Documents/GitHub/Console/Modules/PsGet/PsGet.psm1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/Exports/Invoke-Superuser.ps1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Install/Install.bat",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/Profile.psm1",
@@ -215,8 +216,7 @@
 				"//asnav-tfsds-01/Drops_ASOS/Backbone-Juggernaut/Backbone-Juggernaut_1.0.13253.1/Packages/Version.xml",
 				"/D/Dropbox/Work/Desktop/readme.txt",
 				"/E/Sites/Deepbay.txt",
-				"/E/BMR.txt",
-				"/D/TFS/Release/Consumer/BuildAndDeploy/buildframework/framework/features/stopStart/stopStart.psm1"
+				"/E/BMR.txt"
 			],
 			"find":
 			{
@@ -416,6 +416,7 @@
 			},
 			"file_history":
 			[
+				"/D/Dropbox/Home/Documents/GitHub/Console/Modules/PsGet/PsGet.psm1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/Exports/Invoke-Superuser.ps1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Install/Install.bat",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/Profile.psm1",
@@ -542,8 +543,7 @@
 				"//asnav-tfsds-01/Drops_ASOS/Backbone-Juggernaut/Backbone-Juggernaut_1.0.13253.1/Packages/Version.xml",
 				"/D/Dropbox/Work/Desktop/readme.txt",
 				"/E/Sites/Deepbay.txt",
-				"/E/BMR.txt",
-				"/D/TFS/Release/Consumer/BuildAndDeploy/buildframework/framework/features/stopStart/stopStart.psm1"
+				"/E/BMR.txt"
 			],
 			"find":
 			{
@@ -652,7 +652,7 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0,2,3,-32000,-32000,-1,-1,728,0,0,1366",
+			"position": "0,2,3,-1,-1,-1,-1,728,0,0,1366",
 			"replace":
 			{
 				"height": 62.0

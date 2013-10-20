@@ -24,6 +24,8 @@ function Invoke-PowerShell
     If using PowerShell v3.0, you can *only* run script blocks under a `v4.0` CLR.  PowerShell converts script blocks to an encoded command, and when running encoded commands, PowerShell doesn't allow the `-Version` parameter for running PowerShell under a different version.  To run code under a .NET 2.0 CLR from PowerShell 3, use the `FilePath` parameter to run a specfic script.
     
     This function launches a PowerShell process that matches the architecture of the *operating system*.  On 64-bit operating systems, you can run under 32-bit PowerShell by specifying the `x86` switch).
+
+    PowerShell's execution policy has to be set seperately in all architectures (i.e. x86 and x64), so you may get an error message about script being disabled.  Use the `-ExecutionPolicy` parameter to set a temporary execution policy when running a script.
     
     .EXAMPLE
     Invoke-PowerShell -Command { $PSVersionTable }
@@ -46,6 +48,11 @@ function Invoke-PowerShell
     Runs the `Set-DotNetConnectionString.ps1` script with `ArgumentList` as arguments/parameters.
     
     Note that you have to double-quote any arguments with spaces.  Otherwise, the argument gets interpreted as multiple arguments.
+
+    .EXAMPLE
+    Invoke-PowerShell -FilePath Get-PsVersionTable.ps1 -x86 -ExecutionPolicy RemoteSigned
+
+    Shows how to run powershell.exe with a custom executin policy, in case the running of scripts is disabled.
     #>
     [CmdletBinding(DefaultParameterSetName='ScriptBlock')]
     param(
@@ -68,6 +75,11 @@ function Invoke-PowerShell
         [string]
         # Determines how output from the PowerShel command is formatted
         $OutputFormat,
+
+        [Parameter(ParameterSetName='FilePath')]
+        [Microsoft.PowerShell.ExecutionPolicy]
+        # The execution policy to use when running a script.  By default, execution policies are set to `Restricted`. If running an architecture of PowerShell whose execution policy isn't set, `Invoke-PowerShell` will fail.
+        $ExecutionPolicy,
         
         [Switch]
         # Run the x86 (32-bit) version of PowerShell, otherwise the version which matches the OS architecture is run, *regardless of the architecture of the currently running process*.
@@ -79,16 +91,24 @@ function Invoke-PowerShell
         $Runtime
     )
     
+    $powerShellv3Installed = Test-Path -Path HKLM:\SOFTWARE\Microsoft\PowerShell\3
     $currentRuntime = 'v{0}.0' -f $PSVersionTable.CLRVersion.Major
+    if( $powerShellv3Installed )
+    {
+        $currentRuntime = 'v4.0'
+    }
 
     if( -not $Runtime )
     {
         $Runtime = $currentRuntime
     }
 
-    if(  $PSCmdlet.ParameterSetName -eq 'ScriptBlock' -and $Runtime -eq 'v2.0' -and $PSVersionTable.PSVersion -ge '3.0' )
+    if(  $PSCmdlet.ParameterSetName -eq 'ScriptBlock' -and `
+         $Host.Name -eq 'Windows PowerShell ISE Host' -and `
+         $Runtime -eq 'v2.0' -and `
+         $powerShellv3Installed )
     {
-        Write-Error ('PowerShell v{0} can''t run script blocks under .NET {1}. Please save your script block into a file and re-run Invoke-PowerShell using the `FilePath` parameter.' -f `
+        Write-Error ('The PowerShell ISE v{0} can''t run script blocks under .NET {1}. Please run from the PowerShell console, or save your script block into a file and re-run Invoke-PowerShell using the `FilePath` parameter.' -f `
                         $PSVersionTable.PSVersion,$Runtime)
         return
     }
@@ -97,7 +117,7 @@ function Invoke-PowerShell
     $activationConfigDir = Join-Path $env:TEMP ([IO.Path]::GetRandomFileName())
     $activationConfigPath = Join-Path $activationConfigDir powershell.exe.activation_config
     $originalCOMAppConfigEnvVar = [Environment]::GetEnvironmentVariable( $comPlusAppConfigEnvVarName )
-    if( $currentRuntime -ne $Runtime )
+    if( -not $powerShellv3Installed -and $currentRuntime -ne $Runtime )
     {
         $null = New-Item -Path $activationConfigDir -ItemType Directory
         @"
@@ -124,19 +144,35 @@ function Invoke-PowerShell
         {
             $ArgumentList = @()
         }
-        $powerShellArgs = @( '-NoProfile', '-NoLogo' )
+        $powerShellArgs = @( )
+        if( $powerShellv3Installed -and $Runtime -eq 'v2.0' )
+        {
+            $powerShellArgs += '-Version'
+            $powerShellArgs += '2.0'
+        }
+
+        $powerShellArgs += '-NoProfile'
+
         if( $OutputFormat )
         {
             $powerShellArgs += '-OutputFormat'
             $powerShellArgs += $OutputFormat
         }
+
         if( $PSCmdlet.ParameterSetName -eq 'ScriptBlock' )
         {
             & $psPath $powerShellArgs -Command $ScriptBlock -Args $ArgumentList
         }
         else
         {
-            & $psPath $powerShellArgs -Command $FilePath $ArgumentList
+            if( $ExecutionPolicy )
+            {
+                $powerShellArgs += '-ExecutionPolicy'
+                $powerShellArgs += $ExecutionPolicy
+            }
+            Write-Verbose ('{0} {1} -Command {2} {3}' -f $psPath,($powerShellArgs -join " "),$FilePath,($ArgumentList -join ' '))
+            & $psPath $powerShellArgs -File $FilePath $ArgumentList
+            Write-Verbose ('LASTEXITCODE: {0}' -f $LASTEXITCODE)
         }
     }
     finally
