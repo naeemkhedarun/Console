@@ -89,6 +89,11 @@
 			},
 			"file_history":
 			[
+				"/D/Dropbox/Work/Documents/GitHub/Console/Sublime Text/Data/Local/Session.sublime_session",
+				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/TestBuildSecurityEnforcer/bin/Debug/TfsPermissionsEnforcer.log",
+				"/D/Dropbox/Work/Documents/WindowsPowerShell/profile.ps1",
+				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/Program/TfsPermissionsEnforcer.log",
+				"/D/Dropbox/Work/Documents/WindowsPowerShell/ProfileConfig.xml",
 				"/D/Dropbox/cmdlets/TFS/Get-DeploymentBuildSource.ps1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/Exports/TFS/Get-QueuedBuilds.ps1",
 				"/D/Dropbox/cmdlets/TFS/Get-BuildAgentTags.ps1",
@@ -210,13 +215,8 @@
 				"/E/Fent.txt",
 				"/D/New Text Document.txt",
 				"/D/Dropbox/Work/Desktop/Invoke-Deployment.ps1",
-				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/Program/TfsPermissionsEnforcer.log",
 				"/C/Program Files/Common Files/Modules/Asos.PoshUtilsFE/cmdlets/Invoke-Deployment.ps1",
-				"/D/Dropbox/Work/Desktop/BuildFramework-FE-AlmFE_1.0.13281.1/_DeploymentRuntime/buildframework/framework/extensions/PerformanceCounterCategories/PerformanceCounterCategories.psm1",
-				"//asnav-tfsds-01/Drops_ASOS/AlmFE-02Test-Deploy/AlmFE-02Test-Deploy_20131008.5/_Logs/asnav-web-pt2a.log",
-				"/D/Dropbox/Work/Documents/include.ps1",
-				"//asnav-tfsds-01/Drops_ASOS/AlmFE-02Test-Deploy/AlmFE-02Test-Deploy_20131008.5/_Logs/asnav-web-pt2a_deployRuntime.log",
-				"/D/Dropbox/Work/Desktop/todo.txt"
+				"/D/Dropbox/Work/Desktop/BuildFramework-FE-AlmFE_1.0.13281.1/_DeploymentRuntime/buildframework/framework/extensions/PerformanceCounterCategories/PerformanceCounterCategories.psm1"
 			],
 			"find":
 			{
@@ -235,6 +235,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"file_history",
 					"amd64",
 					"Invoke-BatchFile",
 					"visualstu",
@@ -416,6 +417,11 @@
 			},
 			"file_history":
 			[
+				"/D/Dropbox/Work/Documents/GitHub/Console/Sublime Text/Data/Local/Session.sublime_session",
+				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/TestBuildSecurityEnforcer/bin/Debug/TfsPermissionsEnforcer.log",
+				"/D/Dropbox/Work/Documents/WindowsPowerShell/profile.ps1",
+				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/Program/TfsPermissionsEnforcer.log",
+				"/D/Dropbox/Work/Documents/WindowsPowerShell/ProfileConfig.xml",
 				"/D/Dropbox/cmdlets/TFS/Get-DeploymentBuildSource.ps1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/Exports/TFS/Get-QueuedBuilds.ps1",
 				"/D/Dropbox/cmdlets/TFS/Get-BuildAgentTags.ps1",
@@ -537,13 +543,8 @@
 				"/E/Fent.txt",
 				"/D/New Text Document.txt",
 				"/D/Dropbox/Work/Desktop/Invoke-Deployment.ps1",
-				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/Program/TfsPermissionsEnforcer.log",
 				"/C/Program Files/Common Files/Modules/Asos.PoshUtilsFE/cmdlets/Invoke-Deployment.ps1",
-				"/D/Dropbox/Work/Desktop/BuildFramework-FE-AlmFE_1.0.13281.1/_DeploymentRuntime/buildframework/framework/extensions/PerformanceCounterCategories/PerformanceCounterCategories.psm1",
-				"//asnav-tfsds-01/Drops_ASOS/AlmFE-02Test-Deploy/AlmFE-02Test-Deploy_20131008.5/_Logs/asnav-web-pt2a.log",
-				"/D/Dropbox/Work/Documents/include.ps1",
-				"//asnav-tfsds-01/Drops_ASOS/AlmFE-02Test-Deploy/AlmFE-02Test-Deploy_20131008.5/_Logs/asnav-web-pt2a_deployRuntime.log",
-				"/D/Dropbox/Work/Desktop/todo.txt"
+				"/D/Dropbox/Work/Desktop/BuildFramework-FE-AlmFE_1.0.13281.1/_DeploymentRuntime/buildframework/framework/extensions/PerformanceCounterCategories/PerformanceCounterCategories.psm1"
 			],
 			"find":
 			{
@@ -562,6 +563,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"file_history",
 					"amd64",
 					"Invoke-BatchFile",
 					"visualstu",
@@ -652,7 +654,7 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0,2,3,-32000,-32000,-1,-1,728,0,0,1366",
+			"position": "0,2,3,-1,-1,-1,-1,728,0,0,1366",
 			"replace":
 			{
 				"height": 62.0
