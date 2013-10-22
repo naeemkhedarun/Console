@@ -1,6 +1,7 @@
 {
 	"folder_history":
 	[
+		"/D/Dropbox/Work/Documents/GitHub/Console/Profile/Exports",
 		"/D/Dropbox/Home/Documents/GitHub/Console/Profile",
 		"/D/Dropbox/Home/Documents/GitHub/Console/Sublime Text",
 		"/D/Dropbox/Home/Documents/GitHub/Console/Install",
@@ -13,7 +14,7 @@
 		"/D/Dropbox/Documents/GitHub/Console/Install"
 	],
 	"last_version": 3047,
-	"last_window_id": 10,
+	"last_window_id": 11,
 	"log_indexing": false,
 	"settings":
 	{
@@ -89,8 +90,27 @@
 			},
 			"file_history":
 			[
-				"/D/Dropbox/Work/Documents/GitHub/Console/Sublime Text/Data/Local/Session.sublime_session",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Content-AsosContent.log",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Profile/Configure/Import Visual Studio Vars.ps1",
+				"/D/TFS/Release/Consumer/DatabaseSolutions/Reporting/DataRoutingMonitoring/DataRoutingMonitoring.sqlproj",
+				"/C/Program Files (x86)/MSBuild/Microsoft/VisualStudio/v10.0/SSDT/Microsoft.Data.Tools.Schema.SqlTasks.targets",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Reporting-DataRoutingMonitoring.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Backoffice-AsosExternal.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Backoffice-MerretBackOffice.log",
+				"/C/Users/PaulM/AppData/Local/Temp/sql_SSDT_1000_20131022160900.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/compile-Asos.Web.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Backoffice-ProductManagement.log",
+				"/C/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.5/System.Deployment.xml",
+				"/C/Program Files/Common Files/Modules/Asos.PoshUtils/cmdlets/TFS/Get-BuildServer.ps1",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Install/Scripts/Mixed Platform/Console/Pin To Start And Taskbar.ps1",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Profile/Exports/Start-PowerShell.ps1",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Profile/Profile.psm1",
+				"/C/Program Files (x86)/Hewlett-Packard/SSM/SP42536.txt",
+				"/C/Program Files (x86)/Hewlett-Packard/SSM/test",
+				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2013 Ultimate/Plugins/Update Links.txt",
+				"/D/Dropbox/Work/Desktop/todo.txt",
 				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/TestBuildSecurityEnforcer/bin/Debug/TfsPermissionsEnforcer.log",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Sublime Text/Data/Local/Session.sublime_session",
 				"/D/Dropbox/Work/Documents/WindowsPowerShell/profile.ps1",
 				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/Program/TfsPermissionsEnforcer.log",
 				"/D/Dropbox/Work/Documents/WindowsPowerShell/ProfileConfig.xml",
@@ -164,7 +184,6 @@
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/InternalHelpers/New-ProfileConfig.ps1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/InternalHelpers/InternalHelpers.psm1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/InternalHelpers/Initialize-ProfileConfig.ps1",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2013 Ultimate/Plugins/Update Links.txt",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Console/ConEmu/Addons/CallPlugin.txt",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Console/ConEmu/clink/Readme.txt",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Install/Scripts/Mixed Platform/Console/Pin To Start And Taskbar.ps1",
@@ -198,25 +217,7 @@
 				"/E/Sites/SR - Dead.txt",
 				"/D/Dropbox/Home/Documents/Software/Installation Files/Procedure.txt",
 				"/D/nakasi-jwr66y/flash-all.bat",
-				"/C/Users/Paul/AppData/Local/Temp/7zOF81F.tmp/android-info.txt",
-				"/D/Dropbox/Home/Desktop/.EDU Email address",
-				"/G/General.txt",
-				"/D/Dropbox/Home/Desktop/router wifi key.txt",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2012 Ultimate/Disable all caps menu.reg",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2013 Ultimate/Disable all caps menu.reg",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2012 Ultimate/Setup.txt",
-				"/D/Dropbox/Documents/WindowsPowerShell/PowerTabConfig.xml",
-				"/D/Dropbox/Home/Documents/GitHub/Console/Console/ConEmuUpdate.info",
-				"/D/cmder/config/settings",
-				"/D/cmder/config/aliases",
-				"/D/Dropbox/Home/Desktop/SetAcl.ps1",
-				"/D/cmder/Cmder.bat",
-				"/D/cmder/Readme.md",
-				"/E/Fent.txt",
-				"/D/New Text Document.txt",
-				"/D/Dropbox/Work/Desktop/Invoke-Deployment.ps1",
-				"/C/Program Files/Common Files/Modules/Asos.PoshUtilsFE/cmdlets/Invoke-Deployment.ps1",
-				"/D/Dropbox/Work/Desktop/BuildFramework-FE-AlmFE_1.0.13281.1/_DeploymentRuntime/buildframework/framework/extensions/PerformanceCounterCategories/PerformanceCounterCategories.psm1"
+				"/C/Users/Paul/AppData/Local/Temp/7zOF81F.tmp/android-info.txt"
 			],
 			"find":
 			{
@@ -235,6 +236,10 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"error",
+					"Import",
+					"update",
+					"bios",
 					"file_history",
 					"amd64",
 					"Invoke-BatchFile",
@@ -417,8 +422,27 @@
 			},
 			"file_history":
 			[
-				"/D/Dropbox/Work/Documents/GitHub/Console/Sublime Text/Data/Local/Session.sublime_session",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Content-AsosContent.log",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Profile/Configure/Import Visual Studio Vars.ps1",
+				"/D/TFS/Release/Consumer/DatabaseSolutions/Reporting/DataRoutingMonitoring/DataRoutingMonitoring.sqlproj",
+				"/C/Program Files (x86)/MSBuild/Microsoft/VisualStudio/v10.0/SSDT/Microsoft.Data.Tools.Schema.SqlTasks.targets",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Reporting-DataRoutingMonitoring.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Backoffice-AsosExternal.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Backoffice-MerretBackOffice.log",
+				"/C/Users/PaulM/AppData/Local/Temp/sql_SSDT_1000_20131022160900.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/compile-Asos.Web.log",
+				"/D/TFS/Release/Consumer/BuildAndDeploy/Consumer/_buildOutputs/_Logs/solution-Backoffice-ProductManagement.log",
+				"/C/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.5/System.Deployment.xml",
+				"/C/Program Files/Common Files/Modules/Asos.PoshUtils/cmdlets/TFS/Get-BuildServer.ps1",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Install/Scripts/Mixed Platform/Console/Pin To Start And Taskbar.ps1",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Profile/Exports/Start-PowerShell.ps1",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Profile/Profile.psm1",
+				"/C/Program Files (x86)/Hewlett-Packard/SSM/SP42536.txt",
+				"/C/Program Files (x86)/Hewlett-Packard/SSM/test",
+				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2013 Ultimate/Plugins/Update Links.txt",
+				"/D/Dropbox/Work/Desktop/todo.txt",
 				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/TestBuildSecurityEnforcer/bin/Debug/TfsPermissionsEnforcer.log",
+				"/D/Dropbox/Work/Documents/GitHub/Console/Sublime Text/Data/Local/Session.sublime_session",
 				"/D/Dropbox/Work/Documents/WindowsPowerShell/profile.ps1",
 				"/D/Dropbox/Work/Desktop/TestBuildSecurityEnforcer/Program/TfsPermissionsEnforcer.log",
 				"/D/Dropbox/Work/Documents/WindowsPowerShell/ProfileConfig.xml",
@@ -492,7 +516,6 @@
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/InternalHelpers/New-ProfileConfig.ps1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/InternalHelpers/InternalHelpers.psm1",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Profile/InternalHelpers/Initialize-ProfileConfig.ps1",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2013 Ultimate/Plugins/Update Links.txt",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Console/ConEmu/Addons/CallPlugin.txt",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Console/ConEmu/clink/Readme.txt",
 				"/D/Dropbox/Home/Documents/GitHub/Console/Install/Scripts/Mixed Platform/Console/Pin To Start And Taskbar.ps1",
@@ -526,25 +549,7 @@
 				"/E/Sites/SR - Dead.txt",
 				"/D/Dropbox/Home/Documents/Software/Installation Files/Procedure.txt",
 				"/D/nakasi-jwr66y/flash-all.bat",
-				"/C/Users/Paul/AppData/Local/Temp/7zOF81F.tmp/android-info.txt",
-				"/D/Dropbox/Home/Desktop/.EDU Email address",
-				"/G/General.txt",
-				"/D/Dropbox/Home/Desktop/router wifi key.txt",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2012 Ultimate/Disable all caps menu.reg",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2013 Ultimate/Disable all caps menu.reg",
-				"/D/Dropbox/Home/Documents/Software/Installation Files/5. Secondary Apps/Development/Visual Studio 2012 Ultimate/Setup.txt",
-				"/D/Dropbox/Documents/WindowsPowerShell/PowerTabConfig.xml",
-				"/D/Dropbox/Home/Documents/GitHub/Console/Console/ConEmuUpdate.info",
-				"/D/cmder/config/settings",
-				"/D/cmder/config/aliases",
-				"/D/Dropbox/Home/Desktop/SetAcl.ps1",
-				"/D/cmder/Cmder.bat",
-				"/D/cmder/Readme.md",
-				"/E/Fent.txt",
-				"/D/New Text Document.txt",
-				"/D/Dropbox/Work/Desktop/Invoke-Deployment.ps1",
-				"/C/Program Files/Common Files/Modules/Asos.PoshUtilsFE/cmdlets/Invoke-Deployment.ps1",
-				"/D/Dropbox/Work/Desktop/BuildFramework-FE-AlmFE_1.0.13281.1/_DeploymentRuntime/buildframework/framework/extensions/PerformanceCounterCategories/PerformanceCounterCategories.psm1"
+				"/C/Users/Paul/AppData/Local/Temp/7zOF81F.tmp/android-info.txt"
 			],
 			"find":
 			{
@@ -563,6 +568,10 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"error",
+					"Import",
+					"update",
+					"bios",
 					"file_history",
 					"amd64",
 					"Invoke-BatchFile",
@@ -654,7 +663,7 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0,2,3,-1,-1,-1,-1,728,0,0,1366",
+			"position": "0,2,3,-32000,-32000,-1,-1,768,0,40,1366",
 			"replace":
 			{
 				"height": 62.0
@@ -696,7 +705,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 6
+			"window_id": 11
 		}
 	],
 	"workspaces":
