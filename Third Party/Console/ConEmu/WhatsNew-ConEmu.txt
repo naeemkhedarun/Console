@@ -15,6 +15,96 @@ http://code.google.com/p/conemu-maximus5/wiki/Awards
 *****************
 
 
+2013.10.26
+[+] Showing Task hotkeys in the start menu (Win+N, [+] drop down).
+[+] Task hotkeys may be configured on «Keys & Macro» settings page, too.
+[%] Regression. Changes in «Default terminal» hooked applications was ignored.
+[+] Shift+Home and Shift+End start text selection if «Start selection with Shift+Arrows» is enabled.
+[+] Trim trailing «.,;» from hyperlinks (Ctrl+LClick).
+
+
+2013.10.25
+[%] Issue 1304: Fail to Run history item from dropdown menu.
+[%] Issue 1298: ConEmu may crash when starting some incorrect tasks.
+[%] Issue 1269: Win+Left, Win+Right once more.
+[+] GuiMacro: SetOption("AlwaysOnTop",Value). Where Value: 2 - switch AlwaysOnTop, 1 - enable, 0 - disable.
+[%] Issue 675: When both "Reset selection on input" and "any key" are checked selection was dropped when Shift (e.g.) was released.
+[+] Issue 685: Allow using simple modifiers for text selection (Shift, Alt, Control).
+[+] Issue 836: Allow to set tasks hotkey.
+[+] Anyone still using WinXP? «Enter TEXT fullscreen mode, when available» hotkey is available.
+    This is a global hotkey, you may (try to) press it even if ConEmu has no focus.
+
+
+2013.10.20
+[%] Issue 1267: Chinese message of previous command crash.
+[%] Issue 1291: Python fails to print string sequence with ASCII character followed by Chinese character.
+[+] Issue 1292: While selection is active, Shift-Home/Shift-End keys extend selection to line begin/end.
+[%] Issue 1293: Regression. "-new_console:d:<path>" and whitespace in <path> = parser issue.
+[%] Issue 1289: Regression. No background image at start.
+
+
+2013.10.17
+[+] New switch "-new_console:W:Background" allows set background image per tab or split.
+    Option «Background image» must be enabled in main settings (main image path may be empty).
+[%] Regression. When prompting for password (-new_console:u:User) command field was not filled.
+[%] Internal changes of "-new_console" parser.
+[%] Minor internal changes in closing procedure.
+[+] About dialog, "-new_console" page was added. May be called from Tasks setup ('?' button in title bar and click on tasks edit field).
+[+] Issue 823: Shift+left mouse selection does not select above visible windows (has to scroll buffer up).
+
+
+2013.10.15
+[%] Environment variables are allowed in tab icon paths.
+[%] Issue 1275: ConEmu window was restored from TSA unexpectedly after RClick-Esc.
+[+] Menu item «Store history» in the create new console dialog (right-click on title bar).
+[*] Minor changes in «New console» dialog.
+[%] Environment export was not working in Far Manager. Example:
+    vcvarsall.bat x86 & ConEmuC /export=CON
+[%] Regression: crash of ConEmuC while expanding environment variables.
+
+
+2013.10.10
+[!] ConEmuC will expand environment variables before running commands.
+[*] Support PortableApps.com folder structure from the box. No need for explicit '/LoadCfgFile "%PAL:DataDir%\settings\ConEmu.xml"'.
+[%] Issue 1274: Hang on "cmd --new_console".
+[%] Switch "/icon" was ignored for startup task.
+[%] Trailing spaces was increased when used «Auto save/restore of opened tabs».
+[%] Issue 1275: When minimized into TSA and all VCon are closed we need to restore and run new tab.
+[+] New color scheme: "<Monokai>".
+[%] Issue 1277: Far Manager shows «DrawWND» in the window title instead of panel path.
+[%] Issue 1279: Copy to clipboard fails if "Plain text only" is the active option.
+[+] New environment variables "ConEmuDrive" and "ConEmuWorkDrive".
+
+
+2013.10.06
+[+] New option on «Startup» page: «Auto save/restore of opened tabs».
+[+] New environment variable "ConEmuWorkDir", it contains folder from where your shell was started.
+    User may use it when starting shell, with «ConEmu Here» feature for example:
+	"C:\Program Files\Far Manager\far.exe" "!ConEmuWorkDir!"
+[*] «Default terminal» settings are moved to own page. «Integration» page contains only «ConEmu Here» and «ConEmu Inside».
+[%] After unregistering «ConEmu Here» or «ConEmu Inside» item drop down was refreshed but not edit fields.
+[*] Issue 1269: More debug logging of Win+Left/Win+Right.
+[%] Issue 1262: ConEmu.Editor.lua bug.
+[+] Debug purposes: "/basic" and "/resetdefault" switch.
+
+
+2013.09.29
+[+] Issue 714: Font size fixed when copying using CF_HTML formatting.
+    You may choose from Edit submenu one of the following options:
+	* Plain text only (don't copy HTML formatting);
+	* Copy HTML format (text will be ready for pasting in Word, Outlook etc.);
+	* Copy as HTML (you want RAW HTML? choose this option).
+[+] Send cursor keys to vim with xterm control sequences.
+
+
+2013.09.28
+[*] Default anti-aliasing method will be «ClearType» if it is turned on in your OS.
+[%] Infinite run loop when «Single instance» was ON and «Multiple consoles» was OFF.
+[+] GuiMacro: Close(8) - close all consoles.
+[+] New menu items in «Close or kill submenus»: «Close all consoles» and «Close except active».
+[+] Issue 714: Copying text to clipboard using CF_HTML formatting. May be disabled from Edit submenu (Copy HTML format).
+
+
 2013.09.23
 [*] Issue 1234: Tasks menu changes (Win+N, button [+])
     * by default - does not expand to submenus, RClick on task - show submenu with task commands;
@@ -261,7 +351,7 @@ http://code.google.com/p/conemu-maximus5/wiki/Awards
 
 
 2013.05.23
-[!] Don't lock current (startup) directory.
+[!] Issue 1049: Don't lock current (startup) directory.
 [!] Width and Height may be set up in cells/pixels/percents.
     For example, Width = "90%", Height = "400px".
     Without modifier - treated as cells.
