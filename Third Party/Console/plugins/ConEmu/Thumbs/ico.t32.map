@@ -1,13 +1,13 @@
  ico
 
- Timestamp is 526c4b96 (Sun Oct 27 03:09:10 2013)
+ Timestamp is 527c020e (Fri Nov 08 01:11:42 2013)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
  0001:00000000 00000078H .idata$5                CODE
  0001:00000080 000006acH .rdata                  CODE
- 0001:0000072c 00000072H .rdata$debug            CODE
+ 0001:0000072c 00000070H .rdata$debug            CODE
  0001:000007a0 00001a84H .text                   CODE
  0001:00002224 00000050H .idata$2                CODE
  0001:00002274 00000014H .idata$3                CODE

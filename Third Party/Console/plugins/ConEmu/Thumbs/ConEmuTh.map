@@ -1,6 +1,6 @@
  ConEmuTh
 
- Timestamp is 526c4b7c (Sun Oct 27 03:08:44 2013)
+ Timestamp is 527c01f5 (Fri Nov 08 01:11:17 2013)
 
  Preferred load address is 10000000
 
@@ -65,8 +65,8 @@
  0001:00000aca       ?isPreloadByDefault@@YI_NXZ 10001aca f   ConEmuTh.obj
  0001:00000af2       ?FreeUserData@CePluginPanelItem@@QAEXXZ 10001af2 f   ConEmuTh.obj
  0001:00000b33       ?FreeItem@CePluginPanelItem@@QAEXXZ 10001b33 f   ConEmuTh.obj
- 0001:00000b48       ??0?$MFileMapping@UPanelViewSetMapping@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
  0001:00000b48       ??0?$MFileMapping@Utag_DetectedDialog@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
+ 0001:00000b48       ??0?$MFileMapping@UPanelViewSetMapping@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
  0001:00000b6c       ?ClosePtr@?$MFileMapping@UPanelViewSetMapping@@@@QAEXXZ 10001b6c f i ConEmuTh.obj
  0001:00000b6c       ?ClosePtr@?$MFileMapping@Utag_DetectedDialog@@@@QAEXXZ 10001b6c f i ConEmuTh.obj
  0001:00000b83       ?StringCchCopyW@@YGJPA_WIPB_W@Z 10001b83 f i ConEmuTh.obj
@@ -77,12 +77,12 @@
  0001:00000f3d       ?IsThumbnailsActive@@YIPAUCeFullPanelInfo@@H@Z 10001f3d f   ConEmuTh.obj
  0001:0000110e       ?SettingsLoadOther@@YIXPB_W@Z 1000210e f   ConEmuTh.obj
  0001:00001208       ?SetFrom@?$MFileMapping@Utag_DetectedDialog@@@@QAE_NPBUtag_DetectedDialog@@H@Z 10002208 f i ConEmuTh.obj
- 0001:00001258       ?CloseMap@?$MFileMapping@Utag_DetectedDialog@@@@QAEXXZ 10002258 f i ConEmuTh.obj
  0001:00001258       ?CloseMap@?$MFileMapping@UPanelViewSetMapping@@@@QAEXXZ 10002258 f i ConEmuTh.obj
+ 0001:00001258       ?CloseMap@?$MFileMapping@Utag_DetectedDialog@@@@QAEXXZ 10002258 f i ConEmuTh.obj
  0001:0000128c       ?ProcessConsoleInput@@YIHHPAU_INPUT_RECORD@@KPAK@Z 1000228c f   ConEmuTh.obj
  0001:0000152f       ?UpdateEnvVar@@YIXH@Z      1000252f f   ConEmuTh.obj
- 0001:0000154f       ?InitName@?$MFileMapping@Utag_DetectedDialog@@@@QAEPB_WPB_WKK@Z 1000254f f i ConEmuTh.obj
  0001:0000154f       ?InitName@?$MFileMapping@UPanelViewSetMapping@@@@QAEPB_WPB_WKK@Z 1000254f f i ConEmuTh.obj
+ 0001:0000154f       ?InitName@?$MFileMapping@Utag_DetectedDialog@@@@QAEPB_WPB_WKK@Z 1000254f f i ConEmuTh.obj
  0001:0000157f       ?InternalOpenCreate@?$MFileMapping@Utag_DetectedDialog@@@@IAEPAUtag_DetectedDialog@@HHH@Z 1000257f f i ConEmuTh.obj
  0001:00001697       ?InternalOpenCreate@?$MFileMapping@UPanelViewSetMapping@@@@IAEPAUPanelViewSetMapping@@HHH@Z 10002697 f i ConEmuTh.obj
  0001:000017af       ??_G?$MFileMapping@Utag_DetectedDialog@@@@QAEPAXI@Z 100027af f i ConEmuTh.obj
@@ -126,27 +126,27 @@
  0001:00002d0b       ?FarColor_3_2@@YIEABUFarColor@@@Z 10003d0b f i ConEmuTh1900.obj
  0001:00002d99       ?GetPluginInfoW1900@@YIXPAX@Z 10003d99 f   ConEmuTh1900.obj
  0001:00002dea       ?SetStartupInfoW1900@@YIXPAX@Z 10003dea f   ConEmuTh1900.obj
- 0001:00002ed8       ?OpenW2800@@YIPAXPBX@Z     10003ed8 f   ConEmuTh2800.obj
- 0001:00002ed8       ?OpenW1900@@YIPAXPBX@Z     10003ed8 f   ConEmuTh1900.obj
- 0001:00002f30       ?ExitFARW1900@@YIXXZ       10003f30 f   ConEmuTh1900.obj
- 0001:00002f5f       ?ShowMessageW1900@@YIHPB_WH@Z 10003f5f f   ConEmuTh1900.obj
- 0001:00002fcf       ?ShowMessageW1900@@YIHHH@Z 10003fcf f   ConEmuTh1900.obj
- 0001:00002fff       ?GetMsgW1900@@YIPB_WH@Z    10003fff f   ConEmuTh1900.obj
- 0001:0000301e       ?PostMacroW1900@@YIXPA_W@Z 1000401e f   ConEmuTh1900.obj
- 0001:00003083       ?ShowPluginMenuW1900@@YIHXZ 10004083 f   ConEmuTh1900.obj
- 0001:000031ea       ?LoadPanelItemInfoW1900@@YIXPAUCeFullPanelInfo@@H@Z 100041ea f   ConEmuTh1900.obj
- 0001:000034aa       ?LoadPanelInfoW1900@@YIHH@Z 100044aa f   ConEmuTh1900.obj
- 0001:000038b9       ?ReloadPanelsInfoW1900@@YIXXZ 100048b9 f   ConEmuTh1900.obj
- 0001:000038d2       ?SetCurrentPanelItemW1900@@YIXHHH@Z 100048d2 f   ConEmuTh1900.obj
- 0001:000039aa       ?CheckPanelSettingsW1900@@YIHH@Z 100049aa f   ConEmuTh1900.obj
- 0001:00003a4b       ?ExecuteInMainThreadW1900@@YIXPAUConEmuThSynchroArg@@@Z 10004a4b f   ConEmuTh1900.obj
- 0001:00003a62       ?GetFarRectW1900@@YIXPAU_SMALL_RECT@@@Z 10004a62 f   ConEmuTh1900.obj
- 0001:00003a90       ?CheckFarPanelsW1900@@YI_NXZ 10004a90 f   ConEmuTh1900.obj
- 0001:00003ad4       ?SettingsLoadW1900@@YIHPB_WPAK@Z 10004ad4 f   ConEmuTh1900.obj
- 0001:00003b69       ?SettingsSaveW1900@@YIXPB_WPAK@Z 10004b69 f   ConEmuTh1900.obj
- 0001:00003c03       _GetGlobalInfoW@4          10004c03 f   ConEmuTh2800.obj
- 0001:00003c96       ?GetPluginInfoW2800@@YIXPAX@Z 10004c96 f   ConEmuTh2800.obj
- 0001:00003ce7       ?SetStartupInfoW2800@@YIXPAX@Z 10004ce7 f   ConEmuTh2800.obj
+ 0001:00002ed8       ?ExitFARW1900@@YIXXZ       10003ed8 f   ConEmuTh1900.obj
+ 0001:00002f07       ?ShowMessageW1900@@YIHPB_WH@Z 10003f07 f   ConEmuTh1900.obj
+ 0001:00002f77       ?ShowMessageW1900@@YIHHH@Z 10003f77 f   ConEmuTh1900.obj
+ 0001:00002fa7       ?GetMsgW1900@@YIPB_WH@Z    10003fa7 f   ConEmuTh1900.obj
+ 0001:00002fc6       ?PostMacroW1900@@YIXPA_W@Z 10003fc6 f   ConEmuTh1900.obj
+ 0001:0000302b       ?ShowPluginMenuW1900@@YIHXZ 1000402b f   ConEmuTh1900.obj
+ 0001:00003192       ?LoadPanelItemInfoW1900@@YIXPAUCeFullPanelInfo@@H@Z 10004192 f   ConEmuTh1900.obj
+ 0001:00003452       ?LoadPanelInfoW1900@@YIHH@Z 10004452 f   ConEmuTh1900.obj
+ 0001:00003861       ?ReloadPanelsInfoW1900@@YIXXZ 10004861 f   ConEmuTh1900.obj
+ 0001:0000387a       ?SetCurrentPanelItemW1900@@YIXHHH@Z 1000487a f   ConEmuTh1900.obj
+ 0001:00003952       ?CheckPanelSettingsW1900@@YIHH@Z 10004952 f   ConEmuTh1900.obj
+ 0001:000039f3       ?ExecuteInMainThreadW1900@@YIXPAUConEmuThSynchroArg@@@Z 100049f3 f   ConEmuTh1900.obj
+ 0001:00003a0a       ?GetFarRectW1900@@YIXPAU_SMALL_RECT@@@Z 10004a0a f   ConEmuTh1900.obj
+ 0001:00003a38       ?CheckFarPanelsW1900@@YI_NXZ 10004a38 f   ConEmuTh1900.obj
+ 0001:00003a7c       ?SettingsLoadW1900@@YIHPB_WPAK@Z 10004a7c f   ConEmuTh1900.obj
+ 0001:00003b11       ?SettingsSaveW1900@@YIXPB_WPAK@Z 10004b11 f   ConEmuTh1900.obj
+ 0001:00003bab       _GetGlobalInfoW@4          10004bab f   ConEmuTh2800.obj
+ 0001:00003c3e       ?GetPluginInfoW2800@@YIXPAX@Z 10004c3e f   ConEmuTh2800.obj
+ 0001:00003c8f       ?SetStartupInfoW2800@@YIXPAX@Z 10004c8f f   ConEmuTh2800.obj
+ 0001:00003d7d       ?OpenW1900@@YIPAXPBX@Z     10004d7d f   ConEmuTh1900.obj
+ 0001:00003d7d       ?OpenW2800@@YIPAXPBX@Z     10004d7d f   ConEmuTh2800.obj
  0001:00003dd5       ?ProcessSynchroEventW3@@YGHPAX@Z 10004dd5 f   ConEmuTh2800.obj
  0001:00003de7       ?ExitFARW2800@@YIXXZ       10004de7 f   ConEmuTh2800.obj
  0001:00003e16       ?ShowMessageW2800@@YIHPB_WH@Z 10004e16 f   ConEmuTh2800.obj
@@ -221,107 +221,112 @@
  0001:00008ce9       ??0?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAE@XZ 10009ce9 f i ImgCache.obj
  0001:00008d23       ?IsStopRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@UAE_NABQAUIMAGE_CACHE_INFO@@@Z 10009d23 f i ImgCache.obj
  0001:00008d34       ?ProcessItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEJAAPAUIMAGE_CACHE_INFO@@J@Z 10009d34 f i ImgCache.obj
+ 0001:00008d3c       ?OnItemFailed@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
  0001:00008d3c       ?OnItemReady@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
  0001:00008d3c       ?ApplyChanges@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@ABQAU2@@Z 10009d3c f i ImgCache.obj
- 0001:00008d3c       ?OnItemFailed@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
- 0001:00008d3f       ?IsTerminationRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NXZ 10009d3f f i ImgCache.obj
- 0001:00008d3f       ?IsTerminationRequested@CImgLoader@@UAE_NXZ 10009d3f f i ImgCache.obj
- 0001:00008d43       ?OnThreadStarted@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEJXZ 10009d43 f i ImgCache.obj
- 0001:00008d46       ?CopyItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXPBQAUIMAGE_CACHE_INFO@@PAPAU2@@Z 10009d46 f i ImgCache.obj
- 0001:00008d62       ?IsEqual@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NABQAUIMAGE_CACHE_INFO@@J0J@Z 10009d62 f i ImgCache.obj
- 0001:00008d98       ?FreeItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXABQAUIMAGE_CACHE_INFO@@@Z 10009d98 f i ImgCache.obj
- 0001:00008d9b       ?ClearQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009d9b f i ImgCache.obj
- 0001:00008df8       ?InitializeQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXH@Z 10009df8 f i ImgCache.obj
- 0001:00008e69       ?CheckWaitingCount@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009e69 f i ImgCache.obj
- 0001:00008ea0       ?ProcessingStep@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAE_NXZ 10009ea0 f i ImgCache.obj
- 0001:00009049       ??$SafeRelease@UIStorage@@@@YIXAAPAUIStorage@@@Z 1000a049 f i ImgCache.obj
- 0001:0000905d       ??0CImgCache@@QAE@PAUHINSTANCE__@@@Z 1000a05d f   ImgCache.obj
- 0001:0000915d       ?PaintItem@CImgCache@@QAEHPAUHDC__@@HHHPAUCePluginPanelItem@@PAPB_WPAH@Z 1000a15d f   ImgCache.obj
- 0001:0000958b       ?Terminate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAEXK@Z 1000a58b f i ImgCache.obj
- 0001:000095cc       ?FindOrCreate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEPAUProcessingItem@1@ABQAUIMAGE_CACHE_INFO@@J_NW4ProcessingPriority@@@Z 1000a5cc f i ImgCache.obj
- 0001:00009729       ?ProcessingThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@KGKPAX@Z 1000a729 f i ImgCache.obj
- 0001:0000974c       ?Reset@CImgCache@@QAEXXZ   1000a74c f   ImgCache.obj
- 0001:00009891       ?Init@CImgCache@@QAEXK@Z   1000a891 f   ImgCache.obj
- 0001:000098d5       ??1?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAE@XZ 1000a8d5 f i ImgCache.obj
- 0001:0000992d       ?CheckThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAEJXZ 1000a92d f i ImgCache.obj
- 0001:000099ba       ?OnThreadStarted@CImgLoader@@UAEJXZ 1000a9ba f i ImgCache.obj
- 0001:000099c5       ?OnThreadStopped@CImgLoader@@UAEXXZ 1000a9c5 f i ImgCache.obj
- 0001:000099cb       ?IsEqual@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@JAAPAU2@J@Z 1000a9cb f i ImgCache.obj
- 0001:000099ed       ?CheckHighPriority@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NABQAUIMAGE_CACHE_INFO@@@Z 1000a9ed f i ImgCache.obj
- 0001:000099ed       ?CheckHighPriority@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@@Z 1000a9ed f i ImgCache.obj
- 0001:000099f2       ?ProcessItem@CImgLoader@@UAEJAAPAUIMAGE_CACHE_INFO@@J@Z 1000a9f2 f i ImgCache.obj
- 0001:00009a37       ?RequestItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAEJ_NW4ProcessingPriority@@QAUIMAGE_CACHE_INFO@@J@Z 1000aa37 f i ImgCache.obj
- 0001:00009adb       ?RequestItem@CImgCache@@QAEHPAUCePluginPanelItem@@I@Z 1000aadb f   ImgCache.obj
- 0001:00009b7c       ??1CImgCache@@QAE@XZ       1000ab7c f   ImgCache.obj
- 0001:00009bfd       _wmemcmp                   1000abfd f i RgnDetect.obj
- 0001:00009c2e       ??0CRgnDetect@@QAE@XZ      1000ac2e f   RgnDetect.obj
- 0001:00009cef       ??1CRgnDetect@@QAE@XZ      1000acef f   RgnDetect.obj
- 0001:00009d38       ?GetDetectedDialogsPtr@CRgnDetect@@QBEPBUtag_DetectedDialog@@XZ 1000ad38 f   RgnDetect.obj
- 0001:00009d3c       ?GetFlags@CRgnDetect@@QBEKXZ 1000ad3c f   RgnDetect.obj
- 0001:00009d43       ?FindFrameRight_ByBottom@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000ad43 f   RgnDetect.obj
- 0001:00009df3       ?FindFrameLeft_ByBottom@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000adf3 f   RgnDetect.obj
- 0001:00009e9c       ?FindFrameTop_ByLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000ae9c f   RgnDetect.obj
- 0001:00009f21       ?FindFrameTop_ByRight@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000af21 f   RgnDetect.obj
- 0001:00009fd4       ?FindFrameBottom_ByRight@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000afd4 f   RgnDetect.obj
- 0001:0000a086       ?FindFrameBottom_ByLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000b086 f   RgnDetect.obj
- 0001:0000a110       ?FindDialog_Inner@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH2@Z 1000b110 f   RgnDetect.obj
- 0001:0000a226       ?FindFrame_TopLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222@Z 1000b226 f   RgnDetect.obj
- 0001:0000a2e6       ?ExpandDialogFrame@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH2HH22@Z 1000b2e6 f   RgnDetect.obj
- 0001:0000a556       ?FindByBackground@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000b556 f   RgnDetect.obj
- 0001:0000a60c       ?MarkDialog@CRgnDetect@@IAEHPA_WPAUtag_CharAttr@@HHHHHH_N2K@Z 1000b60c f   RgnDetect.obj
- 0001:0000ace1       ?OnWindowSizeChanged@CRgnDetect@@QAEXXZ 1000bce1 f   RgnDetect.obj
- 0001:0000ace9       ?OnWriteConsoleOutput@CRgnDetect@@QAEXPBU_CHAR_INFO@@U_COORD@@1PAU_SMALL_RECT@@PBK@Z 1000bce9 f   RgnDetect.obj
- 0001:0000aefc       ?SetFarRect@CRgnDetect@@QAEXPAU_SMALL_RECT@@@Z 1000befc f   RgnDetect.obj
- 0001:0000af8d       ?TextWidth@CRgnDetect@@QAEHXZ 1000bf8d f   RgnDetect.obj
- 0001:0000afb2       ?TextHeight@CRgnDetect@@QAEHXZ 1000bfb2 f   RgnDetect.obj
- 0001:0000afd7       ?GetCharAttr@CRgnDetect@@QAEHHHAA_WAAUtag_CharAttr@@@Z 1000bfd7 f   RgnDetect.obj
- 0001:0000b04b       ?FindFrameRight_ByTop@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000c04b f   RgnDetect.obj
- 0001:0000b133       ?FindFrameLeft_ByTop@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000c133 f   RgnDetect.obj
- 0001:0000b247       ?FindDialog_TopLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c247 f   RgnDetect.obj
- 0001:0000b2cd       ?FindDialog_TopRight@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c2cd f   RgnDetect.obj
- 0001:0000b360       ?FindDialog_Left@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c360 f   RgnDetect.obj
- 0001:0000b4a5       ?FindDialog_Right@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c4a5 f   RgnDetect.obj
- 0001:0000b56b       ?FindDialog_Any@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c56b f   RgnDetect.obj
- 0001:0000b734       ?DetectDialog@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHHHPAH2@Z 1000c734 f   RgnDetect.obj
- 0001:0000b99f       ?InitializeSBI@CRgnDetect@@QAEHPBK@Z 1000c99f f   RgnDetect.obj
- 0001:0000bcc6       ?PrepareTransparent@CRgnDetect@@QAEXPBUCEFAR_INFO_MAPPING@@PBKPBU_CONSOLE_SCREEN_BUFFER_INFO@@PA_WPAUtag_CharAttr@@HH@Z 1000ccc6 f   RgnDetect.obj
- 0001:0000c343       ?PrepareTransparent@CRgnDetect@@QAEXPBUCEFAR_INFO_MAPPING@@PBK@Z 1000d343 f   RgnDetect.obj
- 0001:0000c3e6       ?CommonShutdown@@YIXXZ     1000d3e6 f   Common.obj
- 0001:0000c401       ?HeapInitialize@@YI_NXZ    1000d401 f   Memory.obj
- 0001:0000c427       ?HeapDeinitialize@@YIXXZ   1000d427 f   Memory.obj
- 0001:0000c43f       ?xf_malloc@@YAPAXI@Z       1000d43f f   Memory.obj
- 0001:0000c452       ?xf_calloc@@YAPAXII@Z      1000d452 f   Memory.obj
- 0001:0000c46b       ?xf_free@@YAXPAX@Z         1000d46b f   Memory.obj
- 0001:0000c489       ??2@YAPAXI@Z               1000d489 f   Memory.obj
- 0001:0000c48e       ??3@YAXPAX@Z               1000d48e f   Memory.obj
- 0001:0000c493       ?lstrdup@@YIPA_WPB_W@Z     1000d493 f   Memory.obj
- 0001:0000c4d0       ?UnloadAdvApi@MNullDesc@@IAEXXZ 1000d4d0 f i MSecurity.obj
- 0001:0000c4e7       ??0MNullDesc@@QAE@XZ       1000d4e7 f i MSecurity.obj
- 0001:0000c509       ??1MNullDesc@@QAE@XZ       1000d509 f i MSecurity.obj
- 0001:0000c53a       ?LoadAdvApi@MNullDesc@@IAEHXZ 1000d53a f i MSecurity.obj
- 0001:0000c652       ?LocalSecurity@MNullDesc@@QAEPAU_SECURITY_ATTRIBUTES@@XZ 1000d652 f i MSecurity.obj
- 0001:0000c78b       ?LocalSecurity@@YIPAU_SECURITY_ATTRIBUTES@@XZ 1000d78b f   MSecurity.obj
- 0001:0000c7b9       ?ShutdownSecurity@@YIXXZ   1000d7b9 f   MSecurity.obj
- 0001:0000c7db       ?msprintf@@YAPB_WPA_WIPB_WZZ 1000d7db f   MStrSafe.obj
- 0001:0000ca84       ?apiShowWindow@@YIHPAUHWND__@@H@Z 1000da84 f   WinObjects.obj
- 0001:0000ca8d       ?isTerminalMode@@YI_NXZ    1000da8d f   WinObjects.obj
- 0001:0000cc88       ?PointToName@@YIPB_WPB_W@Z 1000dc88 f   WinObjects.obj
- 0001:0000cca9       ??0MSection@@QAE@XZ        1000dca9 f   WinObjects.obj
- 0001:0000ccfc       ??1MSection@@QAE@XZ        1000dcfc f   WinObjects.obj
- 0001:0000cd3e       ?AddRef@MSection@@IAEXK@Z  1000dd3e f   WinObjects.obj
- 0001:0000cd9c       ?ReleaseRef@MSection@@IAEHK@Z 1000dd9c f   WinObjects.obj
- 0001:0000ce05       ?WaitUnlocked@MSection@@IAEXKK@Z 1000de05 f   WinObjects.obj
- 0001:0000ce60       ?MyEnterCriticalSection@MSection@@IAE_NK@Z 1000de60 f   WinObjects.obj
- 0001:0000cf88       ?Lock@MSection@@IAEHHK@Z   1000df88 f   WinObjects.obj
- 0001:0000d04d       ?Unlock@MSection@@IAEXH@Z  1000e04d f   WinObjects.obj
- 0001:0000d087       ??0MSectionLock@@QAE@XZ    1000e087 f   WinObjects.obj
- 0001:0000d094       ?Lock@MSectionLock@@QAEHPAVMSection@@HK@Z 1000e094 f   WinObjects.obj
- 0001:0000d0de       ?Unlock@MSectionLock@@QAEXXZ 1000e0de f   WinObjects.obj
- 0001:0000d0fb       ??1MSectionLock@@QAE@XZ    1000e0fb f   WinObjects.obj
- 0001:0000d114       _VerQueryValueW@16         1000e114 f   version:VERSION.dll
- 0001:0000d11a       _GetFileVersionInfoW@16    1000e11a f   version:VERSION.dll
- 0001:0000d120       _GetFileVersionInfoSizeW@8 1000e120 f   version:VERSION.dll
- 0001:0000d126       _wcsrchr                   1000e126 f   libcmt:wcsrchr.obj
+ 0001:00008d3f       ?OnThreadStarted@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEJXZ 10009d3f f i ImgCache.obj
+ 0001:00008d42       __initp_misc_winxfltr      10009d42 f i libcmt:winxfltr.obj
+ 0001:00008d42       ?LoadPanelItemInfoA@@YIXPAUCeFullPanelInfo@@H@Z 10009d42 f i ConEmuThA.obj
+ 0001:00008d42       ?SettingsLoadOtherW1900@@YIXXZ 10009d42 f i ConEmuTh1900.obj
+ 0001:00008d42       ?OnThreadStopped@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXXZ 10009d42 f i ImgCache.obj
+ 0001:00008d42       ?SettingsLoadOtherW2800@@YIXXZ 10009d42 f i ConEmuTh2800.obj
+ 0001:00008d43       ?CopyItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXPBQAUIMAGE_CACHE_INFO@@PAPAU2@@Z 10009d43 f i ImgCache.obj
+ 0001:00008d5f       ?IsEqual@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NABQAUIMAGE_CACHE_INFO@@J0J@Z 10009d5f f i ImgCache.obj
+ 0001:00008d95       ?FreeItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXABQAUIMAGE_CACHE_INFO@@@Z 10009d95 f i ImgCache.obj
+ 0001:00008d98       ?CheckHighPriority@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NABQAUIMAGE_CACHE_INFO@@@Z 10009d98 f i ImgCache.obj
+ 0001:00008d98       ?CheckHighPriority@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@@Z 10009d98 f i ImgCache.obj
+ 0001:00008d9d       ?ClearQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009d9d f i ImgCache.obj
+ 0001:00008dfa       ?InitializeQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXH@Z 10009dfa f i ImgCache.obj
+ 0001:00008e6b       ?CheckWaitingCount@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009e6b f i ImgCache.obj
+ 0001:00008ea2       ?ProcessingStep@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAE_NXZ 10009ea2 f i ImgCache.obj
+ 0001:0000904b       ??$SafeRelease@UIStorage@@@@YIXAAPAUIStorage@@@Z 1000a04b f i ImgCache.obj
+ 0001:0000905f       ??0CImgCache@@QAE@PAUHINSTANCE__@@@Z 1000a05f f   ImgCache.obj
+ 0001:0000915f       ?PaintItem@CImgCache@@QAEHPAUHDC__@@HHHPAUCePluginPanelItem@@PAPB_WPAH@Z 1000a15f f   ImgCache.obj
+ 0001:0000958d       ?Terminate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAEXK@Z 1000a58d f i ImgCache.obj
+ 0001:000095ce       ?FindOrCreate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEPAUProcessingItem@1@ABQAUIMAGE_CACHE_INFO@@J_NW4ProcessingPriority@@@Z 1000a5ce f i ImgCache.obj
+ 0001:0000972b       ?ProcessingThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@KGKPAX@Z 1000a72b f i ImgCache.obj
+ 0001:0000974e       ?Reset@CImgCache@@QAEXXZ   1000a74e f   ImgCache.obj
+ 0001:00009893       ?Init@CImgCache@@QAEXK@Z   1000a893 f   ImgCache.obj
+ 0001:000098d7       ??1?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAE@XZ 1000a8d7 f i ImgCache.obj
+ 0001:0000992f       ?CheckThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAEJXZ 1000a92f f i ImgCache.obj
+ 0001:000099bc       ?OnThreadStarted@CImgLoader@@UAEJXZ 1000a9bc f i ImgCache.obj
+ 0001:000099c7       ?OnThreadStopped@CImgLoader@@UAEXXZ 1000a9c7 f i ImgCache.obj
+ 0001:000099cd       ?IsEqual@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@JAAPAU2@J@Z 1000a9cd f i ImgCache.obj
+ 0001:000099ef       ?ProcessItem@CImgLoader@@UAEJAAPAUIMAGE_CACHE_INFO@@J@Z 1000a9ef f i ImgCache.obj
+ 0001:00009a34       ?IsTerminationRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NXZ 1000aa34 f i ImgCache.obj
+ 0001:00009a34       ?IsTerminationRequested@CImgLoader@@UAE_NXZ 1000aa34 f i ImgCache.obj
+ 0001:00009a38       ?RequestItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAEJ_NW4ProcessingPriority@@QAUIMAGE_CACHE_INFO@@J@Z 1000aa38 f i ImgCache.obj
+ 0001:00009adc       ?RequestItem@CImgCache@@QAEHPAUCePluginPanelItem@@I@Z 1000aadc f   ImgCache.obj
+ 0001:00009b7d       ??1CImgCache@@QAE@XZ       1000ab7d f   ImgCache.obj
+ 0001:00009bfe       _wmemcmp                   1000abfe f i RgnDetect.obj
+ 0001:00009c2f       ??0CRgnDetect@@QAE@XZ      1000ac2f f   RgnDetect.obj
+ 0001:00009cf0       ??1CRgnDetect@@QAE@XZ      1000acf0 f   RgnDetect.obj
+ 0001:00009d39       ?GetDetectedDialogsPtr@CRgnDetect@@QBEPBUtag_DetectedDialog@@XZ 1000ad39 f   RgnDetect.obj
+ 0001:00009d3d       ?GetFlags@CRgnDetect@@QBEKXZ 1000ad3d f   RgnDetect.obj
+ 0001:00009d44       ?FindFrameRight_ByBottom@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000ad44 f   RgnDetect.obj
+ 0001:00009df4       ?FindFrameLeft_ByBottom@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000adf4 f   RgnDetect.obj
+ 0001:00009e9d       ?FindFrameTop_ByLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000ae9d f   RgnDetect.obj
+ 0001:00009f22       ?FindFrameTop_ByRight@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000af22 f   RgnDetect.obj
+ 0001:00009fd5       ?FindFrameBottom_ByRight@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000afd5 f   RgnDetect.obj
+ 0001:0000a087       ?FindFrameBottom_ByLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000b087 f   RgnDetect.obj
+ 0001:0000a111       ?FindDialog_Inner@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH2@Z 1000b111 f   RgnDetect.obj
+ 0001:0000a227       ?FindFrame_TopLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222@Z 1000b227 f   RgnDetect.obj
+ 0001:0000a2e7       ?ExpandDialogFrame@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH2HH22@Z 1000b2e7 f   RgnDetect.obj
+ 0001:0000a557       ?FindByBackground@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000b557 f   RgnDetect.obj
+ 0001:0000a60d       ?MarkDialog@CRgnDetect@@IAEHPA_WPAUtag_CharAttr@@HHHHHH_N2K@Z 1000b60d f   RgnDetect.obj
+ 0001:0000ace2       ?OnWindowSizeChanged@CRgnDetect@@QAEXXZ 1000bce2 f   RgnDetect.obj
+ 0001:0000acea       ?OnWriteConsoleOutput@CRgnDetect@@QAEXPBU_CHAR_INFO@@U_COORD@@1PAU_SMALL_RECT@@PBK@Z 1000bcea f   RgnDetect.obj
+ 0001:0000aefd       ?SetFarRect@CRgnDetect@@QAEXPAU_SMALL_RECT@@@Z 1000befd f   RgnDetect.obj
+ 0001:0000af8e       ?TextWidth@CRgnDetect@@QAEHXZ 1000bf8e f   RgnDetect.obj
+ 0001:0000afb3       ?TextHeight@CRgnDetect@@QAEHXZ 1000bfb3 f   RgnDetect.obj
+ 0001:0000afd8       ?GetCharAttr@CRgnDetect@@QAEHHHAA_WAAUtag_CharAttr@@@Z 1000bfd8 f   RgnDetect.obj
+ 0001:0000b04c       ?FindFrameRight_ByTop@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000c04c f   RgnDetect.obj
+ 0001:0000b134       ?FindFrameLeft_ByTop@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH22@Z 1000c134 f   RgnDetect.obj
+ 0001:0000b248       ?FindDialog_TopLeft@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c248 f   RgnDetect.obj
+ 0001:0000b2ce       ?FindDialog_TopRight@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c2ce f   RgnDetect.obj
+ 0001:0000b361       ?FindDialog_Left@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c361 f   RgnDetect.obj
+ 0001:0000b4a6       ?FindDialog_Right@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c4a6 f   RgnDetect.obj
+ 0001:0000b56c       ?FindDialog_Any@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHAAH222AA_N@Z 1000c56c f   RgnDetect.obj
+ 0001:0000b735       ?DetectDialog@CRgnDetect@@IAE_NPA_WPAUtag_CharAttr@@HHHHPAH2@Z 1000c735 f   RgnDetect.obj
+ 0001:0000b9a0       ?InitializeSBI@CRgnDetect@@QAEHPBK@Z 1000c9a0 f   RgnDetect.obj
+ 0001:0000bcc7       ?PrepareTransparent@CRgnDetect@@QAEXPBUCEFAR_INFO_MAPPING@@PBKPBU_CONSOLE_SCREEN_BUFFER_INFO@@PA_WPAUtag_CharAttr@@HH@Z 1000ccc7 f   RgnDetect.obj
+ 0001:0000c344       ?PrepareTransparent@CRgnDetect@@QAEXPBUCEFAR_INFO_MAPPING@@PBK@Z 1000d344 f   RgnDetect.obj
+ 0001:0000c3e7       ?CommonShutdown@@YIXXZ     1000d3e7 f   Common.obj
+ 0001:0000c402       ?HeapInitialize@@YI_NXZ    1000d402 f   Memory.obj
+ 0001:0000c428       ?HeapDeinitialize@@YIXXZ   1000d428 f   Memory.obj
+ 0001:0000c440       ?xf_malloc@@YAPAXI@Z       1000d440 f   Memory.obj
+ 0001:0000c453       ?xf_calloc@@YAPAXII@Z      1000d453 f   Memory.obj
+ 0001:0000c46c       ?xf_free@@YAXPAX@Z         1000d46c f   Memory.obj
+ 0001:0000c48a       ??2@YAPAXI@Z               1000d48a f   Memory.obj
+ 0001:0000c48f       ??3@YAXPAX@Z               1000d48f f   Memory.obj
+ 0001:0000c494       ?lstrdup@@YIPA_WPB_W@Z     1000d494 f   Memory.obj
+ 0001:0000c4d1       ?UnloadAdvApi@MNullDesc@@IAEXXZ 1000d4d1 f i MSecurity.obj
+ 0001:0000c4e8       ??0MNullDesc@@QAE@XZ       1000d4e8 f i MSecurity.obj
+ 0001:0000c50a       ??1MNullDesc@@QAE@XZ       1000d50a f i MSecurity.obj
+ 0001:0000c53b       ?LoadAdvApi@MNullDesc@@IAEHXZ 1000d53b f i MSecurity.obj
+ 0001:0000c653       ?LocalSecurity@MNullDesc@@QAEPAU_SECURITY_ATTRIBUTES@@XZ 1000d653 f i MSecurity.obj
+ 0001:0000c78c       ?LocalSecurity@@YIPAU_SECURITY_ATTRIBUTES@@XZ 1000d78c f   MSecurity.obj
+ 0001:0000c7ba       ?ShutdownSecurity@@YIXXZ   1000d7ba f   MSecurity.obj
+ 0001:0000c7dc       ?msprintf@@YAPB_WPA_WIPB_WZZ 1000d7dc f   MStrSafe.obj
+ 0001:0000ca85       ?apiShowWindow@@YIHPAUHWND__@@H@Z 1000da85 f   WinObjects.obj
+ 0001:0000ca8e       ?isTerminalMode@@YI_NXZ    1000da8e f   WinObjects.obj
+ 0001:0000cc89       ?PointToName@@YIPB_WPB_W@Z 1000dc89 f   WinObjects.obj
+ 0001:0000ccaa       ??0MSection@@QAE@XZ        1000dcaa f   WinObjects.obj
+ 0001:0000ccfd       ??1MSection@@QAE@XZ        1000dcfd f   WinObjects.obj
+ 0001:0000cd4a       ?AddRef@MSection@@IAEXK@Z  1000dd4a f   WinObjects.obj
+ 0001:0000cda8       ?ReleaseRef@MSection@@IAEHK@Z 1000dda8 f   WinObjects.obj
+ 0001:0000ce11       ?WaitUnlocked@MSection@@IAEXKK@Z 1000de11 f   WinObjects.obj
+ 0001:0000ce6c       ?MyEnterCriticalSection@MSection@@IAE_NK@Z 1000de6c f   WinObjects.obj
+ 0001:0000cf96       ?Lock@MSection@@IAEHHK@Z   1000df96 f   WinObjects.obj
+ 0001:0000d05b       ?Unlock@MSection@@IAEXH@Z  1000e05b f   WinObjects.obj
+ 0001:0000d095       ??0MSectionLock@@QAE@XZ    1000e095 f   WinObjects.obj
+ 0001:0000d0a2       ?Lock@MSectionLock@@QAEHPAVMSection@@HK@Z 1000e0a2 f   WinObjects.obj
+ 0001:0000d0ec       ?Unlock@MSectionLock@@QAEXXZ 1000e0ec f   WinObjects.obj
+ 0001:0000d109       ??1MSectionLock@@QAE@XZ    1000e109 f   WinObjects.obj
+ 0001:0000d122       _VerQueryValueW@16         1000e122 f   version:VERSION.dll
+ 0001:0000d128       _GetFileVersionInfoW@16    1000e128 f   version:VERSION.dll
+ 0001:0000d12e       _GetFileVersionInfoSizeW@8 1000e12e f   version:VERSION.dll
+ 0001:0000d134       _wcsrchr                   1000e134 f   libcmt:wcsrchr.obj
  0001:0000d160       _memmove                   1000e160 f   libcmt:memmove.obj
  0001:0000d4d0       _memset                    1000e4d0 f   libcmt:memset.obj
  0001:0000d550       __ftol2_sse                1000e550 f   libcmt:ftol2.obj
@@ -339,8 +344,8 @@
  0001:0000d8b0       _memchr                    1000e8b0 f   libcmt:memchr.obj
  0001:0000d95d       _wcspbrk                   1000e95d f   libcmt:wcspbrk.obj
  0001:0000d9a0       _strrchr                   1000e9a0 f   libcmt:strrchr.obj
- 0001:0000d9d0       __chkstk                   1000e9d0 f   libcmt:chkstk.obj
  0001:0000d9d0       __alloca_probe             1000e9d0     libcmt:chkstk.obj
+ 0001:0000d9d0       __chkstk                   1000e9d0 f   libcmt:chkstk.obj
  0001:0000d9fb       __CRT_INIT@12              1000e9fb f   libcmt:dllcrt0.obj
  0001:0000dc26       __DllMainCRTStartup@12     1000ec26 f   libcmt:dllcrt0.obj
  0001:0000dcd0       __VEC_memcpy               1000ecd0 f   libcmt:p4_memcpy.obj
@@ -353,8 +358,8 @@
  0001:0000e079       __abnormal_termination     1000f079 f   libcmt:exsup.obj
  0001:0000e09c       __NLG_Notify1              1000f09c f   libcmt:exsup.obj
  0001:0000e0a5       __NLG_Notify               1000f0a5 f   libcmt:exsup.obj
- 0001:0000e0bc       __NLG_Dispatch             1000f0bc     libcmt:exsup.obj
  0001:0000e0bc       __NLG_Dispatch2            1000f0bc     libcmt:exsup.obj
+ 0001:0000e0bc       __NLG_Dispatch             1000f0bc     libcmt:exsup.obj
  0001:0000e0c4       __NLG_Call                 1000f0c4 f   libcmt:exsup.obj
  0001:0000e0c6       __NLG_Return2              1000f0c6     libcmt:exsup.obj
  0001:0000e190       __ValidateEH3RN            1000f190 f   libcmt:eh3valid.obj
@@ -394,15 +399,10 @@
  0001:0000f696       __RTC_Terminate            10010696 f   libcmt:_initsect_.obj
  0001:0000f6bc       __heap_init                100106bc f   libcmt:heapinit.obj
  0001:0000f6ec       __heap_term                100106ec f   libcmt:heapinit.obj
- 0001:0000f760       ?OnThreadStopped@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXXZ 10010760 f   ImgCache.obj
- 0001:0000f760       ?SettingsLoadOtherW2800@@YIXXZ 10010760 f   ConEmuTh2800.obj
- 0001:0000f760       ?LoadPanelItemInfoA@@YIXPAUCeFullPanelInfo@@H@Z 10010760 f   ConEmuThA.obj
- 0001:0000f760       __initp_misc_winxfltr      10010760 f   libcmt:winxfltr.obj
- 0001:0000f760       ?SettingsLoadOtherW1900@@YIXXZ 10010760 f   ConEmuTh1900.obj
- 0001:0000f761       __XcptFilter               10010761 f   libcmt:winxfltr.obj
- 0001:0000f8c1       ___CppXcptFilter           100108c1 f   libcmt:winxfltr.obj
- 0001:0000f8e4       __SEH_prolog4              100108e4 f   libcmt:sehprolg4.obj
- 0001:0000f929       __SEH_epilog4              10010929 f   libcmt:sehprolg4.obj
+ 0001:0000f760       __XcptFilter               10010760 f   libcmt:winxfltr.obj
+ 0001:0000f8c0       ___CppXcptFilter           100108c0 f   libcmt:winxfltr.obj
+ 0001:0000f8e0       __SEH_prolog4              100108e0 f   libcmt:sehprolg4.obj
+ 0001:0000f925       __SEH_epilog4              10010925 f   libcmt:sehprolg4.obj
  0001:0000f940       __except_handler4          10010940 f   libcmt:chandler4.obj
  0001:0000facc       ___security_init_cookie    10010acc f   libcmt:gs_support.obj
  0001:0000fb70       __ValidateImageBase        10010b70 f   libcmt:pesect.obj
@@ -1064,8 +1064,8 @@
  0001:00000000       ?LoadFarVersion@@YI_NAAUFarVersion@@AAY0CAA@_W@Z 10001000 f   ConEmuTh.obj
  0001:00000245       ?ChangeExports@@YI_NPBUExportFunc@@PAUHINSTANCE__@@@Z 10001245 f   ConEmuTh.obj
  0001:0000260d       ?LoadFarSettingsW995@@YIXPAUCEFarInterfaceSettings@@PAUCEFarPanelSettings@@@Z 1000360d f   ConEmuTh995.obj
- 0001:0000336e       ?GetFarSetting@@YIHPAXIPB_W@Z 1000436e f   ConEmuTh1900.obj
- 0001:000033b4       ?LoadFarSettingsW1900@@YIXPAUCEFarInterfaceSettings@@PAUCEFarPanelSettings@@@Z 100043b4 f   ConEmuTh1900.obj
+ 0001:00003316       ?GetFarSetting@@YIHPAXIPB_W@Z 10004316 f   ConEmuTh1900.obj
+ 0001:0000335c       ?LoadFarSettingsW1900@@YIXPAUCEFarInterfaceSettings@@PAUCEFarPanelSettings@@@Z 1000435c f   ConEmuTh1900.obj
  0001:0000428e       ?GetFarSetting@@YIHPAXIPB_W@Z 1000528e f   ConEmuTh2800.obj
  0001:000042d7       ?LoadFarSettingsW2800@@YIXPAUCEFarInterfaceSettings@@PAUCEFarPanelSettings@@@Z 100052d7 f   ConEmuTh2800.obj
  0001:00004e6a       ?LoadFarSettingsA@@YIXPAUCEFarInterfaceSettings@@PAUCEFarPanelSettings@@@Z 10005e6a f   ConEmuThA.obj
