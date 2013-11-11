@@ -1,13 +1,13 @@
  gdi+
 
- Timestamp is 526c4b83 (Sun Oct 27 03:08:51 2013)
+ Timestamp is 527c01fd (Fri Nov 08 01:11:25 2013)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
  0001:00000000 000000acH .idata$5                CODE
  0001:000000b0 0000085cH .rdata                  CODE
- 0001:0000090c 00000074H .rdata$debug            CODE
+ 0001:0000090c 00000072H .rdata$debug            CODE
  0001:00000980 00001b36H .text                   CODE
  0001:000024b8 00000050H .idata$2                CODE
  0001:00002508 00000014H .idata$3                CODE
