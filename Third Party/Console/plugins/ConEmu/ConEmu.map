@@ -1,6 +1,6 @@
  ConEmu
 
- Timestamp is 527c01e0 (Fri Nov 08 01:10:56 2013)
+ Timestamp is 5293b292 (Tue Nov 26 00:26:58 2013)
 
  Preferred load address is 10000000
 
@@ -8,7 +8,7 @@
  0001:00000000 0002cc26H .text                   CODE
  0002:00000000 00000348H .idata$5                DATA
  0002:00000350 00003998H .rdata                  DATA
- 0002:00003ce8 00000078H .rdata$debug            DATA
+ 0002:00003ce8 0000006fH .rdata$debug            DATA
  0002:00003d60 0000000cH .rdata$sxdata           DATA
  0002:00003d70 0000003cH .xdata$x                DATA
  0002:00003dac 00000078H .idata$2                DATA
@@ -28,44 +28,44 @@
  0000:00000003       ___safe_se_handler_count   00000003     <absolute>
  0000:00000000       ___ImageBase               10000000     <linker-defined>
  0001:00000000       ?StartupHooks@@YIHPAUHINSTANCE__@@@Z 10001000 f   ConEmuInjects.obj
- 0001:00000360       ?ShutdownHooks@@YIXXZ      10001360 f   ConEmuInjects.obj
- 0001:000004f0       ??$wcscpy_c@$0EA@@@YIHAAY0EA@_WPB_W@Z 100014f0 f i ConEmuInjects.obj
- 0001:00000520       ?StringCchCopyW@@YGJPA_WIPB_W@Z 10001520 f i ConEmuInjects.obj
- 0001:00000650       ?pcc_Selected@@YI_NW4PluginMenuCommands@@@Z 10001650 f   ConEmuPlugin.obj
- 0001:000006c0       ?pcc_Disabled@@YI_NW4PluginMenuCommands@@@Z 100016c0 f   ConEmuPlugin.obj
- 0001:00000770       ?GetPluginInfoWcmn@@YGXPAX@Z 10001770 f   ConEmuPlugin.obj
- 0001:000007b0       ?CheckConEmuDetached@@YIXXZ 100017b0 f   ConEmuPlugin.obj
- 0001:00000850       ??BHWND2@@QBEKXZ           10001850 f i ConEmuPlugin.obj
- 0001:00000860       ?OpenPluginWcmn@@YIPAXHH_N@Z 10001860 f   ConEmuPlugin.obj
- 0001:00000af0       _OpenPluginW@8             10001af0 f   ConEmuPlugin.obj
- 0001:00000b30       ?TouchReadPeekConsoleInputs@@YIXH@Z 10001b30 f   ConEmuPlugin.obj
- 0001:00000b70       ?OnMainThreadActivated@@YIXXZ 10001b70 f   ConEmuPlugin.obj
- 0001:00000df0       ?IsFarLua@FarVersion@@QBE_NXZ 10001df0 f i ConEmuPlugin.obj
- 0001:00000e40       ?OnConsolePeekReadInput@@YIXH@Z 10001e40 f   ConEmuPlugin.obj
- 0001:00001030       ?ActiveServerPID@CESERVER_CONSOLE_MAPPING_HDR@@QBEKXZ 10002030 f i ConEmuPlugin.obj
- 0001:00001070       ?OnPanelViewCallbacks@@YIHPAUHookCallbackArg@@P6GHPAXPAU_INPUT_RECORD@@KPAKPAH@Z5@Z 10002070 f   ConEmuPlugin.obj
- 0001:00001150       ?OnShellExecuteExW_Except@@YGXPAUHookCallbackArg@@@Z 10002150 f   ConEmuPlugin.obj
- 0001:00001190       ?OnGetNumberOfConsoleInputEventsPost@@YGXPAUHookCallbackArg@@@Z 10002190 f   ConEmuPlugin.obj
- 0001:000011d0       ?UngetDummyMouseEvent@@YIHHPAUHookCallbackArg@@@Z 100021d0 f   ConEmuPlugin.obj
- 0001:00001400       ??4HANDLE2@@QAEAAU0@PAX@Z  10002400 f i ConEmuPlugin.obj
- 0001:00001420       ?OnConsolePeekInput@@YGHPAUHookCallbackArg@@@Z 10002420 f   ConEmuPlugin.obj
- 0001:000014a0       ?OnConsolePeekInputPost@@YGXPAUHookCallbackArg@@@Z 100024a0 f   ConEmuPlugin.obj
- 0001:000014e0       ?OnConsoleReadInputWork@@YIHPAUHookCallbackArg@@@Z 100024e0 f   ConEmuPlugin.obj
- 0001:00001570       ?OnConsoleReadInput@@YGHPAUHookCallbackArg@@@Z 10002570 f   ConEmuPlugin.obj
- 0001:00001580       ?OnConsoleReadInputPost@@YGXPAUHookCallbackArg@@@Z 10002580 f   ConEmuPlugin.obj
- 0001:000017c0       ?OnWriteConsoleOutput@@YGHPAUHookCallbackArg@@@Z 100027c0 f   ConEmuPlugin.obj
- 0001:000018a0       _ProcessSynchroEventW@8    100028a0 f   ConEmuPlugin.obj
- 0001:00001950       ?ShutdownPluginStep@@YIXPB_WHHHH@Z 10002950 f   ConEmuPlugin.obj
- 0001:00001970       _DllMain@12                10002970 f   ConEmuPlugin.obj
- 0001:00001be0       ??_GMSection@@QAEPAXI@Z    10002be0 f i ConEmuPlugin.obj
- 0001:00001c10       ??_GCPluginBackground@@QAEPAXI@Z 10002c10 f i ConEmuPlugin.obj
- 0001:00001c40       __DllMainCRTStartup@12     10002c40 f   ConEmuPlugin.obj
- 0001:00001c60       ?IsConsoleActive@@YGHXZ    10002c60 f   ConEmuPlugin.obj
- 0001:00001cc0       ?GetFarHWND2@@YGPAUHWND__@@H@Z 10002cc0 f   ConEmuPlugin.obj
- 0001:00001d30       ?GetFarHWND@@YGPAUHWND__@@XZ 10002d30 f   ConEmuPlugin.obj
- 0001:00001d40       ?IsTerminalMode@@YGHXZ     10002d40 f   ConEmuPlugin.obj
- 0001:00001d50       ?GetFarVersion@@YGXPAUFarVersion@@@Z 10002d50 f   ConEmuPlugin.obj
- 0001:00001d80       ?LoadFarVersion@@YIHXZ     10002d80 f   ConEmuPlugin.obj
+ 0001:00000350       ?ShutdownHooks@@YIXXZ      10001350 f   ConEmuInjects.obj
+ 0001:000004e0       ??$wcscpy_c@$0EA@@@YIHAAY0EA@_WPB_W@Z 100014e0 f i ConEmuInjects.obj
+ 0001:00000510       ?StringCchCopyW@@YGJPA_WIPB_W@Z 10001510 f i ConEmuInjects.obj
+ 0001:00000640       ?pcc_Selected@@YI_NW4PluginMenuCommands@@@Z 10001640 f   ConEmuPlugin.obj
+ 0001:000006b0       ?pcc_Disabled@@YI_NW4PluginMenuCommands@@@Z 100016b0 f   ConEmuPlugin.obj
+ 0001:00000760       ?GetPluginInfoWcmn@@YGXPAX@Z 10001760 f   ConEmuPlugin.obj
+ 0001:000007a0       ?CheckConEmuDetached@@YIXXZ 100017a0 f   ConEmuPlugin.obj
+ 0001:00000840       ??BHWND2@@QBEKXZ           10001840 f i ConEmuPlugin.obj
+ 0001:00000850       ?OpenPluginWcmn@@YIPAXHH_N@Z 10001850 f   ConEmuPlugin.obj
+ 0001:00000ae0       _OpenPluginW@8             10001ae0 f   ConEmuPlugin.obj
+ 0001:00000b20       ?TouchReadPeekConsoleInputs@@YIXH@Z 10001b20 f   ConEmuPlugin.obj
+ 0001:00000b60       ?OnMainThreadActivated@@YIXXZ 10001b60 f   ConEmuPlugin.obj
+ 0001:00000de0       ?IsFarLua@FarVersion@@QBE_NXZ 10001de0 f i ConEmuPlugin.obj
+ 0001:00000e30       ?OnConsolePeekReadInput@@YIXH@Z 10001e30 f   ConEmuPlugin.obj
+ 0001:00001020       ?ActiveServerPID@CESERVER_CONSOLE_MAPPING_HDR@@QBEKXZ 10002020 f i ConEmuPlugin.obj
+ 0001:00001060       ?OnPanelViewCallbacks@@YIHPAUHookCallbackArg@@P6GHPAXPAU_INPUT_RECORD@@KPAKPAH@Z5@Z 10002060 f   ConEmuPlugin.obj
+ 0001:00001140       ?OnShellExecuteExW_Except@@YGXPAUHookCallbackArg@@@Z 10002140 f   ConEmuPlugin.obj
+ 0001:00001180       ?OnGetNumberOfConsoleInputEventsPost@@YGXPAUHookCallbackArg@@@Z 10002180 f   ConEmuPlugin.obj
+ 0001:000011c0       ?UngetDummyMouseEvent@@YIHHPAUHookCallbackArg@@@Z 100021c0 f   ConEmuPlugin.obj
+ 0001:000013f0       ??4HANDLE2@@QAEAAU0@PAX@Z  100023f0 f i ConEmuPlugin.obj
+ 0001:00001410       ?OnConsolePeekInput@@YGHPAUHookCallbackArg@@@Z 10002410 f   ConEmuPlugin.obj
+ 0001:00001490       ?OnConsolePeekInputPost@@YGXPAUHookCallbackArg@@@Z 10002490 f   ConEmuPlugin.obj
+ 0001:000014d0       ?OnConsoleReadInputWork@@YIHPAUHookCallbackArg@@@Z 100024d0 f   ConEmuPlugin.obj
+ 0001:00001560       ?OnConsoleReadInput@@YGHPAUHookCallbackArg@@@Z 10002560 f   ConEmuPlugin.obj
+ 0001:00001570       ?OnConsoleReadInputPost@@YGXPAUHookCallbackArg@@@Z 10002570 f   ConEmuPlugin.obj
+ 0001:000017b0       ?OnWriteConsoleOutput@@YGHPAUHookCallbackArg@@@Z 100027b0 f   ConEmuPlugin.obj
+ 0001:00001890       _ProcessSynchroEventW@8    10002890 f   ConEmuPlugin.obj
+ 0001:00001940       ?ShutdownPluginStep@@YIXPB_WHHHH@Z 10002940 f   ConEmuPlugin.obj
+ 0001:00001960       _DllMain@12                10002960 f   ConEmuPlugin.obj
+ 0001:00001bd0       ??_GMSection@@QAEPAXI@Z    10002bd0 f i ConEmuPlugin.obj
+ 0001:00001c00       ??_GCPluginBackground@@QAEPAXI@Z 10002c00 f i ConEmuPlugin.obj
+ 0001:00001c30       __DllMainCRTStartup@12     10002c30 f   ConEmuPlugin.obj
+ 0001:00001c50       ?IsConsoleActive@@YGHXZ    10002c50 f   ConEmuPlugin.obj
+ 0001:00001cb0       ?GetFarHWND2@@YGPAUHWND__@@H@Z 10002cb0 f   ConEmuPlugin.obj
+ 0001:00001d20       ?GetFarHWND@@YGPAUHWND__@@XZ 10002d20 f   ConEmuPlugin.obj
+ 0001:00001d30       ?IsTerminalMode@@YGHXZ     10002d30 f   ConEmuPlugin.obj
+ 0001:00001d40       ?GetFarVersion@@YGXPAUFarVersion@@@Z 10002d40 f   ConEmuPlugin.obj
+ 0001:00001d70       ?LoadFarVersion@@YIHXZ     10002d70 f   ConEmuPlugin.obj
  0001:00002110       ?RegisterPanelView@@YGHPAUPanelViewInit@@@Z 10003110 f   ConEmuPlugin.obj
  0001:00002300       ?RegisterBackground@@YGHPAURegisterBackgroundArg@@@Z 10003300 f   ConEmuPlugin.obj
  0001:00002390       ?SyncExecute@@YGHPAUHINSTANCE__@@P6GXJ@ZJ@Z 10003390 f   ConEmuPlugin.obj
@@ -1478,12 +1478,12 @@
  0003:00002540       __pDestructExceptionObject 10036540     <common>
  0003:00002544       ___sse2_available          10036544     <common>
 
- entry point at        0001:00001c40
+ entry point at        0001:00001c30
 
  Static symbols
 
- 0001:00000570       ?StringValidateDestW@@YGJPB_WII@Z 10001570 f   ConEmuInjects.obj
- 0001:000005a0       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 100015a0 f   ConEmuInjects.obj
+ 0001:00000560       ?StringValidateDestW@@YGJPB_WII@Z 10001560 f   ConEmuInjects.obj
+ 0001:00000590       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 10001590 f   ConEmuInjects.obj
  0001:00001e20       ?LoadFarVersion@@YI_NAAUFarVersion@@AAY0CAA@_W@Z 10002e20 f   ConEmuPlugin.obj
  0001:00003350       ?StringValidateDestW@@YGJPB_WII@Z 10004350 f   ConEmuPlugin.obj
  0001:00003380       ?StringValidateDestAndLengthW@@YGJPB_WIPAII@Z 10004380 f   ConEmuPlugin.obj
