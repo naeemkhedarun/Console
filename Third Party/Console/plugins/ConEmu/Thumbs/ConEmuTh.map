@@ -1,6 +1,6 @@
  ConEmuTh
 
- Timestamp is 5293b2a5 (Tue Nov 26 00:27:17 2013)
+ Timestamp is 52ae39bb (Mon Dec 16 03:22:35 2013)
 
  Preferred load address is 10000000
 
@@ -65,8 +65,8 @@
  0001:00000aca       ?isPreloadByDefault@@YI_NXZ 10001aca f   ConEmuTh.obj
  0001:00000af2       ?FreeUserData@CePluginPanelItem@@QAEXXZ 10001af2 f   ConEmuTh.obj
  0001:00000b33       ?FreeItem@CePluginPanelItem@@QAEXXZ 10001b33 f   ConEmuTh.obj
- 0001:00000b48       ??0?$MFileMapping@Utag_DetectedDialog@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
  0001:00000b48       ??0?$MFileMapping@UPanelViewSetMapping@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
+ 0001:00000b48       ??0?$MFileMapping@Utag_DetectedDialog@@@@QAE@XZ 10001b48 f i ConEmuTh.obj
  0001:00000b6c       ?ClosePtr@?$MFileMapping@UPanelViewSetMapping@@@@QAEXXZ 10001b6c f i ConEmuTh.obj
  0001:00000b6c       ?ClosePtr@?$MFileMapping@Utag_DetectedDialog@@@@QAEXXZ 10001b6c f i ConEmuTh.obj
  0001:00000b83       ?StringCchCopyW@@YGJPA_WIPB_W@Z 10001b83 f i ConEmuTh.obj
@@ -81,8 +81,8 @@
  0001:00001258       ?CloseMap@?$MFileMapping@Utag_DetectedDialog@@@@QAEXXZ 10002258 f i ConEmuTh.obj
  0001:0000128c       ?ProcessConsoleInput@@YIHHPAU_INPUT_RECORD@@KPAK@Z 1000228c f   ConEmuTh.obj
  0001:0000152f       ?UpdateEnvVar@@YIXH@Z      1000252f f   ConEmuTh.obj
- 0001:0000154f       ?InitName@?$MFileMapping@UPanelViewSetMapping@@@@QAEPB_WPB_WKK@Z 1000254f f i ConEmuTh.obj
  0001:0000154f       ?InitName@?$MFileMapping@Utag_DetectedDialog@@@@QAEPB_WPB_WKK@Z 1000254f f i ConEmuTh.obj
+ 0001:0000154f       ?InitName@?$MFileMapping@UPanelViewSetMapping@@@@QAEPB_WPB_WKK@Z 1000254f f i ConEmuTh.obj
  0001:0000157f       ?InternalOpenCreate@?$MFileMapping@Utag_DetectedDialog@@@@IAEPAUtag_DetectedDialog@@HHH@Z 1000257f f i ConEmuTh.obj
  0001:00001697       ?InternalOpenCreate@?$MFileMapping@UPanelViewSetMapping@@@@IAEPAUPanelViewSetMapping@@HHH@Z 10002697 f i ConEmuTh.obj
  0001:000017af       ??_G?$MFileMapping@Utag_DetectedDialog@@@@QAEPAXI@Z 100027af f i ConEmuTh.obj
@@ -145,8 +145,8 @@
  0001:00003bab       _GetGlobalInfoW@4          10004bab f   ConEmuTh2800.obj
  0001:00003c3e       ?GetPluginInfoW2800@@YIXPAX@Z 10004c3e f   ConEmuTh2800.obj
  0001:00003c8f       ?SetStartupInfoW2800@@YIXPAX@Z 10004c8f f   ConEmuTh2800.obj
- 0001:00003d7d       ?OpenW1900@@YIPAXPBX@Z     10004d7d f   ConEmuTh1900.obj
  0001:00003d7d       ?OpenW2800@@YIPAXPBX@Z     10004d7d f   ConEmuTh2800.obj
+ 0001:00003d7d       ?OpenW1900@@YIPAXPBX@Z     10004d7d f   ConEmuTh1900.obj
  0001:00003dd5       ?ProcessSynchroEventW3@@YGHPAX@Z 10004dd5 f   ConEmuTh2800.obj
  0001:00003de7       ?ExitFARW2800@@YIXXZ       10004de7 f   ConEmuTh2800.obj
  0001:00003e16       ?ShowMessageW2800@@YIHPB_WH@Z 10004e16 f   ConEmuTh2800.obj
@@ -221,40 +221,40 @@
  0001:00008ce9       ??0?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAE@XZ 10009ce9 f i ImgCache.obj
  0001:00008d23       ?IsStopRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@UAE_NABQAUIMAGE_CACHE_INFO@@@Z 10009d23 f i ImgCache.obj
  0001:00008d34       ?ProcessItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEJAAPAUIMAGE_CACHE_INFO@@J@Z 10009d34 f i ImgCache.obj
- 0001:00008d3c       ?OnItemFailed@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
  0001:00008d3c       ?OnItemReady@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
+ 0001:00008d3c       ?OnItemFailed@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@J@Z 10009d3c f i ImgCache.obj
  0001:00008d3c       ?ApplyChanges@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXAAPAUIMAGE_CACHE_INFO@@ABQAU2@@Z 10009d3c f i ImgCache.obj
  0001:00008d3f       ?OnThreadStarted@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEJXZ 10009d3f f i ImgCache.obj
  0001:00008d42       __initp_misc_winxfltr      10009d42 f i libcmt:winxfltr.obj
- 0001:00008d42       ?LoadPanelItemInfoA@@YIXPAUCeFullPanelInfo@@H@Z 10009d42 f i ConEmuThA.obj
- 0001:00008d42       ?SettingsLoadOtherW1900@@YIXXZ 10009d42 f i ConEmuTh1900.obj
  0001:00008d42       ?OnThreadStopped@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXXZ 10009d42 f i ImgCache.obj
  0001:00008d42       ?SettingsLoadOtherW2800@@YIXXZ 10009d42 f i ConEmuTh2800.obj
+ 0001:00008d42       ?LoadPanelItemInfoA@@YIXPAUCeFullPanelInfo@@H@Z 10009d42 f i ConEmuThA.obj
+ 0001:00008d42       ?SettingsLoadOtherW1900@@YIXXZ 10009d42 f i ConEmuTh1900.obj
  0001:00008d43       ?CopyItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXPBQAUIMAGE_CACHE_INFO@@PAPAU2@@Z 10009d43 f i ImgCache.obj
  0001:00008d5f       ?IsEqual@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NABQAUIMAGE_CACHE_INFO@@J0J@Z 10009d5f f i ImgCache.obj
  0001:00008d95       ?FreeItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAEXABQAUIMAGE_CACHE_INFO@@@Z 10009d95 f i ImgCache.obj
- 0001:00008d98       ?CheckHighPriority@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NABQAUIMAGE_CACHE_INFO@@@Z 10009d98 f i ImgCache.obj
- 0001:00008d98       ?CheckHighPriority@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@@Z 10009d98 f i ImgCache.obj
- 0001:00008d9d       ?ClearQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009d9d f i ImgCache.obj
- 0001:00008dfa       ?InitializeQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXH@Z 10009dfa f i ImgCache.obj
- 0001:00008e6b       ?CheckWaitingCount@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009e6b f i ImgCache.obj
- 0001:00008ea2       ?ProcessingStep@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAE_NXZ 10009ea2 f i ImgCache.obj
- 0001:0000904b       ??$SafeRelease@UIStorage@@@@YIXAAPAUIStorage@@@Z 1000a04b f i ImgCache.obj
- 0001:0000905f       ??0CImgCache@@QAE@PAUHINSTANCE__@@@Z 1000a05f f   ImgCache.obj
- 0001:0000915f       ?PaintItem@CImgCache@@QAEHPAUHDC__@@HHHPAUCePluginPanelItem@@PAPB_WPAH@Z 1000a15f f   ImgCache.obj
- 0001:0000958d       ?Terminate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAEXK@Z 1000a58d f i ImgCache.obj
- 0001:000095ce       ?FindOrCreate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEPAUProcessingItem@1@ABQAUIMAGE_CACHE_INFO@@J_NW4ProcessingPriority@@@Z 1000a5ce f i ImgCache.obj
- 0001:0000972b       ?ProcessingThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@KGKPAX@Z 1000a72b f i ImgCache.obj
- 0001:0000974e       ?Reset@CImgCache@@QAEXXZ   1000a74e f   ImgCache.obj
- 0001:00009893       ?Init@CImgCache@@QAEXK@Z   1000a893 f   ImgCache.obj
- 0001:000098d7       ??1?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAE@XZ 1000a8d7 f i ImgCache.obj
- 0001:0000992f       ?CheckThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAEJXZ 1000a92f f i ImgCache.obj
- 0001:000099bc       ?OnThreadStarted@CImgLoader@@UAEJXZ 1000a9bc f i ImgCache.obj
- 0001:000099c7       ?OnThreadStopped@CImgLoader@@UAEXXZ 1000a9c7 f i ImgCache.obj
- 0001:000099cd       ?IsEqual@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@JAAPAU2@J@Z 1000a9cd f i ImgCache.obj
+ 0001:00008d98       ?ClearQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009d98 f i ImgCache.obj
+ 0001:00008df5       ?InitializeQueue@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXH@Z 10009df5 f i ImgCache.obj
+ 0001:00008e66       ?CheckWaitingCount@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEXXZ 10009e66 f i ImgCache.obj
+ 0001:00008e9d       ?ProcessingStep@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAE_NXZ 10009e9d f i ImgCache.obj
+ 0001:00009046       ??$SafeRelease@UIStorage@@@@YIXAAPAUIStorage@@@Z 1000a046 f i ImgCache.obj
+ 0001:0000905a       ??0CImgCache@@QAE@PAUHINSTANCE__@@@Z 1000a05a f   ImgCache.obj
+ 0001:0000915a       ?PaintItem@CImgCache@@QAEHPAUHDC__@@HHHPAUCePluginPanelItem@@PAPB_WPAH@Z 1000a15a f   ImgCache.obj
+ 0001:00009588       ?Terminate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAEXK@Z 1000a588 f i ImgCache.obj
+ 0001:000095c9       ?FindOrCreate@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@AAEPAUProcessingItem@1@ABQAUIMAGE_CACHE_INFO@@J_NW4ProcessingPriority@@@Z 1000a5c9 f i ImgCache.obj
+ 0001:00009726       ?ProcessingThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@KGKPAX@Z 1000a726 f i ImgCache.obj
+ 0001:00009749       ?Reset@CImgCache@@QAEXXZ   1000a749 f   ImgCache.obj
+ 0001:0000988e       ?Init@CImgCache@@QAEXK@Z   1000a88e f   ImgCache.obj
+ 0001:000098d2       ??1?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAE@XZ 1000a8d2 f i ImgCache.obj
+ 0001:0000992a       ?CheckThread@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@IAEJXZ 1000a92a f i ImgCache.obj
+ 0001:000099b7       ?OnThreadStarted@CImgLoader@@UAEJXZ 1000a9b7 f i ImgCache.obj
+ 0001:000099c2       ?OnThreadStopped@CImgLoader@@UAEXXZ 1000a9c2 f i ImgCache.obj
+ 0001:000099c8       ?IsEqual@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@JAAPAU2@J@Z 1000a9c8 f i ImgCache.obj
+ 0001:000099ea       ?CheckHighPriority@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NABQAUIMAGE_CACHE_INFO@@@Z 1000a9ea f i ImgCache.obj
+ 0001:000099ea       ?CheckHighPriority@CImgLoader@@UAE_NAAPBUIMAGE_CACHE_INFO@@@Z 1000a9ea f i ImgCache.obj
  0001:000099ef       ?ProcessItem@CImgLoader@@UAEJAAPAUIMAGE_CACHE_INFO@@J@Z 1000a9ef f i ImgCache.obj
- 0001:00009a34       ?IsTerminationRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NXZ 1000aa34 f i ImgCache.obj
  0001:00009a34       ?IsTerminationRequested@CImgLoader@@UAE_NXZ 1000aa34 f i ImgCache.obj
+ 0001:00009a34       ?IsTerminationRequested@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@MAE_NXZ 1000aa34 f i ImgCache.obj
  0001:00009a38       ?RequestItem@?$CQueueProcessor@PAUIMAGE_CACHE_INFO@@@@QAEJ_NW4ProcessingPriority@@QAUIMAGE_CACHE_INFO@@J@Z 1000aa38 f i ImgCache.obj
  0001:00009adc       ?RequestItem@CImgCache@@QAEHPAUCePluginPanelItem@@I@Z 1000aadc f   ImgCache.obj
  0001:00009b7d       ??1CImgCache@@QAE@XZ       1000ab7d f   ImgCache.obj
@@ -562,40 +562,40 @@
  0002:000000e8       __imp__GetCurrentProcess@0 100150e8     kernel32:KERNEL32.dll
  0002:000000ec       __imp__Process32NextW@8    100150ec     kernel32:KERNEL32.dll
  0002:000000f0       __imp__Process32FirstW@8   100150f0     kernel32:KERNEL32.dll
- 0002:000000f4       __imp__TryEnterCriticalSection@4 100150f4     kernel32:KERNEL32.dll
- 0002:000000f8       __imp__OpenThread@12       100150f8     kernel32:KERNEL32.dll
- 0002:000000fc       __imp__WriteFile@20        100150fc     kernel32:KERNEL32.dll
- 0002:00000100       __imp__LocalAlloc@8        10015100     kernel32:KERNEL32.dll
- 0002:00000104       __imp__GetModuleFileNameA@12 10015104     kernel32:KERNEL32.dll
- 0002:00000108       __imp__GetCommandLineA@0   10015108     kernel32:KERNEL32.dll
- 0002:0000010c       __imp__RtlUnwind@16        1001510c     kernel32:KERNEL32.dll
- 0002:00000110       __imp__VirtualQuery@12     10015110     kernel32:KERNEL32.dll
- 0002:00000114       __imp__TlsGetValue@4       10015114     kernel32:KERNEL32.dll
- 0002:00000118       __imp__TlsAlloc@0          10015118     kernel32:KERNEL32.dll
- 0002:0000011c       __imp__TlsSetValue@8       1001511c     kernel32:KERNEL32.dll
- 0002:00000120       __imp__TlsFree@4           10015120     kernel32:KERNEL32.dll
- 0002:00000124       __imp__InterlockedIncrement@4 10015124     kernel32:KERNEL32.dll
- 0002:00000128       __imp__SetLastError@4      10015128     kernel32:KERNEL32.dll
- 0002:0000012c       __imp__InterlockedDecrement@4 1001512c     kernel32:KERNEL32.dll
- 0002:00000130       __imp__ExitProcess@4       10015130     kernel32:KERNEL32.dll
- 0002:00000134       __imp__SetHandleCount@4    10015134     kernel32:KERNEL32.dll
- 0002:00000138       __imp__GetFileType@4       10015138     kernel32:KERNEL32.dll
- 0002:0000013c       __imp__GetStartupInfoA@4   1001513c     kernel32:KERNEL32.dll
- 0002:00000140       __imp__FreeEnvironmentStringsA@4 10015140     kernel32:KERNEL32.dll
- 0002:00000144       __imp__GetEnvironmentStrings@0 10015144     kernel32:KERNEL32.dll
- 0002:00000148       __imp__FreeEnvironmentStringsW@4 10015148     kernel32:KERNEL32.dll
- 0002:0000014c       __imp__GetEnvironmentStringsW@0 1001514c     kernel32:KERNEL32.dll
- 0002:00000150       __imp__VirtualFree@12      10015150     kernel32:KERNEL32.dll
- 0002:00000154       __imp__QueryPerformanceCounter@4 10015154     kernel32:KERNEL32.dll
- 0002:00000158       __imp__GetSystemTimeAsFileTime@4 10015158     kernel32:KERNEL32.dll
- 0002:0000015c       __imp__GetCPInfo@8         1001515c     kernel32:KERNEL32.dll
- 0002:00000160       __imp__GetACP@0            10015160     kernel32:KERNEL32.dll
- 0002:00000164       __imp__GetOEMCP@0          10015164     kernel32:KERNEL32.dll
- 0002:00000168       __imp__IsValidCodePage@4   10015168     kernel32:KERNEL32.dll
- 0002:0000016c       __imp__VirtualAlloc@16     1001516c     kernel32:KERNEL32.dll
+ 0002:000000f4       __imp__VirtualFree@12      100150f4     kernel32:KERNEL32.dll
+ 0002:000000f8       __imp__VirtualAlloc@16     100150f8     kernel32:KERNEL32.dll
+ 0002:000000fc       __imp__TryEnterCriticalSection@4 100150fc     kernel32:KERNEL32.dll
+ 0002:00000100       __imp__OpenThread@12       10015100     kernel32:KERNEL32.dll
+ 0002:00000104       __imp__WriteFile@20        10015104     kernel32:KERNEL32.dll
+ 0002:00000108       __imp__LocalAlloc@8        10015108     kernel32:KERNEL32.dll
+ 0002:0000010c       __imp__GetModuleFileNameA@12 1001510c     kernel32:KERNEL32.dll
+ 0002:00000110       __imp__GetCommandLineA@0   10015110     kernel32:KERNEL32.dll
+ 0002:00000114       __imp__RtlUnwind@16        10015114     kernel32:KERNEL32.dll
+ 0002:00000118       __imp__VirtualQuery@12     10015118     kernel32:KERNEL32.dll
+ 0002:0000011c       __imp__TlsGetValue@4       1001511c     kernel32:KERNEL32.dll
+ 0002:00000120       __imp__TlsAlloc@0          10015120     kernel32:KERNEL32.dll
+ 0002:00000124       __imp__TlsSetValue@8       10015124     kernel32:KERNEL32.dll
+ 0002:00000128       __imp__TlsFree@4           10015128     kernel32:KERNEL32.dll
+ 0002:0000012c       __imp__InterlockedIncrement@4 1001512c     kernel32:KERNEL32.dll
+ 0002:00000130       __imp__SetLastError@4      10015130     kernel32:KERNEL32.dll
+ 0002:00000134       __imp__InterlockedDecrement@4 10015134     kernel32:KERNEL32.dll
+ 0002:00000138       __imp__ExitProcess@4       10015138     kernel32:KERNEL32.dll
+ 0002:0000013c       __imp__SetHandleCount@4    1001513c     kernel32:KERNEL32.dll
+ 0002:00000140       __imp__GetFileType@4       10015140     kernel32:KERNEL32.dll
+ 0002:00000144       __imp__GetStartupInfoA@4   10015144     kernel32:KERNEL32.dll
+ 0002:00000148       __imp__FreeEnvironmentStringsA@4 10015148     kernel32:KERNEL32.dll
+ 0002:0000014c       __imp__GetEnvironmentStrings@0 1001514c     kernel32:KERNEL32.dll
+ 0002:00000150       __imp__FreeEnvironmentStringsW@4 10015150     kernel32:KERNEL32.dll
+ 0002:00000154       __imp__GetEnvironmentStringsW@0 10015154     kernel32:KERNEL32.dll
+ 0002:00000158       __imp__QueryPerformanceCounter@4 10015158     kernel32:KERNEL32.dll
+ 0002:0000015c       __imp__GetSystemTimeAsFileTime@4 1001515c     kernel32:KERNEL32.dll
+ 0002:00000160       __imp__GetCPInfo@8         10015160     kernel32:KERNEL32.dll
+ 0002:00000164       __imp__GetACP@0            10015164     kernel32:KERNEL32.dll
+ 0002:00000168       __imp__GetOEMCP@0          10015168     kernel32:KERNEL32.dll
+ 0002:0000016c       __imp__IsValidCodePage@4   1001516c     kernel32:KERNEL32.dll
  0002:00000170       __imp__TerminateProcess@8  10015170     kernel32:KERNEL32.dll
- 0002:00000174       __imp__UnhandledExceptionFilter@4 10015174     kernel32:KERNEL32.dll
- 0002:00000178       __imp__lstrlenA@4          10015178     kernel32:KERNEL32.dll
+ 0002:00000174       __imp__lstrlenA@4          10015174     kernel32:KERNEL32.dll
+ 0002:00000178       __imp__SetUnhandledExceptionFilter@4 10015178     kernel32:KERNEL32.dll
  0002:0000017c       __imp__IsDebuggerPresent@0 1001517c     kernel32:KERNEL32.dll
  0002:00000180       __imp__LoadLibraryA@4      10015180     kernel32:KERNEL32.dll
  0002:00000184       __imp__InitializeCriticalSectionAndSpinCount@8 10015184     kernel32:KERNEL32.dll
@@ -635,7 +635,7 @@
  0002:0000020c       __imp__GetLastError@0      1001520c     kernel32:KERNEL32.dll
  0002:00000210       __imp__lstrcatW@8          10015210     kernel32:KERNEL32.dll
  0002:00000214       __imp__lstrlenW@4          10015214     kernel32:KERNEL32.dll
- 0002:00000218       __imp__SetUnhandledExceptionFilter@4 10015218     kernel32:KERNEL32.dll
+ 0002:00000218       __imp__UnhandledExceptionFilter@4 10015218     kernel32:KERNEL32.dll
  0002:0000021c       \177KERNEL32_NULL_THUNK_DATA 1001521c     kernel32:KERNEL32.dll
  0002:00000220       __imp__SHGetFileInfoW@20   10015220     shell32:SHELL32.dll
  0002:00000224       \177SHELL32_NULL_THUNK_DATA 10015224     shell32:SHELL32.dll
@@ -781,8 +781,8 @@
  0002:00000dec       ??_C@_1BI@MPDCNJBA@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAv?$AAr?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 10015dec     WinObjects.obj
  0002:00000e04       ??_C@_1BK@HHKNEJDC@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAe?$AAs?$AAs?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 10015e04     WinObjects.obj
  0002:00000e20       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 10015e20     WinObjects.obj
- 0002:00000e24       __pDefaultRawDllMain       10015e24     libcmt:dllcrt0.obj
  0002:00000e24       __pRawDllMain              10015e24     libcmt:dllcrt0.obj
+ 0002:00000e24       __pDefaultRawDllMain       10015e24     libcmt:dllcrt0.obj
  0002:00000e28       ??_C@_0O@NLDKAIKN@EncodePointer?$AA@ 10015e28     libcmt:tidtable.obj
  0002:00000e38       ??_C@_1BK@DBDEIDLH@?$AAK?$AAE?$AAR?$AAN?$AAE?$AAL?$AA3?$AA2?$AA?4?$AAD?$AAL?$AAL?$AA?$AA@ 10015e38     libcmt:tidtable.obj
  0002:00000e54       ??_C@_0O@KBPMFGHI@DecodePointer?$AA@ 10015e54     libcmt:tidtable.obj

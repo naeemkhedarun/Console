@@ -1,6 +1,6 @@
  ConEmuTh.x64
 
- Timestamp is 5293b444 (Tue Nov 26 00:34:12 2013)
+ Timestamp is 52ae3ac3 (Mon Dec 16 03:26:59 2013)
 
  Preferred load address is 0000000180000000
 
@@ -23,9 +23,9 @@
  0002:00002400 00000008H .rtc$IZZ                DATA
  0002:00002408 00000008H .rtc$TAA                DATA
  0002:00002410 00000008H .rtc$TZZ                DATA
- 0002:00002418 00000cd8H .xdata                  DATA
- 0002:000030f0 0000008cH .idata$2                DATA
- 0002:0000317c 00000014H .idata$3                DATA
+ 0002:00002418 00000cd4H .xdata                  DATA
+ 0002:000030ec 0000008cH .idata$2                DATA
+ 0002:00003178 00000014H .idata$3                DATA
  0002:00003190 000005d8H .idata$4                DATA
  0002:00003768 00000c9eH .idata$6                DATA
  0002:00004410 0000016cH .edata                  DATA
@@ -77,15 +77,15 @@
  0001:00001678       ??$wcscpy_c@$0CAI@@@YAHAEAY0CAI@_WPEB_W@Z 0000000180002678 f i ConEmuTh.obj
  0001:000016c4       ?ProcessConsoleInput@@YAHHPEAU_INPUT_RECORD@@KPEAK@Z 00000001800026c4 f   ConEmuTh.obj
  0001:000019ec       ?UpdateEnvVar@@YAXH@Z      00000001800029ec f   ConEmuTh.obj
- 0001:00001a1c       ?InitName@?$MFileMapping@Utag_DetectedDialog@@@@QEAAPEB_WPEB_WKK@Z 0000000180002a1c f i ConEmuTh.obj
  0001:00001a1c       ?InitName@?$MFileMapping@UPanelViewSetMapping@@@@QEAAPEB_WPEB_WKK@Z 0000000180002a1c f i ConEmuTh.obj
+ 0001:00001a1c       ?InitName@?$MFileMapping@Utag_DetectedDialog@@@@QEAAPEB_WPEB_WKK@Z 0000000180002a1c f i ConEmuTh.obj
  0001:00001ab4       ?InternalOpenCreate@?$MFileMapping@Utag_DetectedDialog@@@@IEAAPEAUtag_DetectedDialog@@HHH@Z 0000000180002ab4 f i ConEmuTh.obj
  0001:00001c68       ?InternalOpenCreate@?$MFileMapping@UPanelViewSetMapping@@@@IEAAPEAUPanelViewSetMapping@@HHH@Z 0000000180002c68 f i ConEmuTh.obj
  0001:00001e1c       ?OnPostPeekConsole@@YAHPEAXPEAU_INPUT_RECORD@@KPEAKPEAH@Z 0000000180002e1c f   ConEmuTh.obj
  0001:00001e5c       ?OnPostReadConsole@@YAHPEAXPEAU_INPUT_RECORD@@KPEAKPEAH@Z 0000000180002e5c f   ConEmuTh.obj
  0001:00001ea0       ?ExitPlugin@@YAXXZ         0000000180002ea0 f   ConEmuTh.obj
- 0001:00002000       ?ExitFARW3@@YAXPEAX@Z      0000000180003000 f   ConEmuTh.obj
  0001:00002000       ExitFARW                   0000000180003000 f   ConEmuTh.obj
+ 0001:00002000       ?ExitFARW3@@YAXPEAX@Z      0000000180003000 f   ConEmuTh.obj
  0001:0000203c       ?OnReadyForPanelsReload@@YAXXZ 000000018000303c f   ConEmuTh.obj
  0001:000021ac       ProcessSynchroEventW       00000001800031ac f   ConEmuTh.obj
  0001:00002318       ?LoadThSet@@YAHK@Z         0000000180003318 f   ConEmuTh.obj
@@ -213,17 +213,17 @@
  0001:0000ae64       ?LoadThumbnail@CImgCache@@QEAAHPEAUIMAGE_CACHE_INFO@@@Z 000000018000be64 f   ImgCache.obj
  0001:0000b57c       ?IsStopRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAA_NAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000c57c f i ImgCache.obj
  0001:0000b58c       ?ProcessItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAJAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000c58c f i ImgCache.obj
- 0001:0000b594       ?LoadPanelItemInfoA@@YAXPEAUCeFullPanelInfo@@_J@Z 000000018000c594 f i ConEmuThA.obj
- 0001:0000b594       ?OnItemReady@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000c594 f i ImgCache.obj
- 0001:0000b594       ?SettingsLoadOtherW2800@@YAXXZ 000000018000c594 f i ConEmuTh2800.obj
- 0001:0000b594       ?OnThreadStopped@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXXZ 000000018000c594 f i ImgCache.obj
- 0001:0000b594       _initp_misc_winxfltr       000000018000c594 f i libcmt:winxfltr.obj
- 0001:0000b594       ?OnItemFailed@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000c594 f i ImgCache.obj
  0001:0000b594       ?ApplyChanges@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@AEBQEAU2@@Z 000000018000c594 f i ImgCache.obj
+ 0001:0000b594       ?OnItemFailed@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000c594 f i ImgCache.obj
  0001:0000b594       ?FreeItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000c594 f i ImgCache.obj
+ 0001:0000b594       ?LoadPanelItemInfoA@@YAXPEAUCeFullPanelInfo@@_J@Z 000000018000c594 f i ConEmuThA.obj
+ 0001:0000b594       _initp_misc_winxfltr       000000018000c594 f i libcmt:winxfltr.obj
+ 0001:0000b594       ?OnThreadStopped@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXXZ 000000018000c594 f i ImgCache.obj
+ 0001:0000b594       ?SettingsLoadOtherW2800@@YAXXZ 000000018000c594 f i ConEmuTh2800.obj
  0001:0000b594       ?SettingsLoadOtherW1900@@YAXXZ 000000018000c594 f i ConEmuTh1900.obj
- 0001:0000b598       ?IsTerminationRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NXZ 000000018000c598 f i ImgCache.obj
+ 0001:0000b594       ?OnItemReady@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000c594 f i ImgCache.obj
  0001:0000b598       ?IsTerminationRequested@CImgLoader@@UEAA_NXZ 000000018000c598 f i ImgCache.obj
+ 0001:0000b598       ?IsTerminationRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NXZ 000000018000c598 f i ImgCache.obj
  0001:0000b5a0       ?CopyItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXPEBQEAUIMAGE_CACHE_INFO@@PEAPEAU2@@Z 000000018000c5a0 f i ImgCache.obj
  0001:0000b5c0       ?IsEqual@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NAEBQEAUIMAGE_CACHE_INFO@@_J01@Z 000000018000c5c0 f i ImgCache.obj
  0001:0000b5e0       ?ClearQueue@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@AEAAXXZ 000000018000c5e0 f i ImgCache.obj
@@ -439,8 +439,8 @@
  0001:000168ae       RtlUnwindEx                00000001800178ae f   kernel32:KERNEL32.dll
  0001:000168b4       RtlVirtualUnwind           00000001800178b4 f   kernel32:KERNEL32.dll
  0001:000168ba       RtlLookupFunctionEntry     00000001800178ba f   kernel32:KERNEL32.dll
- 0001:000168d0       _alloca_probe              00000001800178d0     libcmt:chkstk.obj
  0001:000168d0       __chkstk                   00000001800178d0 f   libcmt:chkstk.obj
+ 0001:000168d0       _alloca_probe              00000001800178d0     libcmt:chkstk.obj
  0002:00000000       __imp_RegCreateKeyExW      0000000180018000     advapi32:ADVAPI32.dll
  0002:00000008       __imp_RegSetValueExW       0000000180018008     advapi32:ADVAPI32.dll
  0002:00000010       __imp_RegOpenKeyExW        0000000180018010     advapi32:ADVAPI32.dll
@@ -533,9 +533,9 @@
  0002:000002c8       __imp_IsValidCodePage      00000001800182c8     kernel32:KERNEL32.dll
  0002:000002d0       __imp_TerminateProcess     00000001800182d0     kernel32:KERNEL32.dll
  0002:000002d8       __imp_UnhandledExceptionFilter 00000001800182d8     kernel32:KERNEL32.dll
- 0002:000002e0       __imp_SetUnhandledExceptionFilter 00000001800182e0     kernel32:KERNEL32.dll
+ 0002:000002e0       __imp_lstrlenA             00000001800182e0     kernel32:KERNEL32.dll
  0002:000002e8       __imp_IsDebuggerPresent    00000001800182e8     kernel32:KERNEL32.dll
- 0002:000002f0       __imp_lstrlenA             00000001800182f0     kernel32:KERNEL32.dll
+ 0002:000002f0       __imp_RtlVirtualUnwind     00000001800182f0     kernel32:KERNEL32.dll
  0002:000002f8       __imp_RtlLookupFunctionEntry 00000001800182f8     kernel32:KERNEL32.dll
  0002:00000300       __imp_RtlCaptureContext    0000000180018300     kernel32:KERNEL32.dll
  0002:00000308       __imp_LoadLibraryA         0000000180018308     kernel32:KERNEL32.dll
@@ -576,7 +576,7 @@
  0002:00000420       __imp_GetLastError         0000000180018420     kernel32:KERNEL32.dll
  0002:00000428       __imp_lstrcatW             0000000180018428     kernel32:KERNEL32.dll
  0002:00000430       __imp_lstrlenW             0000000180018430     kernel32:KERNEL32.dll
- 0002:00000438       __imp_RtlVirtualUnwind     0000000180018438     kernel32:KERNEL32.dll
+ 0002:00000438       __imp_SetUnhandledExceptionFilter 0000000180018438     kernel32:KERNEL32.dll
  0002:00000440       \177KERNEL32_NULL_THUNK_DATA 0000000180018440     kernel32:KERNEL32.dll
  0002:00000448       __imp_SHGetFileInfoW       0000000180018448     shell32:SHELL32.dll
  0002:00000450       \177SHELL32_NULL_THUNK_DATA 0000000180018450     shell32:SHELL32.dll
@@ -814,14 +814,14 @@
  0002:00002400       __rtc_izz                  000000018001a400     libcmt:_initsect_.obj
  0002:00002408       __rtc_taa                  000000018001a408     libcmt:_initsect_.obj
  0002:00002410       __rtc_tzz                  000000018001a410     libcmt:_initsect_.obj
- 0002:000030f0       __IMPORT_DESCRIPTOR_VERSION 000000018001b0f0     version:VERSION.dll
- 0002:00003104       __IMPORT_DESCRIPTOR_KERNEL32 000000018001b104     kernel32:KERNEL32.dll
- 0002:00003118       __IMPORT_DESCRIPTOR_USER32 000000018001b118     user32:USER32.dll
- 0002:0000312c       __IMPORT_DESCRIPTOR_GDI32  000000018001b12c     gdi32:GDI32.dll
- 0002:00003140       __IMPORT_DESCRIPTOR_ADVAPI32 000000018001b140     advapi32:ADVAPI32.dll
- 0002:00003154       __IMPORT_DESCRIPTOR_SHELL32 000000018001b154     shell32:SHELL32.dll
- 0002:00003168       __IMPORT_DESCRIPTOR_ole32  000000018001b168     ole32:ole32.dll
- 0002:0000317c       __NULL_IMPORT_DESCRIPTOR   000000018001b17c     version:VERSION.dll
+ 0002:000030ec       __IMPORT_DESCRIPTOR_VERSION 000000018001b0ec     version:VERSION.dll
+ 0002:00003100       __IMPORT_DESCRIPTOR_KERNEL32 000000018001b100     kernel32:KERNEL32.dll
+ 0002:00003114       __IMPORT_DESCRIPTOR_USER32 000000018001b114     user32:USER32.dll
+ 0002:00003128       __IMPORT_DESCRIPTOR_GDI32  000000018001b128     gdi32:GDI32.dll
+ 0002:0000313c       __IMPORT_DESCRIPTOR_ADVAPI32 000000018001b13c     advapi32:ADVAPI32.dll
+ 0002:00003150       __IMPORT_DESCRIPTOR_SHELL32 000000018001b150     shell32:SHELL32.dll
+ 0002:00003164       __IMPORT_DESCRIPTOR_ole32  000000018001b164     ole32:ole32.dll
+ 0002:00003178       __NULL_IMPORT_DESCRIPTOR   000000018001b178     version:VERSION.dll
  0003:00000000       ?gbPreloadByDefault@@3HA   000000018001d000     ConEmuTh.obj
  0003:00000008       ?gcrCurColors@@3PEAKEA     000000018001d008     ConEmuTh.obj
  0003:00000010       ?Far3Func@@3PAUExportFunc@@A 000000018001d010     ConEmuTh.obj
