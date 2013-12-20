@@ -193,6 +193,13 @@ class Window(object):
         """ Platform specific window handle, only returns a meaningful result under Windows """
         return sublime_api.window_system_handle(self.window_id)
 
+    def active_sheet(self):
+        sheet_id = sublime_api.window_active_sheet(self.window_id)
+        if sheet_id == 0:
+            return None
+        else:
+            return Sheet(sheet_id)
+
     def active_view(self):
         view_id = sublime_api.window_active_view(self.window_id)
         if view_id == 0:
@@ -207,14 +214,14 @@ class Window(object):
         """ flags must be either 0 or TRANSIENT """
         return View(sublime_api.window_new_file(self.window_id, flags, syntax))
 
-    def open_file(self, fname, flags = 0):
+    def open_file(self, fname, flags = 0, group = -1):
         """
         valid bits for flags are:
         ENCODED_POSITION: fname name may have :row:col or :row suffix
         TRASIENT: don't add the file to the list of open buffers
         FORCE_GROUP: don't select the file if it's opened in a different group
         """
-        return View(sublime_api.window_open_file(self.window_id, fname, flags))
+        return View(sublime_api.window_open_file(self.window_id, fname, flags, group))
 
     def find_open_file(self, fname):
         view_id = sublime_api.window_find_open_file(self.window_id, fname)
@@ -232,9 +239,19 @@ class Window(object):
     def focus_group(self, idx):
         sublime_api.window_focus_group(self.window_id, idx)
 
+    def focus_sheet(self, sheet):
+        if sheet:
+            sublime_api.window_focus_sheet(self.window_id, sheet.sheet_id)
+
     def focus_view(self, view):
         if view:
             sublime_api.window_focus_view(self.window_id, view.view_id)
+
+    def get_sheet_index(self, sheet):
+        if sheet:
+            return sublime_api.window_get_sheet_index(self.window_id, sheet.sheet_id)
+        else:
+            return (-1, -1)
 
     def get_view_index(self, view):
         if view:
@@ -242,12 +259,26 @@ class Window(object):
         else:
             return (-1, -1)
 
+    def set_sheet_index(self, sheet, group, idx):
+        sublime_api.window_set_sheet_index(self.window_id, sheet.sheet_id, group, idx)
+
     def set_view_index(self, view, group, idx):
         sublime_api.window_set_view_index(self.window_id, view.view_id, group, idx)
+
+    def sheets(self):
+        sheet_ids = sublime_api.window_sheets(self.window_id)
+        return [Sheet(x) for x in sheet_ids]
 
     def views(self):
         view_ids = sublime_api.window_views(self.window_id)
         return [View(x) for x in view_ids]
+
+    def active_sheet_in_group(self, group):
+        sheet_id = sublime_api.window_active_sheet_in_group(self.window_id, group)
+        if sheet_id == 0:
+            return None
+        else:
+            return Sheet(sheet_id)
 
     def active_view_in_group(self, group):
         view_id = sublime_api.window_active_view_in_group(self.window_id, group)
@@ -256,9 +287,20 @@ class Window(object):
         else:
             return View(view_id)
 
+    def sheets_in_group(self, group):
+        sheet_ids = sublime_api.window_sheets_in_group(self.window_id, group)
+        return [Sheet(x) for x in sheet_ids]
+
     def views_in_group(self, group):
         view_ids = sublime_api.window_views_in_group(self.window_id, group)
         return [View(x) for x in view_ids]
+
+    def transient_sheet_in_group(self, group):
+        sheet_id = sublime_api.window_transient_sheet_in_group(self.window_id, group)
+        if sheet_id != 0:
+            return Sheet(sheet_id)
+        else:
+            return None
 
     def transient_view_in_group(self, group):
         view_id = sublime_api.window_transient_view_in_group(self.window_id, group)
@@ -483,6 +525,23 @@ class Selection(object):
 
     def contains(self, region):
         return sublime_api.view_selection_contains(self.view_id, region.a, region.b)
+
+class Sheet(object):
+    def __init__(self, id):
+        self.sheet_id = id
+
+    def __eq__(self, other):
+        return isinstance(other, Sheet) and other.sheet_id == self.sheet_id
+
+    def id(self):
+        return self.sheet_id
+
+    def window(self):
+        window_id = sublime_api.sheet_window(self.sheet_id)
+        if window_id == 0:
+            return None
+        else:
+            return Window(window_id)
 
 class View(object):
     def __init__(self, id):
