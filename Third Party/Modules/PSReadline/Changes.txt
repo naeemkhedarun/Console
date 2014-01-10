@@ -2,7 +2,28 @@
 
 New features:
 * CharacterSearch/CharacterSearchBackward
-* AcceptAndGetNext
+* AcceptAndGetNext (Ctrl+O in bash)
+* Get-PSReadlineKeyHandler now returns unbound functions
+* Get-PSReadlineKeyHandler has 2 new parameters: -Bound and -Unbound
+* Set-PSReadlineKeyHandler parameter -LongDescription is now -Description
+  (not breaking because I left an alias)
+* WhatIsKey - display binding for a key
+* ShowKeyBindings - show all bound keys
+* Keyboard selection of text for cut/copy/delete.  New functions:
+  - Cut
+  - Copy
+  - KillRegion
+  - SelectBackwardChar
+  - SelectForwardChar
+  - SelectBackwardWord
+  - SelectForwardWord
+  - SelectNextWord
+  - SelectShellForwardWord
+  - SelectShellBackwardWord
+
+Breaking change:
+* The properties in the output of Get-PSReadlineKeyHandler have changed.
+  This is unlikely to break anyone though.
 
 ### Version 1.0.0.5
 
