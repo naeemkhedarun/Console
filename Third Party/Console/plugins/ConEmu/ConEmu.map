@@ -1,11 +1,11 @@
  ConEmu
 
- Timestamp is 52d85917 (Fri Jan 17 02:11:35 2014)
+ Timestamp is 52e2d6b6 (Sat Jan 25 01:10:14 2014)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
- 0001:00000000 0002d116H .text                   CODE
+ 0001:00000000 0002d166H .text                   CODE
  0002:00000000 0000035cH .idata$5                DATA
  0002:00000360 00003a58H .rdata                  DATA
  0002:00003db8 0000006fH .rdata$debug            DATA
@@ -17,7 +17,7 @@
  0002:00004264 00000f3eH .idata$6                DATA
  0002:000051b0 00000337H .edata                  DATA
  0003:00000000 00000198H .data                   DATA
- 0003:00000198 000023e0H .bss                    DATA
+ 0003:00000198 000023e8H .bss                    DATA
  0004:00000000 00000004H .CRT$XIC                DATA
  0005:00000000 00000058H .rsrc$01                DATA
  0005:00000060 00000290H .rsrc$02                DATA
@@ -357,474 +357,474 @@
  0001:0001b610       ?GetEnclosingSectionHeader@@YIPAU_IMAGE_SECTION_HEADER@@KPAUIMAGE_MAPPING@@@Z 1001c610 f   Execute.obj
  0001:0001b6a0       ?GetPtrFromRVA@@YIPAXKPAUIMAGE_MAPPING@@@Z 1001c6a0 f   Execute.obj
  0001:0001b700       ?FindImageSubsystem@@YI_NPB_WAAK11@Z 1001c700 f   Execute.obj
- 0001:0001bfd0       ?ModuleName@@YIPB_WPB_W@Z  1001cfd0 f   ConEmuCheck.obj
- 0001:0001c0b0       ?ExecuteOpenPipe@@YIPAXPB_WAAY0CAI@_W0KKHPAX@Z 1001d0b0 f   ConEmuCheck.obj
- 0001:0001c2e0       ?ExecutePrepareCmd@@YIXPAUCESERVER_REQ@@KI@Z 1001d2e0 f   ConEmuCheck.obj
- 0001:0001c330       ?ExecutePrepareCmd@@YIXPAUCESERVER_REQ_HDR@@KI@Z 1001d330 f   ConEmuCheck.obj
- 0001:0001c3d0       ?ExecuteNewCmd@@YIPAUCESERVER_REQ@@KI@Z 1001d3d0 f   ConEmuCheck.obj
- 0001:0001c430       ?ExecuteNewCmd@@YIHAAPAUCESERVER_REQ@@AAKKI@Z 1001d430 f   ConEmuCheck.obj
- 0001:0001c4b0       ?LoadSrvMapping@@YIHPAUHWND__@@AAUCESERVER_CONSOLE_MAPPING_HDR@@@Z 1001d4b0 f   ConEmuCheck.obj
- 0001:0001c5d0       ?LoadGuiMapping@@YIHKAAUConEmuGuiMapping@@@Z 1001d5d0 f   ConEmuCheck.obj
- 0001:0001c6f0       ?ExecuteNewCmdOnCreate@@YIPAUCESERVER_REQ@@PAUCESERVER_CONSOLE_MAPPING_HDR@@PAUHWND__@@W4CmdOnCreateType@@PB_W33PAK444HHPAX55@Z 1001d6f0 f   ConEmuCheck.obj
- 0001:0001cb60       ?ExecuteGuiCmd@@YIPAUCESERVER_REQ@@PAUHWND__@@PAU1@0H@Z 1001db60 f   ConEmuCheck.obj
- 0001:0001cbf0       ?ExecuteSrvCmd@@YIPAUCESERVER_REQ@@KPAU1@PAUHWND__@@HK@Z 1001dbf0 f   ConEmuCheck.obj
- 0001:0001cc90       ?ExecuteHkCmd@@YIPAUCESERVER_REQ@@KPAU1@PAUHWND__@@H@Z 1001dc90 f   ConEmuCheck.obj
- 0001:0001cd30       ?ExecuteCmd@@YIPAUCESERVER_REQ@@PB_WPAU1@KPAUHWND__@@HK@Z 1001dd30 f   ConEmuCheck.obj
- 0001:0001cff0       ?ExecuteFreeResult@@YIXAAPAUCESERVER_REQ@@@Z 1001dff0 f   ConEmuCheck.obj
- 0001:0001d030       ?myGetConsoleWindow@@YIPAUHWND__@@XZ 1001e030 f   ConEmuCheck.obj
- 0001:0001d0b0       ?GetConEmuHWND@@YIPAUHWND__@@H@Z 1001e0b0 f   ConEmuCheck.obj
- 0001:0001d260       ?ConEmuCheck@@YIHPAPAUHWND__@@@Z 1001e260 f   ConEmuCheck.obj
- 0001:0001d2a0       ?GuiMessageBox@@YIHPAUHWND__@@PB_W1H@Z 1001e2a0 f   ConEmuCheck.obj
- 0001:0001d460       ?InitName@?$MFileMapping@UConEmuGuiMapping@@@@QAEPB_WPB_WKK@Z 1001e460 f i ConEmuCheck.obj
- 0001:0001d4b0       ?CloseMap@?$MFileMapping@UConEmuGuiMapping@@@@QAEXXZ 1001e4b0 f i ConEmuCheck.obj
- 0001:0001d520       ?Open@?$MFileMapping@UConEmuGuiMapping@@@@QAEPAUConEmuGuiMapping@@HH@Z 1001e520 f i ConEmuCheck.obj
- 0001:0001d540       ??0?$MFileMapping@UConEmuGuiMapping@@@@QAE@XZ 1001e540 f i ConEmuCheck.obj
- 0001:0001d5a0       ??1?$MFileMapping@UConEmuGuiMapping@@@@QAE@XZ 1001e5a0 f i ConEmuCheck.obj
- 0001:0001d5c0       ?ClosePtr@?$MFileMapping@UConEmuGuiMapping@@@@QAEXXZ 1001e5c0 f i ConEmuCheck.obj
- 0001:0001d5f0       ?InternalOpenCreate@?$MFileMapping@UConEmuGuiMapping@@@@IAEPAUConEmuGuiMapping@@HHH@Z 1001e5f0 f i ConEmuCheck.obj
- 0001:0001d7e0       ??$wcscpy_c@$0CA@@@YIHAAY0CA@_WPB_W@Z 1001e7e0 f i ConEmuCheck.obj
- 0001:0001d810       ?LoadGuiMapping@@YIHPAUHWND__@@AAUConEmuGuiMapping@@@Z 1001e810 f   ConEmuCheckEx.obj
- 0001:0001d850       ?IsConEmuExeExist@@YIHPB_WAAY0BAF@_W@Z 1001e850 f   ConEmuCheckEx.obj
- 0001:0001d900       ?FindConEmuBaseDir@@YIHAAY0BAF@_W0PAUHINSTANCE__@@@Z 1001e900 f   ConEmuCheckEx.obj
- 0001:0001dea0       ??$wcscpy_c@$0BAF@@@YIHAAY0BAF@_WPB_W@Z 1001eea0 f i ConEmuCheckEx.obj
- 0001:0001dfb0       ??$wcscpy_add@$0BAF@@@YIHPA_WAAY0BAF@_WPB_W@Z 1001efb0 f i ConEmuCheckEx.obj
- 0001:0001e000       ??$wcscat_c@$0BAF@@@YIHAAY0BAF@_WPB_W@Z 1001f000 f i ConEmuCheckEx.obj
- 0001:0001e0f0       ?HeapInitialize@@YI_NXZ    1001f0f0 f   Memory.obj
- 0001:0001e120       ?HeapDeinitialize@@YIXXZ   1001f120 f   Memory.obj
- 0001:0001e150       ?xf_malloc@@YAPAXI@Z       1001f150 f   Memory.obj
- 0001:0001e180       ?xf_calloc@@YAPAXII@Z      1001f180 f   Memory.obj
- 0001:0001e1b0       ?xf_realloc@@YAPAXPAXI@Z   1001f1b0 f   Memory.obj
- 0001:0001e1e0       ?xf_free@@YAXPAX@Z         1001f1e0 f   Memory.obj
- 0001:0001e210       ?xf_validate@@YA_NPAX@Z    1001f210 f   Memory.obj
- 0001:0001e240       ??2@YAPAXI@Z               1001f240 f   Memory.obj
- 0001:0001e260       ??_U@YAPAXI@Z              1001f260 f   Memory.obj
- 0001:0001e280       ??3@YAXPAX@Z               1001f280 f   Memory.obj
- 0001:0001e2a0       ??_V@YAXPAX@Z              1001f2a0 f   Memory.obj
- 0001:0001e2c0       ?lstrdup@@YIPADPBD@Z       1001f2c0 f   Memory.obj
- 0001:0001e330       ?StringCchCopyA@@YGJPADIPBD@Z 1001f330 f i Memory.obj
- 0001:0001e450       ?lstrdup@@YIPA_WPB_W@Z     1001f450 f   Memory.obj
- 0001:0001e5a0       ?lstrdupW@@YIPA_WPBDI@Z    1001f5a0 f   Memory.obj
- 0001:0001e620       ?lstrmerge@@YIPA_WPB_W000@Z 1001f620 f   Memory.obj
- 0001:0001e740       ?lstrmerge@@YI_NPAPA_WPB_W11@Z 1001f740 f   Memory.obj
- 0001:0001e7a0       ?FindMonitorsWorkspace@@YGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 1001f7a0 f   Monitors.obj
- 0001:0001e820       ?GetAllMonitorsWorkspace@@YI?AUtagRECT@@XZ 1001f820 f   Monitors.obj
- 0001:0001e8a0       ?FindPrimaryMonitor@@YGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 1001f8a0 f   Monitors.obj
- 0001:0001e920       ?GetMonitorInfoSafe@@YI_NPAUHMONITOR__@@AAUtagMONITORINFO@@@Z 1001f920 f   Monitors.obj
- 0001:0001e970       ?GetPrimaryMonitorInfo@@YIPAUHMONITOR__@@PAUtagMONITORINFO@@@Z 1001f970 f   Monitors.obj
- 0001:0001ea20       ?GetNearestMonitorInfo@@YIPAUHMONITOR__@@PAUtagMONITORINFO@@PAU1@PBUtagRECT@@PAUHWND__@@@Z 1001fa20 f   Monitors.obj
- 0001:0001eb10       ?EnumAllMonitors@@YGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 1001fb10 f   Monitors.obj
- 0001:0001eb80       ?MonitorSortCallback@@YIHAAU_FindAllMonitorsItem@@0@Z 1001fb80 f   Monitors.obj
- 0001:0001ebf0       ?GetNextMonitorInfo@@YIPAUHMONITOR__@@PAUtagMONITORINFO@@PBUtagRECT@@_N@Z 1001fbf0 f   Monitors.obj
- 0001:0001ee00       ??0_FindAllMonitors@@QAE@XZ 1001fe00 f i Monitors.obj
- 0001:0001ee20       ??1_FindAllMonitors@@QAE@XZ 1001fe20 f i Monitors.obj
- 0001:0001ee40       ??0?$MArray@U_FindAllMonitorsItem@@@@QAE@XZ 1001fe40 f i Monitors.obj
- 0001:0001ee80       ??1?$MArray@U_FindAllMonitorsItem@@@@QAE@XZ 1001fe80 f i Monitors.obj
- 0001:0001eea0       ??A?$MArray@U_FindAllMonitorsItem@@@@QAEAAU_FindAllMonitorsItem@@H@Z 1001fea0 f i Monitors.obj
- 0001:0001eec0       ?push_back@?$MArray@U_FindAllMonitorsItem@@@@QAEHABU_FindAllMonitorsItem@@@Z 1001fec0 f i Monitors.obj
- 0001:0001ef50       ?size@?$MArray@U_FindAllMonitorsItem@@@@QBEHXZ 1001ff50 f i Monitors.obj
- 0001:0001ef70       ?sort@?$MArray@U_FindAllMonitorsItem@@@@QAEXP6IHAAU_FindAllMonitorsItem@@0@Z@Z 1001ff70 f i Monitors.obj
- 0001:0001f060       ?clear@?$MArray@U_FindAllMonitorsItem@@@@QAEXXZ 10020060 f i Monitors.obj
- 0001:0001f0b0       ?addsize@?$MArray@U_FindAllMonitorsItem@@@@QAEXH@Z 100200b0 f i Monitors.obj
- 0001:0001f1a0       ?NullSecurity@@YIPAU_SECURITY_ATTRIBUTES@@XZ 100201a0 f   MSecurity.obj
- 0001:0001f1f0       ??0MNullDesc@@QAE@XZ       100201f0 f i MSecurity.obj
- 0001:0001f250       ?NullSecurity@MNullDesc@@QAEPAU_SECURITY_ATTRIBUTES@@XZ 10020250 f i MSecurity.obj
- 0001:0001f350       ?LoadAdvApi@MNullDesc@@IAEHXZ 10020350 f i MSecurity.obj
- 0001:0001f5a0       ?UnloadAdvApi@MNullDesc@@IAEXXZ 100205a0 f i MSecurity.obj
- 0001:0001f5d0       ?LocalSecurity@@YIPAU_SECURITY_ATTRIBUTES@@XZ 100205d0 f   MSecurity.obj
- 0001:0001f620       ?LocalSecurity@MNullDesc@@QAEPAU_SECURITY_ATTRIBUTES@@XZ 10020620 f i MSecurity.obj
- 0001:0001f840       ?ShutdownSecurity@@YIXXZ   10020840 f   MSecurity.obj
- 0001:0001f890       ??_GMNullDesc@@QAEPAXI@Z   10020890 f i MSecurity.obj
- 0001:0001f8c0       ??1MNullDesc@@QAE@XZ       100208c0 f i MSecurity.obj
- 0001:0001f920       ?msprintf@@YAPB_WPA_WIPB_WZZ 10020920 f   MStrSafe.obj
- 0001:0001ff20       ?msprintf@@YAPBDPADIPBDZZ  10020f20 f   MStrSafe.obj
- 0001:00020380       ?lstrcmpni@@YIHPB_W0H@Z    10021380 f   MStrSafe.obj
- 0001:00020420       ?SetConEmuEnvHWND@@YIXPB_WPAUHWND__@@@Z 10021420 f   SetEnvVar.obj
- 0001:00020470       ?SetConEmuEnvVar@@YIXPAUHWND__@@@Z 10021470 f   SetEnvVar.obj
- 0001:000204e0       ?SetConEmuEnvVarChild@@YIXPAUHWND__@@0@Z 100214e0 f   SetEnvVar.obj
- 0001:00020510       ?ShutdownConsole@@YGXXZ    10021510 f   WinConsole.obj
- 0001:00020560       ?SetConsoleInfo@@YIHPAUHWND__@@PAU_CONSOLE_INFO@@@Z 10021560 f   WinConsole.obj
- 0001:00020840       ?ChangeScreenBufferSize@@YIXAAU_CONSOLE_SCREEN_BUFFER_INFO@@FFFF@Z 10021840 f   WinConsole.obj
- 0001:00020950       ?GetConWindowSize@@YIHABU_CONSOLE_SCREEN_BUFFER_INFO@@HHKPAH1PAK@Z 10021950 f   WinConsole.obj
- 0001:00020aa0       ?GetConsoleSizeInfo@@YIXPAU_CONSOLE_INFO@@@Z 10021aa0 f   WinConsole.obj
- 0001:00020b50       ?apiGetConsoleScreenBufferInfoEx@@YIHPAXPAUMY_CONSOLE_SCREEN_BUFFER_INFOEX@@@Z 10021b50 f   WinConsole.obj
- 0001:00020bc0       ?apiSetConsoleScreenBufferInfoEx@@YIHPAXPAUMY_CONSOLE_SCREEN_BUFFER_INFOEX@@@Z 10021bc0 f   WinConsole.obj
- 0001:00020c40       ?apiGetConsoleFontSize@@YIHPAXAAH1AAY0CA@_W@Z 10021c40 f   WinConsole.obj
- 0001:00020ce0       ?apiSetConsoleFontSize@@YIHPAXHHPB_W@Z 10021ce0 f   WinConsole.obj
- 0001:00020d90       ?apiFixFontSizeForBufferSize@@YIHPAXU_COORD@@PADH@Z 10021d90 f   WinConsole.obj
- 0001:000212a0       ?SetConsoleFontSizeTo@@YIXPAUHWND__@@HHPB_WGG@Z 100222a0 f   WinConsole.obj
- 0001:00021820       ?EvaluateDefaultFontWidth@@YIHHPB_W@Z 10022820 f   WinConsole.obj
- 0001:00021960       ?SetUserFriendlyFont@@YIXPAUHWND__@@@Z 10022960 f   WinConsole.obj
- 0001:00021e30       ?CorrectConsolePos@@YIXPAUHWND__@@@Z 10022e30 f   WinConsole.obj
- 0001:00021f70       ?EmergencyShow@@YIXPAUHWND__@@@Z 10022f70 f   WinConsole.obj
- 0001:00022020       ?getWindowInfo@@YIXPAUHWND__@@AAY0EAA@_W@Z 10023020 f   WinObjects.obj
- 0001:00022180       ?apiSetForegroundWindow@@YIHPAUHWND__@@@Z 10023180 f   WinObjects.obj
- 0001:000221a0       ?apiShowWindow@@YIHPAUHWND__@@H@Z 100231a0 f   WinObjects.obj
- 0001:000221d0       ?apiShowWindowAsync@@YIHPAUHWND__@@H@Z 100231d0 f   WinObjects.obj
- 0001:00022200       ?isWindow@@YIHPAUHWND__@@@Z 10023200 f   WinObjects.obj
- 0001:00022270       ?FileCompare@@YI_NPB_W0@Z  10023270 f   WinObjects.obj
- 0001:00022490       ?FileExists@@YI_NPB_WPAK@Z 10023490 f   WinObjects.obj
- 0001:00022670       ?FileExistsSearch@@YI_NPA_WI@Z 10023670 f   WinObjects.obj
- 0001:000228b0       ?DirectoryExists@@YI_NPB_W@Z 100238b0 f   WinObjects.obj
- 0001:00022a30       ?MyCreateDirectory@@YI_NPA_W@Z 10023a30 f   WinObjects.obj
- 0001:00022b40       ?IsFilePath@@YI_NPB_W@Z    10023b40 f   WinObjects.obj
- 0001:00022c20       ?IsPathNeedQuot@@YI_NPB_W@Z 10023c20 f   WinObjects.obj
- 0001:00022c50       ?GetShortFileName@@YIHPB_WHPA_WH@Z 10023c50 f   WinObjects.obj
- 0001:00022e60       ?GetShortFileNameEx@@YIPA_WPB_WH@Z 10023e60 f   WinObjects.obj
- 0001:00023270       ?IsUserAdmin@@YI_NXZ       10024270 f   WinObjects.obj
- 0001:00023370       ?GetLogonSID@@YI_NPAXPAPA_W@Z 10024370 f   WinObjects.obj
- 0001:00023490       ?IsWine@@YI_NXZ            10024490 f   WinObjects.obj
- 0001:00023520       ?IsWinPE@@YI_NXZ           10024520 f   WinObjects.obj
- 0001:000235b0       ?IsDbcs@@YI_NXZ            100245b0 f   WinObjects.obj
- 0001:000235d0       ?IsWindows64@@YI_NXZ       100245d0 f   WinObjects.obj
- 0001:00023660       ?IsHwFullScreenAvailable@@YI_NXZ 10024660 f   WinObjects.obj
- 0001:00023700       ?IsVsNetHostExe@@YI_NPB_W@Z 10024700 f   WinObjects.obj
- 0001:00023780       ?GetProcessBits@@YIHKPAX@Z 10024780 f   WinObjects.obj
- 0001:00023860       ?GetProcessInfo@@YI_NKPAUtagPROCESSENTRY32W@@@Z 10024860 f   WinObjects.obj
- 0001:00023950       ?isTerminalMode@@YI_NXZ    10024950 f   WinObjects.obj
- 0001:00023c70       ?IsModuleValid@@YI_NPAUHINSTANCE__@@H@Z 10024c70 f   WinObjects.obj
- 0001:00023db0       ?CheckCallbackPtr@@YI_NPAUHINSTANCE__@@IPAP6GHXZHHH@Z 10024db0 f   WinObjects.obj
- 0001:00023f00       ?RemoveOldComSpecC@@YIXXZ  10024f00 f   WinObjects.obj
- 0001:00024030       ?PointToName@@YIPB_WPB_W@Z 10025030 f   WinObjects.obj
- 0001:00024080       ?PointToName@@YIPBDPBD@Z   10025080 f   WinObjects.obj
- 0001:000240c0       ?PointToExt@@YIPB_WPB_W@Z  100250c0 f   WinObjects.obj
- 0001:00024100       ?Unquote@@YIPB_WPA_W_N@Z   10025100 f   WinObjects.obj
- 0001:00024190       ?ExpandMacroValues@@YIPA_WPB_WPAPB_WI@Z 10025190 f   WinObjects.obj
- 0001:00024350       ?ExpandEnvStr@@YIPA_WPB_W@Z 10025350 f   WinObjects.obj
- 0001:00024430       ?GetFullPathNameEx@@YIPA_WPB_W@Z 10025430 f   WinObjects.obj
- 0001:00024500       ??0MConHandle@@QAE@PB_W@Z  10025500 f   WinObjects.obj
- 0001:00024580       ?LogHandle@MConHandle@@AAEXIPAX@Z 10025580 f   WinObjects.obj
- 0001:000245f0       ??1MConHandle@@QAE@XZ      100255f0 f   WinObjects.obj
- 0001:00024610       ?SetBufferPtr@MConHandle@@QAEXPAPAX@Z 10025610 f   WinObjects.obj
- 0001:00024630       ??BMConHandle@@QAEQAXXZ    10025630 f   WinObjects.obj
- 0001:00024920       ?strrchr@@YAPADPADH@Z      10025920 f i WinObjects.obj
- 0001:00024940       ?Close@MConHandle@@QAEXXZ  10025940 f   WinObjects.obj
- 0001:000249f0       ??0MEvent@@QAE@XZ          100259f0 f   WinObjects.obj
- 0001:00024a20       ??1MEvent@@QAE@XZ          10025a20 f   WinObjects.obj
- 0001:00024a40       ?Close@MEvent@@QAEXXZ      10025a40 f   WinObjects.obj
- 0001:00024a90       ?InitName@MEvent@@QAEXPB_WK@Z 10025a90 f   WinObjects.obj
- 0001:00024ae0       ?Open@MEvent@@QAEPAXXZ     10025ae0 f   WinObjects.obj
- 0001:00024b60       ?Wait@MEvent@@QAEKKH@Z     10025b60 f   WinObjects.obj
- 0001:00024bc0       ?GetHandle@MEvent@@QAEPAXXZ 10025bc0 f   WinObjects.obj
- 0001:00024be0       ??0MSetter@@QAE@PAH@Z      10025be0 f   WinObjects.obj
- 0001:00024c20       ??0MSetter@@QAE@PA_N@Z     10025c20 f   WinObjects.obj
- 0001:00024c60       ??0MSetter@@QAE@PAKK@Z     10025c60 f   WinObjects.obj
- 0001:00024ca0       ??1MSetter@@QAE@XZ         10025ca0 f   WinObjects.obj
- 0001:00024cc0       ?Unlock@MSetter@@QAEXXZ    10025cc0 f   WinObjects.obj
- 0001:00024d30       ??0MSection@@QAE@XZ        10025d30 f   WinObjects.obj
- 0001:00024dd0       ??1MSection@@QAE@XZ        10025dd0 f   WinObjects.obj
- 0001:00024e60       ?Process_Lock@MSection@@IAEXXZ 10025e60 f   WinObjects.obj
- 0001:00024e80       ?Process_Unlock@MSection@@IAEXXZ 10025e80 f   WinObjects.obj
- 0001:00024ea0       ?ThreadTerminated@MSection@@QAEXK@Z 10025ea0 f   WinObjects.obj
- 0001:00024ef0       ?AddRef@MSection@@IAEXK@Z  10025ef0 f   WinObjects.obj
- 0001:00024fe0       ?ReleaseRef@MSection@@IAEHK@Z 10025fe0 f   WinObjects.obj
- 0001:000250b0       ?WaitUnlocked@MSection@@IAEXKK@Z 100260b0 f   WinObjects.obj
- 0001:00025150       ?MyEnterCriticalSection@MSection@@IAE_NK@Z 10026150 f   WinObjects.obj
- 0001:00025320       ?Lock@MSection@@IAEHHK@Z   10026320 f   WinObjects.obj
- 0001:00025470       ?Unlock@MSection@@IAEXH@Z  10026470 f   WinObjects.obj
- 0001:000254e0       ?isLockedExclusive@MSection@@QAE_NXZ 100264e0 f   WinObjects.obj
- 0001:00025530       ??0MSectionThread@@QAE@PAVMSection@@@Z 10026530 f   WinObjects.obj
- 0001:00025560       ??1MSectionThread@@QAE@XZ  10026560 f   WinObjects.obj
- 0001:00025590       ??0MSectionLock@@QAE@XZ    10026590 f   WinObjects.obj
- 0001:000255c0       ??1MSectionLock@@QAE@XZ    100265c0 f   WinObjects.obj
- 0001:000255f0       ?Lock@MSectionLock@@QAEHPAVMSection@@HK@Z 100265f0 f   WinObjects.obj
- 0001:00025670       ?RelockExclusive@MSectionLock@@QAEHK@Z 10026670 f   WinObjects.obj
- 0001:000256e0       ?Unlock@MSectionLock@@QAEXXZ 100266e0 f   WinObjects.obj
- 0001:00025720       ?isLocked@MSectionLock@@QAEHH@Z 10026720 f   WinObjects.obj
- 0001:00025770       ??0MSectionLockSimple@@QAE@XZ 10026770 f   WinObjects.obj
- 0001:00025790       ??1MSectionLockSimple@@QAE@XZ 10026790 f   WinObjects.obj
- 0001:000257b0       ?Lock@MSectionLockSimple@@QAEHPAU_RTL_CRITICAL_SECTION@@K@Z 100267b0 f   WinObjects.obj
- 0001:00025850       ?Unlock@MSectionLockSimple@@QAEXXZ 10026850 f   WinObjects.obj
- 0001:00025890       ?isLocked@MSectionLockSimple@@QAEHXZ 10026890 f   WinObjects.obj
- 0001:000258b0       ??0MFileLog@@QAE@PB_W0K@Z  100268b0 f   WinObjects.obj
- 0001:00025920       ?InitFileName@MFileLog@@IAEJPB_WK@Z 10026920 f   WinObjects.obj
- 0001:000259b0       ??1MFileLog@@QAE@XZ        100269b0 f   WinObjects.obj
- 0001:00025a00       ?CloseLogFile@MFileLog@@QAEXXZ 10026a00 f   WinObjects.obj
- 0001:00025a90       ?CreateLogFile@MFileLog@@QAEJPB_WKK@Z 10026a90 f   WinObjects.obj
- 0001:00026100       ?GetLogFileName@MFileLog@@QAEPB_WXZ 10027100 f   WinObjects.obj
- 0001:00026140       ?LogString@MFileLog@@QAEXPBD_N01I@Z 10027140 f   WinObjects.obj
- 0001:00026290       ?LogString@MFileLog@@QAEXPB_W_N01@Z 10027290 f   WinObjects.obj
- 0001:00026590       ?MonitorEnumProc@MFileLog@@KGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 10027590 f   WinObjects.obj
- 0001:000266c0       ?LogStartEnv@MFileLog@@QAEXPAUCEStartupEnv@@@Z 100276c0 f   WinObjects.obj
- 0001:000270b0       ??0CToolTip@@QAE@XZ        100280b0 f   WinObjects.obj
- 0001:00027120       ??_GCToolTip@@UAEPAXI@Z    10028120 f i WinObjects.obj
- 0001:00027120       ??_ECToolTip@@UAEPAXI@Z    10028120 f i WinObjects.obj
- 0001:00027150       ??1CToolTip@@UAE@XZ        10028150 f   WinObjects.obj
- 0001:000271f0       ?ShowTip@CToolTip@@QAEXPAUHWND__@@0PB_WHUtagPOINT@@PAUHINSTANCE__@@@Z 100281f0 f   WinObjects.obj
- 0001:000274d0       ?HideTip@CToolTip@@QAEXXZ  100284d0 f   WinObjects.obj
- 0001:00027540       ??0CTimer@@QAE@XZ          10028540 f   WinObjects.obj
- 0001:00027580       ??1CTimer@@QAE@XZ          10028580 f   WinObjects.obj
- 0001:000275a0       ?IsStarted@CTimer@@QAE_NXZ 100285a0 f   WinObjects.obj
- 0001:000275c0       ?Start@CTimer@@QAEXI@Z     100285c0 f   WinObjects.obj
- 0001:00027620       ?Stop@CTimer@@QAEXXZ       10028620 f   WinObjects.obj
- 0001:00027650       ?Restart@CTimer@@QAEXI@Z   10028650 f   WinObjects.obj
- 0001:00027680       ?Init@CTimer@@QAEXPAUHWND__@@II@Z 10028680 f   WinObjects.obj
- 0001:000276b0       ?MyGetLargestConsoleWindowSize@@YI?AU_COORD@@PAX@Z 100286b0 f   WinObjects.obj
- 0001:00027730       ?DuplicateProcessHandle@@YIPAXK@Z 10028730 f   WinObjects.obj
- 0001:000277a0       ?FindComspec@@YIXPAUConEmuComspec@@_N@Z 100287a0 f   WinObjects.obj
- 0001:00028100       ?GetEnvVar@@YIPA_WPB_WK@Z  10029100 f   WinObjects.obj
- 0001:00028210       ?UpdateComspec@@YIXPAUConEmuComspec@@_N@Z 10029210 f   WinObjects.obj
- 0001:00028550       ?SetEnvVarExpanded@@YIXPB_W0@Z 10029550 f   WinObjects.obj
- 0001:00028650       ?GetComspecFromEnvVar@@YIPB_WPA_WKW4ComSpecBits@@@Z 10029650 f   WinObjects.obj
- 0001:00028810       ?GetComspec@@YIPA_WPBUConEmuComspec@@@Z 10029810 f   WinObjects.obj
- 0001:00028a50       ?IsExportEnvVarAllowed@@YI_NPB_W@Z 10029a50 f   WinObjects.obj
- 0001:00028ac0       ?ApplyExportEnvVar@@YIXPB_W@Z 10029ac0 f   WinObjects.obj
- 0001:00028b40       ?CopyToClipboard@@YI_NPB_W@Z 10029b40 f   WinObjects.obj
- 0001:00028bf0       ??$wcscpy_c@$0EAA@@@YIHAAY0EAA@_WPB_W@Z 10029bf0 f i WinObjects.obj
- 0001:00028c20       ??$wcscpy_c@$0BAA@@@YIHAAY0BAA@_WPB_W@Z 10029c20 f i WinObjects.obj
- 0001:00028c50       ??$wcscpy_c@$0EBA@@@YIHAAY0EBA@_WPB_W@Z 10029c50 f i WinObjects.obj
- 0001:00028c78       _GetProcAddress@8          10029c78 f   kernel32:KERNEL32.dll
- 0001:00028c7e       _GetCurrentProcessId@0     10029c7e f   kernel32:KERNEL32.dll
- 0001:00028c84       _GetLastError@0            10029c84 f   kernel32:KERNEL32.dll
- 0001:00028c8a       _LoadLibraryW@4            10029c8a f   kernel32:KERNEL32.dll
- 0001:00028c90       _GetModuleHandleW@4        10029c90 f   kernel32:KERNEL32.dll
- 0001:00028c96       _IsDebuggerPresent@0       10029c96 f   kernel32:KERNEL32.dll
- 0001:00028c9c       _SetEvent@4                10029c9c f   kernel32:KERNEL32.dll
- 0001:00028ca2       _lstrcpyW@8                10029ca2 f   kernel32:KERNEL32.dll
- 0001:00028ca8       _lstrlenW@4                10029ca8 f   kernel32:KERNEL32.dll
- 0001:00028cae       _SetEnvironmentVariableW@8 10029cae f   kernel32:KERNEL32.dll
- 0001:00028cb4       _IsBadStringPtrW@8         10029cb4 f   kernel32:KERNEL32.dll
- 0001:00028cba       _GetNumberOfConsoleInputEvents@8 10029cba f   kernel32:KERNEL32.dll
- 0001:00028cc0       _GetStdHandle@4            10029cc0 f   kernel32:KERNEL32.dll
- 0001:00028cc6       _GetTickCount@0            10029cc6 f   kernel32:KERNEL32.dll
- 0001:00028ccc       _SetLastError@4            10029ccc f   kernel32:KERNEL32.dll
- 0001:00028cd2       _GetCurrentThreadId@0      10029cd2 f   kernel32:KERNEL32.dll
- 0001:00028cd8       _ReadConsoleInputW@16      10029cd8 f   kernel32:KERNEL32.dll
- 0001:00028cde       _PeekConsoleInputW@16      10029cde f   kernel32:KERNEL32.dll
- 0001:00028ce4       _lstrcatW@8                10029ce4 f   kernel32:KERNEL32.dll
- 0001:00028cea       _GetModuleFileNameW@12     10029cea f   kernel32:KERNEL32.dll
- 0001:00028cf0       _WriteConsoleInputW@16     10029cf0 f   kernel32:KERNEL32.dll
- 0001:00028cf6       _WaitForSingleObject@8     10029cf6 f   kernel32:KERNEL32.dll
- 0001:00028cfc       _ReleaseSemaphore@12       10029cfc f   kernel32:KERNEL32.dll
- 0001:00028d02       _WaitForMultipleObjects@16 10029d02 f   kernel32:KERNEL32.dll
- 0001:00028d08       _ResetEvent@4              10029d08 f   kernel32:KERNEL32.dll
- 0001:00028d0e       _InterlockedDecrement@4    10029d0e f   kernel32:KERNEL32.dll
- 0001:00028d14       _InterlockedIncrement@4    10029d14 f   kernel32:KERNEL32.dll
- 0001:00028d1a       _GetConsoleScreenBufferInfo@8 10029d1a f   kernel32:KERNEL32.dll
- 0001:00028d20       _SuspendThread@4           10029d20 f   kernel32:KERNEL32.dll
- 0001:00028d26       _ResumeThread@4            10029d26 f   kernel32:KERNEL32.dll
- 0001:00028d2c       _TerminateProcess@8        10029d2c f   kernel32:KERNEL32.dll
- 0001:00028d32       _GetCurrentProcess@0       10029d32 f   kernel32:KERNEL32.dll
- 0001:00028d38       _CloseHandle@4             10029d38 f   kernel32:KERNEL32.dll
- 0001:00028d3e       _Module32NextW@8           10029d3e f   kernel32:KERNEL32.dll
- 0001:00028d44       _Module32FirstW@8          10029d44 f   kernel32:KERNEL32.dll
- 0001:00028d4a       _CreateToolhelp32Snapshot@8 10029d4a f   kernel32:KERNEL32.dll
- 0001:00028d50       _GetEnvironmentVariableW@12 10029d50 f   kernel32:KERNEL32.dll
- 0001:00028d56       _CreateThread@24           10029d56 f   kernel32:KERNEL32.dll
- 0001:00028d5c       _CreateSemaphoreW@16       10029d5c f   kernel32:KERNEL32.dll
- 0001:00028d62       _CreateEventW@16           10029d62 f   kernel32:KERNEL32.dll
- 0001:00028d68       _OpenFileMappingW@12       10029d68 f   kernel32:KERNEL32.dll
- 0001:00028d6e       _VirtualProtect@16         10029d6e f   kernel32:KERNEL32.dll
- 0001:00028d74       _MapViewOfFile@20          10029d74 f   kernel32:KERNEL32.dll
- 0001:00028d7a       _CreateFileMappingW@24     10029d7a f   kernel32:KERNEL32.dll
- 0001:00028d80       _lstrcmpW@8                10029d80 f   kernel32:KERNEL32.dll
- 0001:00028d86       _lstrcpynW@12              10029d86 f   kernel32:KERNEL32.dll
- 0001:00028d8c       _lstrcmpiW@8               10029d8c f   kernel32:KERNEL32.dll
- 0001:00028d92       _UnmapViewOfFile@4         10029d92 f   kernel32:KERNEL32.dll
- 0001:00028d98       _TerminateThread@8         10029d98 f   kernel32:KERNEL32.dll
- 0001:00028d9e       _SetConsoleTitleW@4        10029d9e f   kernel32:KERNEL32.dll
- 0001:00028da4       _GetConsoleTitleW@8        10029da4 f   kernel32:KERNEL32.dll
- 0001:00028daa       _WideCharToMultiByte@32    10029daa f   kernel32:KERNEL32.dll
- 0001:00028db0       _DeleteFileW@4             10029db0 f   kernel32:KERNEL32.dll
- 0001:00028db6       _CreateProcessW@40         10029db6 f   kernel32:KERNEL32.dll
- 0001:00028dbc       _GetExitCodeProcess@8      10029dbc f   kernel32:KERNEL32.dll
- 0001:00028dc2       _SetConsoleMode@8          10029dc2 f   kernel32:KERNEL32.dll
- 0001:00028dc8       _GetConsoleMode@8          10029dc8 f   kernel32:KERNEL32.dll
- 0001:00028dce       _GetConsoleCursorInfo@8    10029dce f   kernel32:KERNEL32.dll
- 0001:00028dd4       _Thread32Next@8            10029dd4 f   kernel32:KERNEL32.dll
- 0001:00028dda       _Thread32First@8           10029dda f   kernel32:KERNEL32.dll
- 0001:00028de0       _ExpandEnvironmentStringsW@12 10029de0 f   kernel32:KERNEL32.dll
- 0001:00028de6       _lstrcmpA@8                10029de6 f   kernel32:KERNEL32.dll
- 0001:00028dec       _MultiByteToWideChar@24    10029dec f   kernel32:KERNEL32.dll
- 0001:00028df2       _lstrlenA@4                10029df2 f   kernel32:KERNEL32.dll
- 0001:00028df8       _lstrcpynA@12              10029df8 f   kernel32:KERNEL32.dll
- 0001:00028dfe       _GetCurrentDirectoryW@8    10029dfe f   kernel32:KERNEL32.dll
- 0001:00028e04       _lstrcpyA@8                10029e04 f   kernel32:KERNEL32.dll
- 0001:00028e0a       _DisconnectNamedPipe@4     10029e0a f   kernel32:KERNEL32.dll
- 0001:00028e10       _SetThreadPriority@8       10029e10 f   kernel32:KERNEL32.dll
- 0001:00028e16       _Sleep@4                   10029e16 f   kernel32:KERNEL32.dll
- 0001:00028e1c       _FlushFileBuffers@4        10029e1c f   kernel32:KERNEL32.dll
- 0001:00028e22       _ReadFile@20               10029e22 f   kernel32:KERNEL32.dll
- 0001:00028e28       _GetOverlappedResult@16    10029e28 f   kernel32:KERNEL32.dll
- 0001:00028e2e       _WriteFile@20              10029e2e f   kernel32:KERNEL32.dll
- 0001:00028e34       _ConnectNamedPipe@8        10029e34 f   kernel32:KERNEL32.dll
- 0001:00028e3a       _CreateNamedPipeW@32       10029e3a f   kernel32:KERNEL32.dll
- 0001:00028e40       _SetFilePointer@16         10029e40 f   kernel32:KERNEL32.dll
- 0001:00028e46       _GetFileInformationByHandle@8 10029e46 f   kernel32:KERNEL32.dll
- 0001:00028e4c       _CreateFileW@28            10029e4c f   kernel32:KERNEL32.dll
- 0001:00028e52       _ReadProcessMemory@20      10029e52 f   kernel32:KERNEL32.dll
- 0001:00028e58       _FreeLibrary@4             10029e58 f   kernel32:KERNEL32.dll
- 0001:00028e5e       _GetVersionExW@4           10029e5e f   kernel32:KERNEL32.dll
- 0001:00028e64       _SearchPathW@24            10029e64 f   kernel32:KERNEL32.dll
- 0001:00028e6a       _DebugBreak@0              10029e6a f   kernel32:KERNEL32.dll
- 0001:00028e70       _SetNamedPipeHandleState@16 10029e70 f   kernel32:KERNEL32.dll
- 0001:00028e76       _WaitNamedPipeW@8          10029e76 f   kernel32:KERNEL32.dll
- 0001:00028e7c       _TransactNamedPipe@28      10029e7c f   kernel32:KERNEL32.dll
- 0001:00028e82       _GetConsoleWindow@0        10029e82 f   kernel32:KERNEL32.dll
- 0001:00028e88       _HeapCreate@12             10029e88 f   kernel32:KERNEL32.dll
- 0001:00028e8e       _HeapDestroy@4             10029e8e f   kernel32:KERNEL32.dll
- 0001:00028e94       _HeapAlloc@12              10029e94 f   kernel32:KERNEL32.dll
- 0001:00028e9a       _HeapReAlloc@16            10029e9a f   kernel32:KERNEL32.dll
- 0001:00028ea0       _HeapFree@12               10029ea0 f   kernel32:KERNEL32.dll
- 0001:00028ea6       _HeapValidate@12           10029ea6 f   kernel32:KERNEL32.dll
- 0001:00028eac       _LocalFree@4               10029eac f   kernel32:KERNEL32.dll
- 0001:00028eb2       _LocalAlloc@8              10029eb2 f   kernel32:KERNEL32.dll
- 0001:00028eb8       _VerifyVersionInfoW@16     10029eb8 f   kernel32:KERNEL32.dll
- 0001:00028ebe       _VerSetConditionMask@16    10029ebe f   kernel32:KERNEL32.dll
- 0001:00028ec4       _SetConsoleWindowInfo@12   10029ec4 f   kernel32:KERNEL32.dll
- 0001:00028eca       _GetConsoleOutputCP@0      10029eca f   kernel32:KERNEL32.dll
- 0001:00028ed0       _GetFileSizeEx@8           10029ed0 f   kernel32:KERNEL32.dll
- 0001:00028ed6       _FindClose@4               10029ed6 f   kernel32:KERNEL32.dll
- 0001:00028edc       _FindNextFileW@8           10029edc f   kernel32:KERNEL32.dll
- 0001:00028ee2       _FindFirstFileW@8          10029ee2 f   kernel32:KERNEL32.dll
- 0001:00028ee8       _CreateDirectoryW@8        10029ee8 f   kernel32:KERNEL32.dll
- 0001:00028eee       _OpenProcess@12            10029eee f   kernel32:KERNEL32.dll
- 0001:00028ef4       _Process32NextW@8          10029ef4 f   kernel32:KERNEL32.dll
- 0001:00028efa       _Process32FirstW@8         10029efa f   kernel32:KERNEL32.dll
- 0001:00028f00       _IsBadReadPtr@8            10029f00 f   kernel32:KERNEL32.dll
- 0001:00028f06       _VirtualFree@12            10029f06 f   kernel32:KERNEL32.dll
- 0001:00028f0c       _VirtualAlloc@16           10029f0c f   kernel32:KERNEL32.dll
- 0001:00028f12       _GetSystemInfo@4           10029f12 f   kernel32:KERNEL32.dll
- 0001:00028f18       _GetFullPathNameW@16       10029f18 f   kernel32:KERNEL32.dll
- 0001:00028f1e       _GetModuleFileNameA@12     10029f1e f   kernel32:KERNEL32.dll
- 0001:00028f24       _OpenEventW@12             10029f24 f   kernel32:KERNEL32.dll
- 0001:00028f2a       _InitializeCriticalSection@4 10029f2a f   kernel32:KERNEL32.dll
- 0001:00028f30       _DeleteCriticalSection@4   10029f30 f   kernel32:KERNEL32.dll
- 0001:00028f36       _EnterCriticalSection@4    10029f36 f   kernel32:KERNEL32.dll
- 0001:00028f3c       _LeaveCriticalSection@4    10029f3c f   kernel32:KERNEL32.dll
- 0001:00028f42       _TryEnterCriticalSection@4 10029f42 f   kernel32:KERNEL32.dll
- 0001:00028f48       _OpenThread@12             10029f48 f   kernel32:KERNEL32.dll
- 0001:00028f4e       _GetLocalTime@4            10029f4e f   kernel32:KERNEL32.dll
- 0001:00028f54       _GetLargestConsoleWindowSize@4 10029f54 f   kernel32:KERNEL32.dll
- 0001:00028f5a       _DuplicateHandle@28        10029f5a f   kernel32:KERNEL32.dll
- 0001:00028f60       _GetWindowsDirectoryW@8    10029f60 f   kernel32:KERNEL32.dll
- 0001:00028f66       _GlobalUnlock@4            10029f66 f   kernel32:KERNEL32.dll
- 0001:00028f6c       _GlobalLock@4              10029f6c f   kernel32:KERNEL32.dll
- 0001:00028f72       _GlobalAlloc@8             10029f72 f   kernel32:KERNEL32.dll
- 0001:00028f78       _MessageBoxW@16            10029f78 f   user32:USER32.dll
- 0001:00028f7e       _wsprintfW                 10029f7e f   user32:USER32.dll
- 0001:00028f84       _IsWindow@4                10029f84 f   user32:USER32.dll
- 0001:00028f8a       _GetWindowLongW@8          10029f8a f   user32:USER32.dll
- 0001:00028f90       _GetParent@4               10029f90 f   user32:USER32.dll
- 0001:00028f96       _PostMessageW@16           10029f96 f   user32:USER32.dll
- 0001:00028f9c       _RegisterWindowMessageW@4  10029f9c f   user32:USER32.dll
- 0001:00028fa2       _GetWindowThreadProcessId@8 10029fa2 f   user32:USER32.dll
- 0001:00028fa8       _IsWindowVisible@4         10029fa8 f   user32:USER32.dll
- 0001:00028fae       _CharUpperBuffW@8          10029fae f   user32:USER32.dll
- 0001:00028fb4       _FillRect@12               10029fb4 f   user32:USER32.dll
- 0001:00028fba       _ReleaseDC@8               10029fba f   user32:USER32.dll
- 0001:00028fc0       _GetDC@4                   10029fc0 f   user32:USER32.dll
- 0001:00028fc6       _ActivateKeyboardLayout@8  10029fc6 f   user32:USER32.dll
- 0001:00028fcc       _LoadKeyboardLayoutW@8     10029fcc f   user32:USER32.dll
- 0001:00028fd2       _MapVirtualKeyW@8          10029fd2 f   user32:USER32.dll
- 0001:00028fd8       _VkKeyScanW@4              10029fd8 f   user32:USER32.dll
- 0001:00028fde       _FindWindowW@8             10029fde f   user32:USER32.dll
- 0001:00028fe4       _GetSystemMetrics@4        10029fe4 f   user32:USER32.dll
- 0001:00028fea       _IsRectEmpty@4             10029fea f   user32:USER32.dll
- 0001:00028ff0       _EnumDisplayMonitors@16    10029ff0 f   user32:USER32.dll
- 0001:00028ff6       _GetMonitorInfoW@8         10029ff6 f   user32:USER32.dll
- 0001:00028ffe       _SystemParametersInfoW@16  10029ffe f   user32:USER32.dll
- 0001:00029004       _MonitorFromWindow@8       1002a004 f   user32:USER32.dll
- 0001:0002900a       _MonitorFromRect@8         1002a00a f   user32:USER32.dll
- 0001:00029010       _SetWindowPos@28           1002a010 f   user32:USER32.dll
- 0001:00029016       _ShowWindow@8              1002a016 f   user32:USER32.dll
- 0001:0002901c       _SendMessageW@16           1002a01c f   user32:USER32.dll
- 0001:00029022       _GetWindowRect@8           1002a022 f   user32:USER32.dll
- 0001:00029028       _EnableWindow@8            1002a028 f   user32:USER32.dll
- 0001:0002902e       _IsWindowEnabled@4         1002a02e f   user32:USER32.dll
- 0001:00029034       _SetForegroundWindow@4     1002a034 f   user32:USER32.dll
- 0001:0002903a       _ShowWindowAsync@8         1002a03a f   user32:USER32.dll
- 0001:00029040       _wsprintfA                 1002a040 f   user32:USER32.dll
- 0001:00029046       _GetCursorPos@4            1002a046 f   user32:USER32.dll
- 0001:0002904c       _GetWindowTextW@12         1002a04c f   user32:USER32.dll
- 0001:00029052       _GetClassNameW@12          1002a052 f   user32:USER32.dll
- 0001:00029058       _GetForegroundWindow@0     1002a058 f   user32:USER32.dll
- 0001:0002905e       _GetKeyboardLayoutList@8   1002a05e f   user32:USER32.dll
- 0001:00029064       _GetKeyboardLayout@4       1002a064 f   user32:USER32.dll
- 0001:0002906a       _DestroyWindow@4           1002a06a f   user32:USER32.dll
- 0001:00029070       _GetClientRect@8           1002a070 f   user32:USER32.dll
- 0001:00029076       _CreateWindowExW@48        1002a076 f   user32:USER32.dll
- 0001:0002907c       _SetTimer@16               1002a07c f   user32:USER32.dll
- 0001:00029082       _KillTimer@8               1002a082 f   user32:USER32.dll
- 0001:00029088       _CloseClipboard@0          1002a088 f   user32:USER32.dll
- 0001:0002908e       _SetClipboardData@8        1002a08e f   user32:USER32.dll
- 0001:00029094       _EmptyClipboard@0          1002a094 f   user32:USER32.dll
- 0001:0002909a       _OpenClipboard@4           1002a09a f   user32:USER32.dll
- 0001:000290a0       _DeleteEnhMetaFile@4       1002a0a0 f   gdi32:GDI32.dll
- 0001:000290a6       _GetEnhMetaFileBits@12     1002a0a6 f   gdi32:GDI32.dll
- 0001:000290ac       _CloseEnhMetaFile@4        1002a0ac f   gdi32:GDI32.dll
- 0001:000290b2       _GdiFlush@0                1002a0b2 f   gdi32:GDI32.dll
- 0001:000290b8       _SelectObject@8            1002a0b8 f   gdi32:GDI32.dll
- 0001:000290be       _DeleteDC@4                1002a0be f   gdi32:GDI32.dll
- 0001:000290c4       _DeleteObject@4            1002a0c4 f   gdi32:GDI32.dll
- 0001:000290ca       _CreateSolidBrush@4        1002a0ca f   gdi32:GDI32.dll
- 0001:000290d0       _CreateDIBSection@24       1002a0d0 f   gdi32:GDI32.dll
- 0001:000290d6       _CreateCompatibleDC@4      1002a0d6 f   gdi32:GDI32.dll
- 0001:000290dc       _CreateEnhMetaFileW@16     1002a0dc f   gdi32:GDI32.dll
- 0001:000290e2       _GetDeviceCaps@8           1002a0e2 f   gdi32:GDI32.dll
- 0001:000290e8       _GetTextMetricsW@8         1002a0e8 f   gdi32:GDI32.dll
- 0001:000290ee       _CreateFontIndirectW@4     1002a0ee f   gdi32:GDI32.dll
- 0001:000290f4       _RegCloseKey@4             1002a0f4 f   advapi32:ADVAPI32.dll
- 0001:000290fa       _RegQueryValueExW@24       1002a0fa f   advapi32:ADVAPI32.dll
- 0001:00029100       _RegOpenKeyExW@20          1002a100 f   advapi32:ADVAPI32.dll
- 0001:00029106       _RegCreateKeyExW@36        1002a106 f   advapi32:ADVAPI32.dll
- 0001:0002910c       _FreeSid@4                 1002a10c f   advapi32:ADVAPI32.dll
- 0001:00029112       _CheckTokenMembership@12   1002a112 f   advapi32:ADVAPI32.dll
- 0001:00029118       _AllocateAndInitializeSid@44 1002a118 f   advapi32:ADVAPI32.dll
- 0001:0002911e       _ConvertSidToStringSidW@8  1002a11e f   advapi32:ADVAPI32.dll
- 0001:00029124       _GetTokenInformation@20    1002a124 f   advapi32:ADVAPI32.dll
- 0001:0002912a       _OpenProcessToken@12       1002a12a f   advapi32:ADVAPI32.dll
- 0001:00029130       _RegEnumKeyExW@32          1002a130 f   advapi32:ADVAPI32.dll
- 0001:00029136       _SHGetFolderPathW@20       1002a136 f   shell32:SHELL32.dll
- 0001:0002913c       _VerQueryValueW@16         1002a13c f   version:VERSION.dll
- 0001:00029142       _GetFileVersionInfoW@16    1002a142 f   version:VERSION.dll
- 0001:00029148       _GetFileVersionInfoSizeW@8 1002a148 f   version:VERSION.dll
- 0001:00029150       __alloca_probe             1002a150     LIBCMT:chkstk.obj
- 0001:00029150       __chkstk                   1002a150 f   LIBCMT:chkstk.obj
- 0001:00029180       _memset                    1002a180 f   LIBCMT:memset.obj
- 0001:0002a770       _memcmp                    1002b770 f   LIBCMT:memcmp.obj
- 0001:0002bdf0       _memcpy                    1002cdf0 f   LIBCMT:memcpy.obj
- 0001:0002c155       _wcsrchr                   1002d155 f   LIBCMT:wcsrchr.obj
- 0001:0002c190       _memmove                   1002d190 f   LIBCMT:memmove.obj
- 0001:0002c4f5       _wcschr                    1002d4f5 f   LIBCMT:wcschr.obj
- 0001:0002c51b       _wcsstr                    1002d51b f   LIBCMT:wcsstr.obj
- 0001:0002c580       __ftol2_sse                1002d580 f   LIBCMT:ftol2.obj
- 0001:0002c589       __ftol2_pentium4           1002d589 f   LIBCMT:ftol2.obj
- 0001:0002c59c       __ftol2_sse_excpt          1002d59c f   LIBCMT:ftol2.obj
- 0001:0002c5b6       __ftol2                    1002d5b6 f   LIBCMT:ftol2.obj
- 0001:0002c62b       _wcsncmp                   1002d62b f   LIBCMT:wcsncmp.obj
- 0001:0002c662       _wcspbrk                   1002d662 f   LIBCMT:wcspbrk.obj
- 0001:0002c6b0       _strrchr                   1002d6b0 f   LIBCMT:strrchr.obj
- 0001:0002c734       __VEC_memzero              1002d734 f   LIBCMT:p4_memset.obj
- 0001:0002c813       __get_sse2_info            1002d813 f   LIBCMT:cpu_disp.obj
- 0001:0002c875       ___sse2_available_init     1002d875 f   LIBCMT:cpu_disp.obj
- 0001:0002c909       __VEC_memcpy               1002d909 f   LIBCMT:p4_memcpy.obj
- 0001:0002c9ec       __SEH_prolog4              1002d9ec f   LIBCMT:sehprolg4.obj
- 0001:0002ca31       __SEH_epilog4              1002da31 f   LIBCMT:sehprolg4.obj
- 0001:0002ca80       __except_handler4          1002da80 f   LIBCMT:chandler4.obj
- 0001:0002cc0c       @__security_check_cookie@4 1002dc0c f   LIBCMT:secchk.obj
- 0001:0002cc1c       __local_unwind4            1002dc1c f   LIBCMT:exsup4.obj
- 0001:0002ccf2       __seh_longjmp_unwind4@4    1002dcf2 f   LIBCMT:exsup4.obj
- 0001:0002cd0e       @_EH4_CallFilterFunc@8     1002dd0e f   LIBCMT:exsup4.obj
- 0001:0002cd25       @_EH4_TransferToHandler@8  1002dd25 f   LIBCMT:exsup4.obj
- 0001:0002cd3e       @_EH4_GlobalUnwind@4       1002dd3e f   LIBCMT:exsup4.obj
- 0001:0002cd58       @_EH4_LocalUnwind@16       1002dd58 f   LIBCMT:exsup4.obj
- 0001:0002cd70       __ValidateImageBase        1002dd70 f   LIBCMT:pesect.obj
- 0001:0002cdb0       __FindPESection            1002ddb0 f   LIBCMT:pesect.obj
- 0001:0002ce00       __IsNonwritableInCurrentImage 1002de00 f   LIBCMT:pesect.obj
- 0001:0002cebd       ___report_gsfailure        1002debd f   LIBCMT:gs_report.obj
- 0001:0002cfc4       __global_unwind2           1002dfc4 f   LIBCMT:exsup.obj
- 0001:0002d029       __local_unwind2            1002e029 f   LIBCMT:exsup.obj
- 0001:0002d0ad       __abnormal_termination     1002e0ad f   LIBCMT:exsup.obj
- 0001:0002d0d0       __NLG_Notify1              1002e0d0 f   LIBCMT:exsup.obj
- 0001:0002d0d9       __NLG_Notify               1002e0d9 f   LIBCMT:exsup.obj
- 0001:0002d0f0       __NLG_Dispatch2            1002e0f0     LIBCMT:exsup.obj
- 0001:0002d0f0       __NLG_Dispatch             1002e0f0     LIBCMT:exsup.obj
- 0001:0002d0f8       __NLG_Call                 1002e0f8 f   LIBCMT:exsup.obj
- 0001:0002d0fa       __NLG_Return2              1002e0fa     LIBCMT:exsup.obj
- 0001:0002d0fb       __crt_debugger_hook        1002e0fb f   LIBCMT:dbghook.obj
- 0001:0002d104       _RtlUnwind@16              1002e104 f   kernel32:KERNEL32.dll
- 0001:0002d10a       _UnhandledExceptionFilter@4 1002e10a f   kernel32:KERNEL32.dll
- 0001:0002d110       _SetUnhandledExceptionFilter@4 1002e110 f   kernel32:KERNEL32.dll
+ 0001:0001c020       ?ModuleName@@YIPB_WPB_W@Z  1001d020 f   ConEmuCheck.obj
+ 0001:0001c100       ?ExecuteOpenPipe@@YIPAXPB_WAAY0CAI@_W0KKHPAX@Z 1001d100 f   ConEmuCheck.obj
+ 0001:0001c330       ?ExecutePrepareCmd@@YIXPAUCESERVER_REQ@@KI@Z 1001d330 f   ConEmuCheck.obj
+ 0001:0001c380       ?ExecutePrepareCmd@@YIXPAUCESERVER_REQ_HDR@@KI@Z 1001d380 f   ConEmuCheck.obj
+ 0001:0001c420       ?ExecuteNewCmd@@YIPAUCESERVER_REQ@@KI@Z 1001d420 f   ConEmuCheck.obj
+ 0001:0001c480       ?ExecuteNewCmd@@YIHAAPAUCESERVER_REQ@@AAKKI@Z 1001d480 f   ConEmuCheck.obj
+ 0001:0001c500       ?LoadSrvMapping@@YIHPAUHWND__@@AAUCESERVER_CONSOLE_MAPPING_HDR@@@Z 1001d500 f   ConEmuCheck.obj
+ 0001:0001c620       ?LoadGuiMapping@@YIHKAAUConEmuGuiMapping@@@Z 1001d620 f   ConEmuCheck.obj
+ 0001:0001c740       ?ExecuteNewCmdOnCreate@@YIPAUCESERVER_REQ@@PAUCESERVER_CONSOLE_MAPPING_HDR@@PAUHWND__@@W4CmdOnCreateType@@PB_W33PAK444HHPAX55@Z 1001d740 f   ConEmuCheck.obj
+ 0001:0001cbb0       ?ExecuteGuiCmd@@YIPAUCESERVER_REQ@@PAUHWND__@@PAU1@0H@Z 1001dbb0 f   ConEmuCheck.obj
+ 0001:0001cc40       ?ExecuteSrvCmd@@YIPAUCESERVER_REQ@@KPAU1@PAUHWND__@@HK@Z 1001dc40 f   ConEmuCheck.obj
+ 0001:0001cce0       ?ExecuteHkCmd@@YIPAUCESERVER_REQ@@KPAU1@PAUHWND__@@H@Z 1001dce0 f   ConEmuCheck.obj
+ 0001:0001cd80       ?ExecuteCmd@@YIPAUCESERVER_REQ@@PB_WPAU1@KPAUHWND__@@HK@Z 1001dd80 f   ConEmuCheck.obj
+ 0001:0001d040       ?ExecuteFreeResult@@YIXAAPAUCESERVER_REQ@@@Z 1001e040 f   ConEmuCheck.obj
+ 0001:0001d080       ?myGetConsoleWindow@@YIPAUHWND__@@XZ 1001e080 f   ConEmuCheck.obj
+ 0001:0001d100       ?GetConEmuHWND@@YIPAUHWND__@@H@Z 1001e100 f   ConEmuCheck.obj
+ 0001:0001d2b0       ?ConEmuCheck@@YIHPAPAUHWND__@@@Z 1001e2b0 f   ConEmuCheck.obj
+ 0001:0001d2f0       ?GuiMessageBox@@YIHPAUHWND__@@PB_W1H@Z 1001e2f0 f   ConEmuCheck.obj
+ 0001:0001d4b0       ?InitName@?$MFileMapping@UConEmuGuiMapping@@@@QAEPB_WPB_WKK@Z 1001e4b0 f i ConEmuCheck.obj
+ 0001:0001d500       ?CloseMap@?$MFileMapping@UConEmuGuiMapping@@@@QAEXXZ 1001e500 f i ConEmuCheck.obj
+ 0001:0001d570       ?Open@?$MFileMapping@UConEmuGuiMapping@@@@QAEPAUConEmuGuiMapping@@HH@Z 1001e570 f i ConEmuCheck.obj
+ 0001:0001d590       ??0?$MFileMapping@UConEmuGuiMapping@@@@QAE@XZ 1001e590 f i ConEmuCheck.obj
+ 0001:0001d5f0       ??1?$MFileMapping@UConEmuGuiMapping@@@@QAE@XZ 1001e5f0 f i ConEmuCheck.obj
+ 0001:0001d610       ?ClosePtr@?$MFileMapping@UConEmuGuiMapping@@@@QAEXXZ 1001e610 f i ConEmuCheck.obj
+ 0001:0001d640       ?InternalOpenCreate@?$MFileMapping@UConEmuGuiMapping@@@@IAEPAUConEmuGuiMapping@@HHH@Z 1001e640 f i ConEmuCheck.obj
+ 0001:0001d830       ??$wcscpy_c@$0CA@@@YIHAAY0CA@_WPB_W@Z 1001e830 f i ConEmuCheck.obj
+ 0001:0001d860       ?LoadGuiMapping@@YIHPAUHWND__@@AAUConEmuGuiMapping@@@Z 1001e860 f   ConEmuCheckEx.obj
+ 0001:0001d8a0       ?IsConEmuExeExist@@YIHPB_WAAY0BAF@_W@Z 1001e8a0 f   ConEmuCheckEx.obj
+ 0001:0001d950       ?FindConEmuBaseDir@@YIHAAY0BAF@_W0PAUHINSTANCE__@@@Z 1001e950 f   ConEmuCheckEx.obj
+ 0001:0001def0       ??$wcscpy_c@$0BAF@@@YIHAAY0BAF@_WPB_W@Z 1001eef0 f i ConEmuCheckEx.obj
+ 0001:0001e000       ??$wcscpy_add@$0BAF@@@YIHPA_WAAY0BAF@_WPB_W@Z 1001f000 f i ConEmuCheckEx.obj
+ 0001:0001e050       ??$wcscat_c@$0BAF@@@YIHAAY0BAF@_WPB_W@Z 1001f050 f i ConEmuCheckEx.obj
+ 0001:0001e140       ?HeapInitialize@@YI_NXZ    1001f140 f   Memory.obj
+ 0001:0001e170       ?HeapDeinitialize@@YIXXZ   1001f170 f   Memory.obj
+ 0001:0001e1a0       ?xf_malloc@@YAPAXI@Z       1001f1a0 f   Memory.obj
+ 0001:0001e1d0       ?xf_calloc@@YAPAXII@Z      1001f1d0 f   Memory.obj
+ 0001:0001e200       ?xf_realloc@@YAPAXPAXI@Z   1001f200 f   Memory.obj
+ 0001:0001e230       ?xf_free@@YAXPAX@Z         1001f230 f   Memory.obj
+ 0001:0001e260       ?xf_validate@@YA_NPAX@Z    1001f260 f   Memory.obj
+ 0001:0001e290       ??2@YAPAXI@Z               1001f290 f   Memory.obj
+ 0001:0001e2b0       ??_U@YAPAXI@Z              1001f2b0 f   Memory.obj
+ 0001:0001e2d0       ??3@YAXPAX@Z               1001f2d0 f   Memory.obj
+ 0001:0001e2f0       ??_V@YAXPAX@Z              1001f2f0 f   Memory.obj
+ 0001:0001e310       ?lstrdup@@YIPADPBD@Z       1001f310 f   Memory.obj
+ 0001:0001e380       ?StringCchCopyA@@YGJPADIPBD@Z 1001f380 f i Memory.obj
+ 0001:0001e4a0       ?lstrdup@@YIPA_WPB_W@Z     1001f4a0 f   Memory.obj
+ 0001:0001e5f0       ?lstrdupW@@YIPA_WPBDI@Z    1001f5f0 f   Memory.obj
+ 0001:0001e670       ?lstrmerge@@YIPA_WPB_W000@Z 1001f670 f   Memory.obj
+ 0001:0001e790       ?lstrmerge@@YI_NPAPA_WPB_W11@Z 1001f790 f   Memory.obj
+ 0001:0001e7f0       ?FindMonitorsWorkspace@@YGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 1001f7f0 f   Monitors.obj
+ 0001:0001e870       ?GetAllMonitorsWorkspace@@YI?AUtagRECT@@XZ 1001f870 f   Monitors.obj
+ 0001:0001e8f0       ?FindPrimaryMonitor@@YGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 1001f8f0 f   Monitors.obj
+ 0001:0001e970       ?GetMonitorInfoSafe@@YI_NPAUHMONITOR__@@AAUtagMONITORINFO@@@Z 1001f970 f   Monitors.obj
+ 0001:0001e9c0       ?GetPrimaryMonitorInfo@@YIPAUHMONITOR__@@PAUtagMONITORINFO@@@Z 1001f9c0 f   Monitors.obj
+ 0001:0001ea70       ?GetNearestMonitorInfo@@YIPAUHMONITOR__@@PAUtagMONITORINFO@@PAU1@PBUtagRECT@@PAUHWND__@@@Z 1001fa70 f   Monitors.obj
+ 0001:0001eb60       ?EnumAllMonitors@@YGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 1001fb60 f   Monitors.obj
+ 0001:0001ebd0       ?MonitorSortCallback@@YIHAAU_FindAllMonitorsItem@@0@Z 1001fbd0 f   Monitors.obj
+ 0001:0001ec40       ?GetNextMonitorInfo@@YIPAUHMONITOR__@@PAUtagMONITORINFO@@PBUtagRECT@@_N@Z 1001fc40 f   Monitors.obj
+ 0001:0001ee50       ??0_FindAllMonitors@@QAE@XZ 1001fe50 f i Monitors.obj
+ 0001:0001ee70       ??1_FindAllMonitors@@QAE@XZ 1001fe70 f i Monitors.obj
+ 0001:0001ee90       ??0?$MArray@U_FindAllMonitorsItem@@@@QAE@XZ 1001fe90 f i Monitors.obj
+ 0001:0001eed0       ??1?$MArray@U_FindAllMonitorsItem@@@@QAE@XZ 1001fed0 f i Monitors.obj
+ 0001:0001eef0       ??A?$MArray@U_FindAllMonitorsItem@@@@QAEAAU_FindAllMonitorsItem@@H@Z 1001fef0 f i Monitors.obj
+ 0001:0001ef10       ?push_back@?$MArray@U_FindAllMonitorsItem@@@@QAEHABU_FindAllMonitorsItem@@@Z 1001ff10 f i Monitors.obj
+ 0001:0001efa0       ?size@?$MArray@U_FindAllMonitorsItem@@@@QBEHXZ 1001ffa0 f i Monitors.obj
+ 0001:0001efc0       ?sort@?$MArray@U_FindAllMonitorsItem@@@@QAEXP6IHAAU_FindAllMonitorsItem@@0@Z@Z 1001ffc0 f i Monitors.obj
+ 0001:0001f0b0       ?clear@?$MArray@U_FindAllMonitorsItem@@@@QAEXXZ 100200b0 f i Monitors.obj
+ 0001:0001f100       ?addsize@?$MArray@U_FindAllMonitorsItem@@@@QAEXH@Z 10020100 f i Monitors.obj
+ 0001:0001f1f0       ?NullSecurity@@YIPAU_SECURITY_ATTRIBUTES@@XZ 100201f0 f   MSecurity.obj
+ 0001:0001f240       ??0MNullDesc@@QAE@XZ       10020240 f i MSecurity.obj
+ 0001:0001f2a0       ?NullSecurity@MNullDesc@@QAEPAU_SECURITY_ATTRIBUTES@@XZ 100202a0 f i MSecurity.obj
+ 0001:0001f3a0       ?LoadAdvApi@MNullDesc@@IAEHXZ 100203a0 f i MSecurity.obj
+ 0001:0001f5f0       ?UnloadAdvApi@MNullDesc@@IAEXXZ 100205f0 f i MSecurity.obj
+ 0001:0001f620       ?LocalSecurity@@YIPAU_SECURITY_ATTRIBUTES@@XZ 10020620 f   MSecurity.obj
+ 0001:0001f670       ?LocalSecurity@MNullDesc@@QAEPAU_SECURITY_ATTRIBUTES@@XZ 10020670 f i MSecurity.obj
+ 0001:0001f890       ?ShutdownSecurity@@YIXXZ   10020890 f   MSecurity.obj
+ 0001:0001f8e0       ??_GMNullDesc@@QAEPAXI@Z   100208e0 f i MSecurity.obj
+ 0001:0001f910       ??1MNullDesc@@QAE@XZ       10020910 f i MSecurity.obj
+ 0001:0001f970       ?msprintf@@YAPB_WPA_WIPB_WZZ 10020970 f   MStrSafe.obj
+ 0001:0001ff70       ?msprintf@@YAPBDPADIPBDZZ  10020f70 f   MStrSafe.obj
+ 0001:000203d0       ?lstrcmpni@@YIHPB_W0H@Z    100213d0 f   MStrSafe.obj
+ 0001:00020470       ?SetConEmuEnvHWND@@YIXPB_WPAUHWND__@@@Z 10021470 f   SetEnvVar.obj
+ 0001:000204c0       ?SetConEmuEnvVar@@YIXPAUHWND__@@@Z 100214c0 f   SetEnvVar.obj
+ 0001:00020530       ?SetConEmuEnvVarChild@@YIXPAUHWND__@@0@Z 10021530 f   SetEnvVar.obj
+ 0001:00020560       ?ShutdownConsole@@YGXXZ    10021560 f   WinConsole.obj
+ 0001:000205b0       ?SetConsoleInfo@@YIHPAUHWND__@@PAU_CONSOLE_INFO@@@Z 100215b0 f   WinConsole.obj
+ 0001:00020890       ?ChangeScreenBufferSize@@YIXAAU_CONSOLE_SCREEN_BUFFER_INFO@@FFFF@Z 10021890 f   WinConsole.obj
+ 0001:000209a0       ?GetConWindowSize@@YIHABU_CONSOLE_SCREEN_BUFFER_INFO@@HHKPAH1PAK@Z 100219a0 f   WinConsole.obj
+ 0001:00020af0       ?GetConsoleSizeInfo@@YIXPAU_CONSOLE_INFO@@@Z 10021af0 f   WinConsole.obj
+ 0001:00020ba0       ?apiGetConsoleScreenBufferInfoEx@@YIHPAXPAUMY_CONSOLE_SCREEN_BUFFER_INFOEX@@@Z 10021ba0 f   WinConsole.obj
+ 0001:00020c10       ?apiSetConsoleScreenBufferInfoEx@@YIHPAXPAUMY_CONSOLE_SCREEN_BUFFER_INFOEX@@@Z 10021c10 f   WinConsole.obj
+ 0001:00020c90       ?apiGetConsoleFontSize@@YIHPAXAAH1AAY0CA@_W@Z 10021c90 f   WinConsole.obj
+ 0001:00020d30       ?apiSetConsoleFontSize@@YIHPAXHHPB_W@Z 10021d30 f   WinConsole.obj
+ 0001:00020de0       ?apiFixFontSizeForBufferSize@@YIHPAXU_COORD@@PADH@Z 10021de0 f   WinConsole.obj
+ 0001:000212f0       ?SetConsoleFontSizeTo@@YIXPAUHWND__@@HHPB_WGG@Z 100222f0 f   WinConsole.obj
+ 0001:00021870       ?EvaluateDefaultFontWidth@@YIHHPB_W@Z 10022870 f   WinConsole.obj
+ 0001:000219b0       ?SetUserFriendlyFont@@YIXPAUHWND__@@@Z 100229b0 f   WinConsole.obj
+ 0001:00021e80       ?CorrectConsolePos@@YIXPAUHWND__@@@Z 10022e80 f   WinConsole.obj
+ 0001:00021fc0       ?EmergencyShow@@YIXPAUHWND__@@@Z 10022fc0 f   WinConsole.obj
+ 0001:00022070       ?getWindowInfo@@YIXPAUHWND__@@AAY0EAA@_W@Z 10023070 f   WinObjects.obj
+ 0001:000221d0       ?apiSetForegroundWindow@@YIHPAUHWND__@@@Z 100231d0 f   WinObjects.obj
+ 0001:000221f0       ?apiShowWindow@@YIHPAUHWND__@@H@Z 100231f0 f   WinObjects.obj
+ 0001:00022220       ?apiShowWindowAsync@@YIHPAUHWND__@@H@Z 10023220 f   WinObjects.obj
+ 0001:00022250       ?isWindow@@YIHPAUHWND__@@@Z 10023250 f   WinObjects.obj
+ 0001:000222c0       ?FileCompare@@YI_NPB_W0@Z  100232c0 f   WinObjects.obj
+ 0001:000224e0       ?FileExists@@YI_NPB_WPAK@Z 100234e0 f   WinObjects.obj
+ 0001:000226c0       ?FileExistsSearch@@YI_NPA_WI@Z 100236c0 f   WinObjects.obj
+ 0001:00022900       ?DirectoryExists@@YI_NPB_W@Z 10023900 f   WinObjects.obj
+ 0001:00022a80       ?MyCreateDirectory@@YI_NPA_W@Z 10023a80 f   WinObjects.obj
+ 0001:00022b90       ?IsFilePath@@YI_NPB_W@Z    10023b90 f   WinObjects.obj
+ 0001:00022c70       ?IsPathNeedQuot@@YI_NPB_W@Z 10023c70 f   WinObjects.obj
+ 0001:00022ca0       ?GetShortFileName@@YIHPB_WHPA_WH@Z 10023ca0 f   WinObjects.obj
+ 0001:00022eb0       ?GetShortFileNameEx@@YIPA_WPB_WH@Z 10023eb0 f   WinObjects.obj
+ 0001:000232c0       ?IsUserAdmin@@YI_NXZ       100242c0 f   WinObjects.obj
+ 0001:000233c0       ?GetLogonSID@@YI_NPAXPAPA_W@Z 100243c0 f   WinObjects.obj
+ 0001:000234e0       ?IsWine@@YI_NXZ            100244e0 f   WinObjects.obj
+ 0001:00023570       ?IsWinPE@@YI_NXZ           10024570 f   WinObjects.obj
+ 0001:00023600       ?IsDbcs@@YI_NXZ            10024600 f   WinObjects.obj
+ 0001:00023620       ?IsWindows64@@YI_NXZ       10024620 f   WinObjects.obj
+ 0001:000236b0       ?IsHwFullScreenAvailable@@YI_NXZ 100246b0 f   WinObjects.obj
+ 0001:00023750       ?IsVsNetHostExe@@YI_NPB_W@Z 10024750 f   WinObjects.obj
+ 0001:000237d0       ?GetProcessBits@@YIHKPAX@Z 100247d0 f   WinObjects.obj
+ 0001:000238b0       ?GetProcessInfo@@YI_NKPAUtagPROCESSENTRY32W@@@Z 100248b0 f   WinObjects.obj
+ 0001:000239a0       ?isTerminalMode@@YI_NXZ    100249a0 f   WinObjects.obj
+ 0001:00023cc0       ?IsModuleValid@@YI_NPAUHINSTANCE__@@H@Z 10024cc0 f   WinObjects.obj
+ 0001:00023e00       ?CheckCallbackPtr@@YI_NPAUHINSTANCE__@@IPAP6GHXZHHH@Z 10024e00 f   WinObjects.obj
+ 0001:00023f50       ?RemoveOldComSpecC@@YIXXZ  10024f50 f   WinObjects.obj
+ 0001:00024080       ?PointToName@@YIPB_WPB_W@Z 10025080 f   WinObjects.obj
+ 0001:000240d0       ?PointToName@@YIPBDPBD@Z   100250d0 f   WinObjects.obj
+ 0001:00024110       ?PointToExt@@YIPB_WPB_W@Z  10025110 f   WinObjects.obj
+ 0001:00024150       ?Unquote@@YIPB_WPA_W_N@Z   10025150 f   WinObjects.obj
+ 0001:000241e0       ?ExpandMacroValues@@YIPA_WPB_WPAPB_WI@Z 100251e0 f   WinObjects.obj
+ 0001:000243a0       ?ExpandEnvStr@@YIPA_WPB_W@Z 100253a0 f   WinObjects.obj
+ 0001:00024480       ?GetFullPathNameEx@@YIPA_WPB_W@Z 10025480 f   WinObjects.obj
+ 0001:00024550       ??0MConHandle@@QAE@PB_W@Z  10025550 f   WinObjects.obj
+ 0001:000245d0       ?LogHandle@MConHandle@@AAEXIPAX@Z 100255d0 f   WinObjects.obj
+ 0001:00024640       ??1MConHandle@@QAE@XZ      10025640 f   WinObjects.obj
+ 0001:00024660       ?SetBufferPtr@MConHandle@@QAEXPAPAX@Z 10025660 f   WinObjects.obj
+ 0001:00024680       ??BMConHandle@@QAEQAXXZ    10025680 f   WinObjects.obj
+ 0001:00024970       ?strrchr@@YAPADPADH@Z      10025970 f i WinObjects.obj
+ 0001:00024990       ?Close@MConHandle@@QAEXXZ  10025990 f   WinObjects.obj
+ 0001:00024a40       ??0MEvent@@QAE@XZ          10025a40 f   WinObjects.obj
+ 0001:00024a70       ??1MEvent@@QAE@XZ          10025a70 f   WinObjects.obj
+ 0001:00024a90       ?Close@MEvent@@QAEXXZ      10025a90 f   WinObjects.obj
+ 0001:00024ae0       ?InitName@MEvent@@QAEXPB_WK@Z 10025ae0 f   WinObjects.obj
+ 0001:00024b30       ?Open@MEvent@@QAEPAXXZ     10025b30 f   WinObjects.obj
+ 0001:00024bb0       ?Wait@MEvent@@QAEKKH@Z     10025bb0 f   WinObjects.obj
+ 0001:00024c10       ?GetHandle@MEvent@@QAEPAXXZ 10025c10 f   WinObjects.obj
+ 0001:00024c30       ??0MSetter@@QAE@PAH@Z      10025c30 f   WinObjects.obj
+ 0001:00024c70       ??0MSetter@@QAE@PA_N@Z     10025c70 f   WinObjects.obj
+ 0001:00024cb0       ??0MSetter@@QAE@PAKK@Z     10025cb0 f   WinObjects.obj
+ 0001:00024cf0       ??1MSetter@@QAE@XZ         10025cf0 f   WinObjects.obj
+ 0001:00024d10       ?Unlock@MSetter@@QAEXXZ    10025d10 f   WinObjects.obj
+ 0001:00024d80       ??0MSection@@QAE@XZ        10025d80 f   WinObjects.obj
+ 0001:00024e20       ??1MSection@@QAE@XZ        10025e20 f   WinObjects.obj
+ 0001:00024eb0       ?Process_Lock@MSection@@IAEXXZ 10025eb0 f   WinObjects.obj
+ 0001:00024ed0       ?Process_Unlock@MSection@@IAEXXZ 10025ed0 f   WinObjects.obj
+ 0001:00024ef0       ?ThreadTerminated@MSection@@QAEXK@Z 10025ef0 f   WinObjects.obj
+ 0001:00024f40       ?AddRef@MSection@@IAEXK@Z  10025f40 f   WinObjects.obj
+ 0001:00025030       ?ReleaseRef@MSection@@IAEHK@Z 10026030 f   WinObjects.obj
+ 0001:00025100       ?WaitUnlocked@MSection@@IAEXKK@Z 10026100 f   WinObjects.obj
+ 0001:000251a0       ?MyEnterCriticalSection@MSection@@IAE_NK@Z 100261a0 f   WinObjects.obj
+ 0001:00025370       ?Lock@MSection@@IAEHHK@Z   10026370 f   WinObjects.obj
+ 0001:000254c0       ?Unlock@MSection@@IAEXH@Z  100264c0 f   WinObjects.obj
+ 0001:00025530       ?isLockedExclusive@MSection@@QAE_NXZ 10026530 f   WinObjects.obj
+ 0001:00025580       ??0MSectionThread@@QAE@PAVMSection@@@Z 10026580 f   WinObjects.obj
+ 0001:000255b0       ??1MSectionThread@@QAE@XZ  100265b0 f   WinObjects.obj
+ 0001:000255e0       ??0MSectionLock@@QAE@XZ    100265e0 f   WinObjects.obj
+ 0001:00025610       ??1MSectionLock@@QAE@XZ    10026610 f   WinObjects.obj
+ 0001:00025640       ?Lock@MSectionLock@@QAEHPAVMSection@@HK@Z 10026640 f   WinObjects.obj
+ 0001:000256c0       ?RelockExclusive@MSectionLock@@QAEHK@Z 100266c0 f   WinObjects.obj
+ 0001:00025730       ?Unlock@MSectionLock@@QAEXXZ 10026730 f   WinObjects.obj
+ 0001:00025770       ?isLocked@MSectionLock@@QAEHH@Z 10026770 f   WinObjects.obj
+ 0001:000257c0       ??0MSectionLockSimple@@QAE@XZ 100267c0 f   WinObjects.obj
+ 0001:000257e0       ??1MSectionLockSimple@@QAE@XZ 100267e0 f   WinObjects.obj
+ 0001:00025800       ?Lock@MSectionLockSimple@@QAEHPAU_RTL_CRITICAL_SECTION@@K@Z 10026800 f   WinObjects.obj
+ 0001:000258a0       ?Unlock@MSectionLockSimple@@QAEXXZ 100268a0 f   WinObjects.obj
+ 0001:000258e0       ?isLocked@MSectionLockSimple@@QAEHXZ 100268e0 f   WinObjects.obj
+ 0001:00025900       ??0MFileLog@@QAE@PB_W0K@Z  10026900 f   WinObjects.obj
+ 0001:00025970       ?InitFileName@MFileLog@@IAEJPB_WK@Z 10026970 f   WinObjects.obj
+ 0001:00025a00       ??1MFileLog@@QAE@XZ        10026a00 f   WinObjects.obj
+ 0001:00025a50       ?CloseLogFile@MFileLog@@QAEXXZ 10026a50 f   WinObjects.obj
+ 0001:00025ae0       ?CreateLogFile@MFileLog@@QAEJPB_WKK@Z 10026ae0 f   WinObjects.obj
+ 0001:00026150       ?GetLogFileName@MFileLog@@QAEPB_WXZ 10027150 f   WinObjects.obj
+ 0001:00026190       ?LogString@MFileLog@@QAEXPBD_N01I@Z 10027190 f   WinObjects.obj
+ 0001:000262e0       ?LogString@MFileLog@@QAEXPB_W_N01@Z 100272e0 f   WinObjects.obj
+ 0001:000265e0       ?MonitorEnumProc@MFileLog@@KGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z 100275e0 f   WinObjects.obj
+ 0001:00026710       ?LogStartEnv@MFileLog@@QAEXPAUCEStartupEnv@@@Z 10027710 f   WinObjects.obj
+ 0001:00027100       ??0CToolTip@@QAE@XZ        10028100 f   WinObjects.obj
+ 0001:00027170       ??_GCToolTip@@UAEPAXI@Z    10028170 f i WinObjects.obj
+ 0001:00027170       ??_ECToolTip@@UAEPAXI@Z    10028170 f i WinObjects.obj
+ 0001:000271a0       ??1CToolTip@@UAE@XZ        100281a0 f   WinObjects.obj
+ 0001:00027240       ?ShowTip@CToolTip@@QAEXPAUHWND__@@0PB_WHUtagPOINT@@PAUHINSTANCE__@@@Z 10028240 f   WinObjects.obj
+ 0001:00027520       ?HideTip@CToolTip@@QAEXXZ  10028520 f   WinObjects.obj
+ 0001:00027590       ??0CTimer@@QAE@XZ          10028590 f   WinObjects.obj
+ 0001:000275d0       ??1CTimer@@QAE@XZ          100285d0 f   WinObjects.obj
+ 0001:000275f0       ?IsStarted@CTimer@@QAE_NXZ 100285f0 f   WinObjects.obj
+ 0001:00027610       ?Start@CTimer@@QAEXI@Z     10028610 f   WinObjects.obj
+ 0001:00027670       ?Stop@CTimer@@QAEXXZ       10028670 f   WinObjects.obj
+ 0001:000276a0       ?Restart@CTimer@@QAEXI@Z   100286a0 f   WinObjects.obj
+ 0001:000276d0       ?Init@CTimer@@QAEXPAUHWND__@@II@Z 100286d0 f   WinObjects.obj
+ 0001:00027700       ?MyGetLargestConsoleWindowSize@@YI?AU_COORD@@PAX@Z 10028700 f   WinObjects.obj
+ 0001:00027780       ?DuplicateProcessHandle@@YIPAXK@Z 10028780 f   WinObjects.obj
+ 0001:000277f0       ?FindComspec@@YIXPAUConEmuComspec@@_N@Z 100287f0 f   WinObjects.obj
+ 0001:00028150       ?GetEnvVar@@YIPA_WPB_WK@Z  10029150 f   WinObjects.obj
+ 0001:00028260       ?UpdateComspec@@YIXPAUConEmuComspec@@_N@Z 10029260 f   WinObjects.obj
+ 0001:000285a0       ?SetEnvVarExpanded@@YIXPB_W0@Z 100295a0 f   WinObjects.obj
+ 0001:000286a0       ?GetComspecFromEnvVar@@YIPB_WPA_WKW4ComSpecBits@@@Z 100296a0 f   WinObjects.obj
+ 0001:00028860       ?GetComspec@@YIPA_WPBUConEmuComspec@@@Z 10029860 f   WinObjects.obj
+ 0001:00028aa0       ?IsExportEnvVarAllowed@@YI_NPB_W@Z 10029aa0 f   WinObjects.obj
+ 0001:00028b10       ?ApplyExportEnvVar@@YIXPB_W@Z 10029b10 f   WinObjects.obj
+ 0001:00028b90       ?CopyToClipboard@@YI_NPB_W@Z 10029b90 f   WinObjects.obj
+ 0001:00028c40       ??$wcscpy_c@$0EAA@@@YIHAAY0EAA@_WPB_W@Z 10029c40 f i WinObjects.obj
+ 0001:00028c70       ??$wcscpy_c@$0BAA@@@YIHAAY0BAA@_WPB_W@Z 10029c70 f i WinObjects.obj
+ 0001:00028ca0       ??$wcscpy_c@$0EBA@@@YIHAAY0EBA@_WPB_W@Z 10029ca0 f i WinObjects.obj
+ 0001:00028cc8       _GetProcAddress@8          10029cc8 f   kernel32:KERNEL32.dll
+ 0001:00028cce       _GetCurrentProcessId@0     10029cce f   kernel32:KERNEL32.dll
+ 0001:00028cd4       _GetLastError@0            10029cd4 f   kernel32:KERNEL32.dll
+ 0001:00028cda       _LoadLibraryW@4            10029cda f   kernel32:KERNEL32.dll
+ 0001:00028ce0       _GetModuleHandleW@4        10029ce0 f   kernel32:KERNEL32.dll
+ 0001:00028ce6       _IsDebuggerPresent@0       10029ce6 f   kernel32:KERNEL32.dll
+ 0001:00028cec       _SetEvent@4                10029cec f   kernel32:KERNEL32.dll
+ 0001:00028cf2       _lstrcpyW@8                10029cf2 f   kernel32:KERNEL32.dll
+ 0001:00028cf8       _lstrlenW@4                10029cf8 f   kernel32:KERNEL32.dll
+ 0001:00028cfe       _SetEnvironmentVariableW@8 10029cfe f   kernel32:KERNEL32.dll
+ 0001:00028d04       _IsBadStringPtrW@8         10029d04 f   kernel32:KERNEL32.dll
+ 0001:00028d0a       _GetNumberOfConsoleInputEvents@8 10029d0a f   kernel32:KERNEL32.dll
+ 0001:00028d10       _GetStdHandle@4            10029d10 f   kernel32:KERNEL32.dll
+ 0001:00028d16       _GetTickCount@0            10029d16 f   kernel32:KERNEL32.dll
+ 0001:00028d1c       _SetLastError@4            10029d1c f   kernel32:KERNEL32.dll
+ 0001:00028d22       _GetCurrentThreadId@0      10029d22 f   kernel32:KERNEL32.dll
+ 0001:00028d28       _ReadConsoleInputW@16      10029d28 f   kernel32:KERNEL32.dll
+ 0001:00028d2e       _PeekConsoleInputW@16      10029d2e f   kernel32:KERNEL32.dll
+ 0001:00028d34       _lstrcatW@8                10029d34 f   kernel32:KERNEL32.dll
+ 0001:00028d3a       _GetModuleFileNameW@12     10029d3a f   kernel32:KERNEL32.dll
+ 0001:00028d40       _WriteConsoleInputW@16     10029d40 f   kernel32:KERNEL32.dll
+ 0001:00028d46       _WaitForSingleObject@8     10029d46 f   kernel32:KERNEL32.dll
+ 0001:00028d4c       _ReleaseSemaphore@12       10029d4c f   kernel32:KERNEL32.dll
+ 0001:00028d52       _WaitForMultipleObjects@16 10029d52 f   kernel32:KERNEL32.dll
+ 0001:00028d58       _ResetEvent@4              10029d58 f   kernel32:KERNEL32.dll
+ 0001:00028d5e       _InterlockedDecrement@4    10029d5e f   kernel32:KERNEL32.dll
+ 0001:00028d64       _InterlockedIncrement@4    10029d64 f   kernel32:KERNEL32.dll
+ 0001:00028d6a       _GetConsoleScreenBufferInfo@8 10029d6a f   kernel32:KERNEL32.dll
+ 0001:00028d70       _SuspendThread@4           10029d70 f   kernel32:KERNEL32.dll
+ 0001:00028d76       _ResumeThread@4            10029d76 f   kernel32:KERNEL32.dll
+ 0001:00028d7c       _TerminateProcess@8        10029d7c f   kernel32:KERNEL32.dll
+ 0001:00028d82       _GetCurrentProcess@0       10029d82 f   kernel32:KERNEL32.dll
+ 0001:00028d88       _CloseHandle@4             10029d88 f   kernel32:KERNEL32.dll
+ 0001:00028d8e       _Module32NextW@8           10029d8e f   kernel32:KERNEL32.dll
+ 0001:00028d94       _Module32FirstW@8          10029d94 f   kernel32:KERNEL32.dll
+ 0001:00028d9a       _CreateToolhelp32Snapshot@8 10029d9a f   kernel32:KERNEL32.dll
+ 0001:00028da0       _GetEnvironmentVariableW@12 10029da0 f   kernel32:KERNEL32.dll
+ 0001:00028da6       _CreateThread@24           10029da6 f   kernel32:KERNEL32.dll
+ 0001:00028dac       _CreateSemaphoreW@16       10029dac f   kernel32:KERNEL32.dll
+ 0001:00028db2       _CreateEventW@16           10029db2 f   kernel32:KERNEL32.dll
+ 0001:00028db8       _OpenFileMappingW@12       10029db8 f   kernel32:KERNEL32.dll
+ 0001:00028dbe       _VirtualProtect@16         10029dbe f   kernel32:KERNEL32.dll
+ 0001:00028dc4       _MapViewOfFile@20          10029dc4 f   kernel32:KERNEL32.dll
+ 0001:00028dca       _CreateFileMappingW@24     10029dca f   kernel32:KERNEL32.dll
+ 0001:00028dd0       _lstrcmpW@8                10029dd0 f   kernel32:KERNEL32.dll
+ 0001:00028dd6       _lstrcpynW@12              10029dd6 f   kernel32:KERNEL32.dll
+ 0001:00028ddc       _lstrcmpiW@8               10029ddc f   kernel32:KERNEL32.dll
+ 0001:00028de2       _UnmapViewOfFile@4         10029de2 f   kernel32:KERNEL32.dll
+ 0001:00028de8       _TerminateThread@8         10029de8 f   kernel32:KERNEL32.dll
+ 0001:00028dee       _SetConsoleTitleW@4        10029dee f   kernel32:KERNEL32.dll
+ 0001:00028df4       _GetConsoleTitleW@8        10029df4 f   kernel32:KERNEL32.dll
+ 0001:00028dfa       _WideCharToMultiByte@32    10029dfa f   kernel32:KERNEL32.dll
+ 0001:00028e00       _DeleteFileW@4             10029e00 f   kernel32:KERNEL32.dll
+ 0001:00028e06       _CreateProcessW@40         10029e06 f   kernel32:KERNEL32.dll
+ 0001:00028e0c       _GetExitCodeProcess@8      10029e0c f   kernel32:KERNEL32.dll
+ 0001:00028e12       _SetConsoleMode@8          10029e12 f   kernel32:KERNEL32.dll
+ 0001:00028e18       _GetConsoleMode@8          10029e18 f   kernel32:KERNEL32.dll
+ 0001:00028e1e       _GetConsoleCursorInfo@8    10029e1e f   kernel32:KERNEL32.dll
+ 0001:00028e24       _Thread32Next@8            10029e24 f   kernel32:KERNEL32.dll
+ 0001:00028e2a       _Thread32First@8           10029e2a f   kernel32:KERNEL32.dll
+ 0001:00028e30       _ExpandEnvironmentStringsW@12 10029e30 f   kernel32:KERNEL32.dll
+ 0001:00028e36       _lstrcmpA@8                10029e36 f   kernel32:KERNEL32.dll
+ 0001:00028e3c       _MultiByteToWideChar@24    10029e3c f   kernel32:KERNEL32.dll
+ 0001:00028e42       _lstrlenA@4                10029e42 f   kernel32:KERNEL32.dll
+ 0001:00028e48       _lstrcpynA@12              10029e48 f   kernel32:KERNEL32.dll
+ 0001:00028e4e       _GetCurrentDirectoryW@8    10029e4e f   kernel32:KERNEL32.dll
+ 0001:00028e54       _lstrcpyA@8                10029e54 f   kernel32:KERNEL32.dll
+ 0001:00028e5a       _DisconnectNamedPipe@4     10029e5a f   kernel32:KERNEL32.dll
+ 0001:00028e60       _SetThreadPriority@8       10029e60 f   kernel32:KERNEL32.dll
+ 0001:00028e66       _Sleep@4                   10029e66 f   kernel32:KERNEL32.dll
+ 0001:00028e6c       _FlushFileBuffers@4        10029e6c f   kernel32:KERNEL32.dll
+ 0001:00028e72       _ReadFile@20               10029e72 f   kernel32:KERNEL32.dll
+ 0001:00028e78       _GetOverlappedResult@16    10029e78 f   kernel32:KERNEL32.dll
+ 0001:00028e7e       _WriteFile@20              10029e7e f   kernel32:KERNEL32.dll
+ 0001:00028e84       _ConnectNamedPipe@8        10029e84 f   kernel32:KERNEL32.dll
+ 0001:00028e8a       _CreateNamedPipeW@32       10029e8a f   kernel32:KERNEL32.dll
+ 0001:00028e90       _SetFilePointer@16         10029e90 f   kernel32:KERNEL32.dll
+ 0001:00028e96       _GetFileInformationByHandle@8 10029e96 f   kernel32:KERNEL32.dll
+ 0001:00028e9c       _CreateFileW@28            10029e9c f   kernel32:KERNEL32.dll
+ 0001:00028ea2       _ReadProcessMemory@20      10029ea2 f   kernel32:KERNEL32.dll
+ 0001:00028ea8       _FreeLibrary@4             10029ea8 f   kernel32:KERNEL32.dll
+ 0001:00028eae       _VerifyVersionInfoW@16     10029eae f   kernel32:KERNEL32.dll
+ 0001:00028eb4       _VerSetConditionMask@16    10029eb4 f   kernel32:KERNEL32.dll
+ 0001:00028eba       _SearchPathW@24            10029eba f   kernel32:KERNEL32.dll
+ 0001:00028ec0       _DebugBreak@0              10029ec0 f   kernel32:KERNEL32.dll
+ 0001:00028ec6       _SetNamedPipeHandleState@16 10029ec6 f   kernel32:KERNEL32.dll
+ 0001:00028ecc       _WaitNamedPipeW@8          10029ecc f   kernel32:KERNEL32.dll
+ 0001:00028ed2       _TransactNamedPipe@28      10029ed2 f   kernel32:KERNEL32.dll
+ 0001:00028ed8       _GetConsoleWindow@0        10029ed8 f   kernel32:KERNEL32.dll
+ 0001:00028ede       _HeapCreate@12             10029ede f   kernel32:KERNEL32.dll
+ 0001:00028ee4       _HeapDestroy@4             10029ee4 f   kernel32:KERNEL32.dll
+ 0001:00028eea       _HeapAlloc@12              10029eea f   kernel32:KERNEL32.dll
+ 0001:00028ef0       _HeapReAlloc@16            10029ef0 f   kernel32:KERNEL32.dll
+ 0001:00028ef6       _HeapFree@12               10029ef6 f   kernel32:KERNEL32.dll
+ 0001:00028efc       _HeapValidate@12           10029efc f   kernel32:KERNEL32.dll
+ 0001:00028f02       _LocalFree@4               10029f02 f   kernel32:KERNEL32.dll
+ 0001:00028f08       _LocalAlloc@8              10029f08 f   kernel32:KERNEL32.dll
+ 0001:00028f0e       _SetConsoleWindowInfo@12   10029f0e f   kernel32:KERNEL32.dll
+ 0001:00028f14       _GetConsoleOutputCP@0      10029f14 f   kernel32:KERNEL32.dll
+ 0001:00028f1a       _GetFileSizeEx@8           10029f1a f   kernel32:KERNEL32.dll
+ 0001:00028f20       _FindClose@4               10029f20 f   kernel32:KERNEL32.dll
+ 0001:00028f26       _FindNextFileW@8           10029f26 f   kernel32:KERNEL32.dll
+ 0001:00028f2c       _FindFirstFileW@8          10029f2c f   kernel32:KERNEL32.dll
+ 0001:00028f32       _CreateDirectoryW@8        10029f32 f   kernel32:KERNEL32.dll
+ 0001:00028f38       _OpenProcess@12            10029f38 f   kernel32:KERNEL32.dll
+ 0001:00028f3e       _Process32NextW@8          10029f3e f   kernel32:KERNEL32.dll
+ 0001:00028f44       _Process32FirstW@8         10029f44 f   kernel32:KERNEL32.dll
+ 0001:00028f4a       _IsBadReadPtr@8            10029f4a f   kernel32:KERNEL32.dll
+ 0001:00028f50       _VirtualFree@12            10029f50 f   kernel32:KERNEL32.dll
+ 0001:00028f56       _VirtualAlloc@16           10029f56 f   kernel32:KERNEL32.dll
+ 0001:00028f5c       _GetSystemInfo@4           10029f5c f   kernel32:KERNEL32.dll
+ 0001:00028f62       _GetFullPathNameW@16       10029f62 f   kernel32:KERNEL32.dll
+ 0001:00028f68       _GetModuleFileNameA@12     10029f68 f   kernel32:KERNEL32.dll
+ 0001:00028f6e       _OpenEventW@12             10029f6e f   kernel32:KERNEL32.dll
+ 0001:00028f74       _InitializeCriticalSection@4 10029f74 f   kernel32:KERNEL32.dll
+ 0001:00028f7a       _DeleteCriticalSection@4   10029f7a f   kernel32:KERNEL32.dll
+ 0001:00028f80       _EnterCriticalSection@4    10029f80 f   kernel32:KERNEL32.dll
+ 0001:00028f86       _LeaveCriticalSection@4    10029f86 f   kernel32:KERNEL32.dll
+ 0001:00028f8c       _TryEnterCriticalSection@4 10029f8c f   kernel32:KERNEL32.dll
+ 0001:00028f92       _OpenThread@12             10029f92 f   kernel32:KERNEL32.dll
+ 0001:00028f98       _GetLocalTime@4            10029f98 f   kernel32:KERNEL32.dll
+ 0001:00028f9e       _GetVersionExW@4           10029f9e f   kernel32:KERNEL32.dll
+ 0001:00028fa4       _GetLargestConsoleWindowSize@4 10029fa4 f   kernel32:KERNEL32.dll
+ 0001:00028faa       _DuplicateHandle@28        10029faa f   kernel32:KERNEL32.dll
+ 0001:00028fb0       _GetWindowsDirectoryW@8    10029fb0 f   kernel32:KERNEL32.dll
+ 0001:00028fb6       _GlobalUnlock@4            10029fb6 f   kernel32:KERNEL32.dll
+ 0001:00028fbc       _GlobalLock@4              10029fbc f   kernel32:KERNEL32.dll
+ 0001:00028fc2       _GlobalAlloc@8             10029fc2 f   kernel32:KERNEL32.dll
+ 0001:00028fc8       _MessageBoxW@16            10029fc8 f   user32:USER32.dll
+ 0001:00028fce       _wsprintfW                 10029fce f   user32:USER32.dll
+ 0001:00028fd4       _IsWindow@4                10029fd4 f   user32:USER32.dll
+ 0001:00028fda       _GetWindowLongW@8          10029fda f   user32:USER32.dll
+ 0001:00028fe0       _GetParent@4               10029fe0 f   user32:USER32.dll
+ 0001:00028fe6       _PostMessageW@16           10029fe6 f   user32:USER32.dll
+ 0001:00028fec       _RegisterWindowMessageW@4  10029fec f   user32:USER32.dll
+ 0001:00028ff2       _GetWindowThreadProcessId@8 10029ff2 f   user32:USER32.dll
+ 0001:00028ff8       _IsWindowVisible@4         10029ff8 f   user32:USER32.dll
+ 0001:00028ffe       _CharUpperBuffW@8          10029ffe f   user32:USER32.dll
+ 0001:00029004       _FillRect@12               1002a004 f   user32:USER32.dll
+ 0001:0002900a       _ReleaseDC@8               1002a00a f   user32:USER32.dll
+ 0001:00029010       _GetDC@4                   1002a010 f   user32:USER32.dll
+ 0001:00029016       _ActivateKeyboardLayout@8  1002a016 f   user32:USER32.dll
+ 0001:0002901c       _LoadKeyboardLayoutW@8     1002a01c f   user32:USER32.dll
+ 0001:00029022       _MapVirtualKeyW@8          1002a022 f   user32:USER32.dll
+ 0001:00029028       _VkKeyScanW@4              1002a028 f   user32:USER32.dll
+ 0001:0002902e       _FindWindowW@8             1002a02e f   user32:USER32.dll
+ 0001:00029034       _GetSystemMetrics@4        1002a034 f   user32:USER32.dll
+ 0001:0002903a       _IsRectEmpty@4             1002a03a f   user32:USER32.dll
+ 0001:00029040       _EnumDisplayMonitors@16    1002a040 f   user32:USER32.dll
+ 0001:00029046       _GetMonitorInfoW@8         1002a046 f   user32:USER32.dll
+ 0001:0002904c       _SystemParametersInfoW@16  1002a04c f   user32:USER32.dll
+ 0001:00029052       _MonitorFromWindow@8       1002a052 f   user32:USER32.dll
+ 0001:00029058       _MonitorFromRect@8         1002a058 f   user32:USER32.dll
+ 0001:0002905e       _SetWindowPos@28           1002a05e f   user32:USER32.dll
+ 0001:00029064       _ShowWindow@8              1002a064 f   user32:USER32.dll
+ 0001:0002906a       _SendMessageW@16           1002a06a f   user32:USER32.dll
+ 0001:00029070       _GetWindowRect@8           1002a070 f   user32:USER32.dll
+ 0001:00029076       _EnableWindow@8            1002a076 f   user32:USER32.dll
+ 0001:0002907c       _IsWindowEnabled@4         1002a07c f   user32:USER32.dll
+ 0001:00029082       _SetForegroundWindow@4     1002a082 f   user32:USER32.dll
+ 0001:00029088       _ShowWindowAsync@8         1002a088 f   user32:USER32.dll
+ 0001:0002908e       _wsprintfA                 1002a08e f   user32:USER32.dll
+ 0001:00029094       _GetCursorPos@4            1002a094 f   user32:USER32.dll
+ 0001:0002909a       _GetWindowTextW@12         1002a09a f   user32:USER32.dll
+ 0001:000290a0       _GetClassNameW@12          1002a0a0 f   user32:USER32.dll
+ 0001:000290a6       _GetForegroundWindow@0     1002a0a6 f   user32:USER32.dll
+ 0001:000290ac       _GetKeyboardLayoutList@8   1002a0ac f   user32:USER32.dll
+ 0001:000290b2       _GetKeyboardLayout@4       1002a0b2 f   user32:USER32.dll
+ 0001:000290b8       _DestroyWindow@4           1002a0b8 f   user32:USER32.dll
+ 0001:000290be       _GetClientRect@8           1002a0be f   user32:USER32.dll
+ 0001:000290c4       _CreateWindowExW@48        1002a0c4 f   user32:USER32.dll
+ 0001:000290ca       _SetTimer@16               1002a0ca f   user32:USER32.dll
+ 0001:000290d0       _KillTimer@8               1002a0d0 f   user32:USER32.dll
+ 0001:000290d6       _CloseClipboard@0          1002a0d6 f   user32:USER32.dll
+ 0001:000290dc       _SetClipboardData@8        1002a0dc f   user32:USER32.dll
+ 0001:000290e2       _EmptyClipboard@0          1002a0e2 f   user32:USER32.dll
+ 0001:000290e8       _OpenClipboard@4           1002a0e8 f   user32:USER32.dll
+ 0001:000290ee       _DeleteEnhMetaFile@4       1002a0ee f   gdi32:GDI32.dll
+ 0001:000290f4       _GetEnhMetaFileBits@12     1002a0f4 f   gdi32:GDI32.dll
+ 0001:000290fa       _CloseEnhMetaFile@4        1002a0fa f   gdi32:GDI32.dll
+ 0001:00029100       _GdiFlush@0                1002a100 f   gdi32:GDI32.dll
+ 0001:00029106       _SelectObject@8            1002a106 f   gdi32:GDI32.dll
+ 0001:0002910c       _DeleteDC@4                1002a10c f   gdi32:GDI32.dll
+ 0001:00029112       _DeleteObject@4            1002a112 f   gdi32:GDI32.dll
+ 0001:00029118       _CreateSolidBrush@4        1002a118 f   gdi32:GDI32.dll
+ 0001:0002911e       _CreateDIBSection@24       1002a11e f   gdi32:GDI32.dll
+ 0001:00029124       _CreateCompatibleDC@4      1002a124 f   gdi32:GDI32.dll
+ 0001:0002912a       _CreateEnhMetaFileW@16     1002a12a f   gdi32:GDI32.dll
+ 0001:00029130       _GetDeviceCaps@8           1002a130 f   gdi32:GDI32.dll
+ 0001:00029136       _GetTextMetricsW@8         1002a136 f   gdi32:GDI32.dll
+ 0001:0002913c       _CreateFontIndirectW@4     1002a13c f   gdi32:GDI32.dll
+ 0001:00029142       _RegCloseKey@4             1002a142 f   advapi32:ADVAPI32.dll
+ 0001:00029148       _RegQueryValueExW@24       1002a148 f   advapi32:ADVAPI32.dll
+ 0001:0002914e       _RegOpenKeyExW@20          1002a14e f   advapi32:ADVAPI32.dll
+ 0001:00029154       _RegCreateKeyExW@36        1002a154 f   advapi32:ADVAPI32.dll
+ 0001:0002915a       _FreeSid@4                 1002a15a f   advapi32:ADVAPI32.dll
+ 0001:00029160       _CheckTokenMembership@12   1002a160 f   advapi32:ADVAPI32.dll
+ 0001:00029166       _AllocateAndInitializeSid@44 1002a166 f   advapi32:ADVAPI32.dll
+ 0001:0002916c       _ConvertSidToStringSidW@8  1002a16c f   advapi32:ADVAPI32.dll
+ 0001:00029172       _GetTokenInformation@20    1002a172 f   advapi32:ADVAPI32.dll
+ 0001:00029178       _OpenProcessToken@12       1002a178 f   advapi32:ADVAPI32.dll
+ 0001:0002917e       _RegEnumKeyExW@32          1002a17e f   advapi32:ADVAPI32.dll
+ 0001:00029184       _SHGetFolderPathW@20       1002a184 f   shell32:SHELL32.dll
+ 0001:0002918a       _VerQueryValueW@16         1002a18a f   version:VERSION.dll
+ 0001:00029190       _GetFileVersionInfoW@16    1002a190 f   version:VERSION.dll
+ 0001:00029196       _GetFileVersionInfoSizeW@8 1002a196 f   version:VERSION.dll
+ 0001:000291a0       __alloca_probe             1002a1a0     LIBCMT:chkstk.obj
+ 0001:000291a0       __chkstk                   1002a1a0 f   LIBCMT:chkstk.obj
+ 0001:000291d0       _memset                    1002a1d0 f   LIBCMT:memset.obj
+ 0001:0002a7c0       _memcmp                    1002b7c0 f   LIBCMT:memcmp.obj
+ 0001:0002be40       _memcpy                    1002ce40 f   LIBCMT:memcpy.obj
+ 0001:0002c1a5       _wcsrchr                   1002d1a5 f   LIBCMT:wcsrchr.obj
+ 0001:0002c1e0       _memmove                   1002d1e0 f   LIBCMT:memmove.obj
+ 0001:0002c545       _wcschr                    1002d545 f   LIBCMT:wcschr.obj
+ 0001:0002c56b       _wcsstr                    1002d56b f   LIBCMT:wcsstr.obj
+ 0001:0002c5d0       __ftol2_sse                1002d5d0 f   LIBCMT:ftol2.obj
+ 0001:0002c5d9       __ftol2_pentium4           1002d5d9 f   LIBCMT:ftol2.obj
+ 0001:0002c5ec       __ftol2_sse_excpt          1002d5ec f   LIBCMT:ftol2.obj
+ 0001:0002c606       __ftol2                    1002d606 f   LIBCMT:ftol2.obj
+ 0001:0002c67b       _wcsncmp                   1002d67b f   LIBCMT:wcsncmp.obj
+ 0001:0002c6b2       _wcspbrk                   1002d6b2 f   LIBCMT:wcspbrk.obj
+ 0001:0002c700       _strrchr                   1002d700 f   LIBCMT:strrchr.obj
+ 0001:0002c784       __VEC_memzero              1002d784 f   LIBCMT:p4_memset.obj
+ 0001:0002c863       __get_sse2_info            1002d863 f   LIBCMT:cpu_disp.obj
+ 0001:0002c8c5       ___sse2_available_init     1002d8c5 f   LIBCMT:cpu_disp.obj
+ 0001:0002c959       __VEC_memcpy               1002d959 f   LIBCMT:p4_memcpy.obj
+ 0001:0002ca3c       __SEH_prolog4              1002da3c f   LIBCMT:sehprolg4.obj
+ 0001:0002ca81       __SEH_epilog4              1002da81 f   LIBCMT:sehprolg4.obj
+ 0001:0002cad0       __except_handler4          1002dad0 f   LIBCMT:chandler4.obj
+ 0001:0002cc5c       @__security_check_cookie@4 1002dc5c f   LIBCMT:secchk.obj
+ 0001:0002cc6c       __local_unwind4            1002dc6c f   LIBCMT:exsup4.obj
+ 0001:0002cd42       __seh_longjmp_unwind4@4    1002dd42 f   LIBCMT:exsup4.obj
+ 0001:0002cd5e       @_EH4_CallFilterFunc@8     1002dd5e f   LIBCMT:exsup4.obj
+ 0001:0002cd75       @_EH4_TransferToHandler@8  1002dd75 f   LIBCMT:exsup4.obj
+ 0001:0002cd8e       @_EH4_GlobalUnwind@4       1002dd8e f   LIBCMT:exsup4.obj
+ 0001:0002cda8       @_EH4_LocalUnwind@16       1002dda8 f   LIBCMT:exsup4.obj
+ 0001:0002cdc0       __ValidateImageBase        1002ddc0 f   LIBCMT:pesect.obj
+ 0001:0002ce00       __FindPESection            1002de00 f   LIBCMT:pesect.obj
+ 0001:0002ce50       __IsNonwritableInCurrentImage 1002de50 f   LIBCMT:pesect.obj
+ 0001:0002cf0d       ___report_gsfailure        1002df0d f   LIBCMT:gs_report.obj
+ 0001:0002d014       __global_unwind2           1002e014 f   LIBCMT:exsup.obj
+ 0001:0002d079       __local_unwind2            1002e079 f   LIBCMT:exsup.obj
+ 0001:0002d0fd       __abnormal_termination     1002e0fd f   LIBCMT:exsup.obj
+ 0001:0002d120       __NLG_Notify1              1002e120 f   LIBCMT:exsup.obj
+ 0001:0002d129       __NLG_Notify               1002e129 f   LIBCMT:exsup.obj
+ 0001:0002d140       __NLG_Dispatch2            1002e140     LIBCMT:exsup.obj
+ 0001:0002d140       __NLG_Dispatch             1002e140     LIBCMT:exsup.obj
+ 0001:0002d148       __NLG_Call                 1002e148 f   LIBCMT:exsup.obj
+ 0001:0002d14a       __NLG_Return2              1002e14a     LIBCMT:exsup.obj
+ 0001:0002d14b       __crt_debugger_hook        1002e14b f   LIBCMT:dbghook.obj
+ 0001:0002d154       _RtlUnwind@16              1002e154 f   kernel32:KERNEL32.dll
+ 0001:0002d15a       _UnhandledExceptionFilter@4 1002e15a f   kernel32:KERNEL32.dll
+ 0001:0002d160       _SetUnhandledExceptionFilter@4 1002e160 f   kernel32:KERNEL32.dll
  0002:00000000       __imp__OpenProcessToken@12 1002f000     advapi32:ADVAPI32.dll
  0002:00000004       __imp__GetTokenInformation@20 1002f004     advapi32:ADVAPI32.dll
  0002:00000008       __imp__ConvertSidToStringSidW@8 1002f008     advapi32:ADVAPI32.dll
@@ -906,47 +906,47 @@
  0002:00000138       __imp__InterlockedIncrement@4 1002f138     kernel32:KERNEL32.dll
  0002:0000013c       __imp__ReadProcessMemory@20 1002f13c     kernel32:KERNEL32.dll
  0002:00000140       __imp__FreeLibrary@4       1002f140     kernel32:KERNEL32.dll
- 0002:00000144       __imp__GetVersionExW@4     1002f144     kernel32:KERNEL32.dll
- 0002:00000148       __imp__SearchPathW@24      1002f148     kernel32:KERNEL32.dll
- 0002:0000014c       __imp__DebugBreak@0        1002f14c     kernel32:KERNEL32.dll
- 0002:00000150       __imp__SetNamedPipeHandleState@16 1002f150     kernel32:KERNEL32.dll
- 0002:00000154       __imp__WaitNamedPipeW@8    1002f154     kernel32:KERNEL32.dll
- 0002:00000158       __imp__TransactNamedPipe@28 1002f158     kernel32:KERNEL32.dll
- 0002:0000015c       __imp__GetConsoleWindow@0  1002f15c     kernel32:KERNEL32.dll
- 0002:00000160       __imp__HeapCreate@12       1002f160     kernel32:KERNEL32.dll
- 0002:00000164       __imp__HeapDestroy@4       1002f164     kernel32:KERNEL32.dll
- 0002:00000168       __imp__HeapAlloc@12        1002f168     kernel32:KERNEL32.dll
- 0002:0000016c       __imp__HeapReAlloc@16      1002f16c     kernel32:KERNEL32.dll
- 0002:00000170       __imp__HeapFree@12         1002f170     kernel32:KERNEL32.dll
- 0002:00000174       __imp__HeapValidate@12     1002f174     kernel32:KERNEL32.dll
- 0002:00000178       __imp__LocalFree@4         1002f178     kernel32:KERNEL32.dll
- 0002:0000017c       __imp__LocalAlloc@8        1002f17c     kernel32:KERNEL32.dll
- 0002:00000180       __imp__VerifyVersionInfoW@16 1002f180     kernel32:KERNEL32.dll
- 0002:00000184       __imp__VerSetConditionMask@16 1002f184     kernel32:KERNEL32.dll
- 0002:00000188       __imp__SetConsoleWindowInfo@12 1002f188     kernel32:KERNEL32.dll
- 0002:0000018c       __imp__GetConsoleOutputCP@0 1002f18c     kernel32:KERNEL32.dll
- 0002:00000190       __imp__GetFileSizeEx@8     1002f190     kernel32:KERNEL32.dll
- 0002:00000194       __imp__FindClose@4         1002f194     kernel32:KERNEL32.dll
- 0002:00000198       __imp__FindNextFileW@8     1002f198     kernel32:KERNEL32.dll
- 0002:0000019c       __imp__FindFirstFileW@8    1002f19c     kernel32:KERNEL32.dll
- 0002:000001a0       __imp__CreateDirectoryW@8  1002f1a0     kernel32:KERNEL32.dll
- 0002:000001a4       __imp__OpenProcess@12      1002f1a4     kernel32:KERNEL32.dll
- 0002:000001a8       __imp__Process32NextW@8    1002f1a8     kernel32:KERNEL32.dll
- 0002:000001ac       __imp__Process32FirstW@8   1002f1ac     kernel32:KERNEL32.dll
- 0002:000001b0       __imp__IsBadReadPtr@8      1002f1b0     kernel32:KERNEL32.dll
- 0002:000001b4       __imp__VirtualFree@12      1002f1b4     kernel32:KERNEL32.dll
- 0002:000001b8       __imp__VirtualAlloc@16     1002f1b8     kernel32:KERNEL32.dll
- 0002:000001bc       __imp__GetSystemInfo@4     1002f1bc     kernel32:KERNEL32.dll
- 0002:000001c0       __imp__GetFullPathNameW@16 1002f1c0     kernel32:KERNEL32.dll
- 0002:000001c4       __imp__GetModuleFileNameA@12 1002f1c4     kernel32:KERNEL32.dll
- 0002:000001c8       __imp__OpenEventW@12       1002f1c8     kernel32:KERNEL32.dll
- 0002:000001cc       __imp__InitializeCriticalSection@4 1002f1cc     kernel32:KERNEL32.dll
- 0002:000001d0       __imp__DeleteCriticalSection@4 1002f1d0     kernel32:KERNEL32.dll
- 0002:000001d4       __imp__EnterCriticalSection@4 1002f1d4     kernel32:KERNEL32.dll
- 0002:000001d8       __imp__LeaveCriticalSection@4 1002f1d8     kernel32:KERNEL32.dll
- 0002:000001dc       __imp__TryEnterCriticalSection@4 1002f1dc     kernel32:KERNEL32.dll
- 0002:000001e0       __imp__OpenThread@12       1002f1e0     kernel32:KERNEL32.dll
- 0002:000001e4       __imp__GetLocalTime@4      1002f1e4     kernel32:KERNEL32.dll
+ 0002:00000144       __imp__VerifyVersionInfoW@16 1002f144     kernel32:KERNEL32.dll
+ 0002:00000148       __imp__VerSetConditionMask@16 1002f148     kernel32:KERNEL32.dll
+ 0002:0000014c       __imp__SearchPathW@24      1002f14c     kernel32:KERNEL32.dll
+ 0002:00000150       __imp__DebugBreak@0        1002f150     kernel32:KERNEL32.dll
+ 0002:00000154       __imp__SetNamedPipeHandleState@16 1002f154     kernel32:KERNEL32.dll
+ 0002:00000158       __imp__WaitNamedPipeW@8    1002f158     kernel32:KERNEL32.dll
+ 0002:0000015c       __imp__TransactNamedPipe@28 1002f15c     kernel32:KERNEL32.dll
+ 0002:00000160       __imp__GetConsoleWindow@0  1002f160     kernel32:KERNEL32.dll
+ 0002:00000164       __imp__HeapCreate@12       1002f164     kernel32:KERNEL32.dll
+ 0002:00000168       __imp__HeapDestroy@4       1002f168     kernel32:KERNEL32.dll
+ 0002:0000016c       __imp__HeapAlloc@12        1002f16c     kernel32:KERNEL32.dll
+ 0002:00000170       __imp__HeapReAlloc@16      1002f170     kernel32:KERNEL32.dll
+ 0002:00000174       __imp__HeapFree@12         1002f174     kernel32:KERNEL32.dll
+ 0002:00000178       __imp__HeapValidate@12     1002f178     kernel32:KERNEL32.dll
+ 0002:0000017c       __imp__LocalFree@4         1002f17c     kernel32:KERNEL32.dll
+ 0002:00000180       __imp__LocalAlloc@8        1002f180     kernel32:KERNEL32.dll
+ 0002:00000184       __imp__SetConsoleWindowInfo@12 1002f184     kernel32:KERNEL32.dll
+ 0002:00000188       __imp__GetConsoleOutputCP@0 1002f188     kernel32:KERNEL32.dll
+ 0002:0000018c       __imp__GetFileSizeEx@8     1002f18c     kernel32:KERNEL32.dll
+ 0002:00000190       __imp__FindClose@4         1002f190     kernel32:KERNEL32.dll
+ 0002:00000194       __imp__FindNextFileW@8     1002f194     kernel32:KERNEL32.dll
+ 0002:00000198       __imp__FindFirstFileW@8    1002f198     kernel32:KERNEL32.dll
+ 0002:0000019c       __imp__CreateDirectoryW@8  1002f19c     kernel32:KERNEL32.dll
+ 0002:000001a0       __imp__OpenProcess@12      1002f1a0     kernel32:KERNEL32.dll
+ 0002:000001a4       __imp__Process32NextW@8    1002f1a4     kernel32:KERNEL32.dll
+ 0002:000001a8       __imp__Process32FirstW@8   1002f1a8     kernel32:KERNEL32.dll
+ 0002:000001ac       __imp__IsBadReadPtr@8      1002f1ac     kernel32:KERNEL32.dll
+ 0002:000001b0       __imp__VirtualFree@12      1002f1b0     kernel32:KERNEL32.dll
+ 0002:000001b4       __imp__VirtualAlloc@16     1002f1b4     kernel32:KERNEL32.dll
+ 0002:000001b8       __imp__GetSystemInfo@4     1002f1b8     kernel32:KERNEL32.dll
+ 0002:000001bc       __imp__GetFullPathNameW@16 1002f1bc     kernel32:KERNEL32.dll
+ 0002:000001c0       __imp__GetModuleFileNameA@12 1002f1c0     kernel32:KERNEL32.dll
+ 0002:000001c4       __imp__OpenEventW@12       1002f1c4     kernel32:KERNEL32.dll
+ 0002:000001c8       __imp__InitializeCriticalSection@4 1002f1c8     kernel32:KERNEL32.dll
+ 0002:000001cc       __imp__DeleteCriticalSection@4 1002f1cc     kernel32:KERNEL32.dll
+ 0002:000001d0       __imp__EnterCriticalSection@4 1002f1d0     kernel32:KERNEL32.dll
+ 0002:000001d4       __imp__LeaveCriticalSection@4 1002f1d4     kernel32:KERNEL32.dll
+ 0002:000001d8       __imp__TryEnterCriticalSection@4 1002f1d8     kernel32:KERNEL32.dll
+ 0002:000001dc       __imp__OpenThread@12       1002f1dc     kernel32:KERNEL32.dll
+ 0002:000001e0       __imp__GetLocalTime@4      1002f1e0     kernel32:KERNEL32.dll
+ 0002:000001e4       __imp__GetVersionExW@4     1002f1e4     kernel32:KERNEL32.dll
  0002:000001e8       __imp__GetLargestConsoleWindowSize@4 1002f1e8     kernel32:KERNEL32.dll
  0002:000001ec       __imp__DuplicateHandle@28  1002f1ec     kernel32:KERNEL32.dll
  0002:000001f0       __imp__GetWindowsDirectoryW@8 1002f1f0     kernel32:KERNEL32.dll
@@ -1481,16 +1481,16 @@
  0003:0000217c       ?ghServerTerminateEvent@@3PAXA 1003717c     PluginSrv.obj
  0003:00002180       ?gbInCommonShutdown@@3HA   10037180     Common.obj
  0003:00002184       ?OnShutdownConsole@@3P6GXXZA 10037184     Common.obj
- 0003:00002188       ?gpLocalSecurity@@3PAU_SECURITY_ATTRIBUTES@@A 10037188     ConEmuCheck.obj
- 0003:00002190       ?ghWorkingModule@@3_KA     10037190     ConEmuCheck.obj
- 0003:000021e4       ?ghHeap@@3PAXA             100371e4     Memory.obj
- 0003:000021e8       ?gNullDesc@@3PAVMNullDesc@@A 100371e8     MSecurity.obj
- 0003:000021ec       ?gpConsoleInfoStr@@3PAU_CONSOLE_INFO@@A 100371ec     WinConsole.obj
- 0003:000021f0       ?ghConsoleSection@@3PAXA   100371f0     WinConsole.obj
- 0003:00002204       ?Is_Window@@3P6GHPAUHWND__@@@ZA 10037204     WinObjects.obj
- 0003:0000256c       __debugger_hook_dummy      1003756c     <common>
- 0003:00002570       __pDestructExceptionObject 10037570     <common>
- 0003:00002574       ___sse2_available          10037574     <common>
+ 0003:00002190       ?gpLocalSecurity@@3PAU_SECURITY_ATTRIBUTES@@A 10037190     ConEmuCheck.obj
+ 0003:00002198       ?ghWorkingModule@@3_KA     10037198     ConEmuCheck.obj
+ 0003:000021ec       ?ghHeap@@3PAXA             100371ec     Memory.obj
+ 0003:000021f0       ?gNullDesc@@3PAVMNullDesc@@A 100371f0     MSecurity.obj
+ 0003:000021f4       ?gpConsoleInfoStr@@3PAU_CONSOLE_INFO@@A 100371f4     WinConsole.obj
+ 0003:000021f8       ?ghConsoleSection@@3PAXA   100371f8     WinConsole.obj
+ 0003:0000220c       ?Is_Window@@3P6GHPAUHWND__@@@ZA 1003720c     WinObjects.obj
+ 0003:00002574       __debugger_hook_dummy      10037574     <common>
+ 0003:00002578       __pDestructExceptionObject 10037578     <common>
+ 0003:0000257c       ___sse2_available          1003757c     <common>
 
  entry point at        0001:00001c30
 
@@ -1532,30 +1532,30 @@
  0001:000186a0       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 100196a0 f   PluginBackground.obj
  0001:0001a930       ?StringValidateDestW@@YGJPB_WII@Z 1001b930 f   PluginSrv.obj
  0001:0001a960       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001b960 f   PluginSrv.obj
- 0001:0001bef0       ?StringValidateDestW@@YGJPB_WII@Z 1001cef0 f   Execute.obj
- 0001:0001bf20       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001cf20 f   Execute.obj
- 0001:0001ca80       ?StringValidateDestW@@YGJPB_WII@Z 1001da80 f   ConEmuCheck.obj
- 0001:0001cab0       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001dab0 f   ConEmuCheck.obj
- 0001:0001ded0       ?StringValidateDestW@@YGJPB_WII@Z 1001eed0 f   ConEmuCheckEx.obj
- 0001:0001df00       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001ef00 f   ConEmuCheckEx.obj
- 0001:0001e030       ?StringValidateDestAndLengthW@@YGJPB_WIPAII@Z 1001f030 f   ConEmuCheckEx.obj
- 0001:0001e080       ?StringLengthWorkerW@@YGJPB_WIPAI@Z 1001f080 f   ConEmuCheckEx.obj
- 0001:0001e380       ?StringValidateDestA@@YGJPBDII@Z 1001f380 f   Memory.obj
- 0001:0001e3b0       ?StringCopyWorkerA@@YGJPADIPAIPBDI@Z 1001f3b0 f   Memory.obj
- 0001:0001e4c0       ?StringValidateDestW@@YGJPB_WII@Z 1001f4c0 f   Memory.obj
- 0001:0001e4f0       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001f4f0 f   Memory.obj
- 0001:00022d80       ?StringValidateDestW@@YGJPB_WII@Z 10023d80 f   WinObjects.obj
- 0001:00022db0       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 10023db0 f   WinObjects.obj
- 0001:00026040       ?StringValidateDestAndLengthW@@YGJPB_WIPAII@Z 10027040 f   WinObjects.obj
- 0001:00026090       ?StringLengthWorkerW@@YGJPB_WIPAI@Z 10027090 f   WinObjects.obj
- 0001:000291fa       _cmpResult                 1002a1fa f   LIBCMT:memcmp.obj
- 0001:0002920c       _cmpBYTE                   1002a20c f   LIBCMT:memcmp.obj
- 0001:00029224       _cmpWORD                   1002a224 f   LIBCMT:memcmp.obj
- 0001:00029264       _cmpDWORD                  1002a264 f   LIBCMT:memcmp.obj
- 0001:000292dc       _unaligned_memcmp          1002a2dc f   LIBCMT:memcmp.obj
- 0001:0002c6dd       _fastzero_I                1002d6dd f   LIBCMT:p4_memset.obj
- 0001:0002c7c3       _has_osfxsr_set            1002d7c3 f   LIBCMT:cpu_disp.obj
- 0001:0002c882       _fastcopy_I                1002d882 f   LIBCMT:p4_memcpy.obj
- 0001:0002ca50       _ValidateLocalCookies      1002da50 f   LIBCMT:chandler4.obj
- 0001:0002ccac       __unwind_handler4          1002dcac f   LIBCMT:exsup4.obj
- 0001:0002cfe4       __unwind_handler           1002dfe4 f   LIBCMT:exsup.obj
+ 0001:0001bf40       ?StringValidateDestW@@YGJPB_WII@Z 1001cf40 f   Execute.obj
+ 0001:0001bf70       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001cf70 f   Execute.obj
+ 0001:0001cad0       ?StringValidateDestW@@YGJPB_WII@Z 1001dad0 f   ConEmuCheck.obj
+ 0001:0001cb00       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001db00 f   ConEmuCheck.obj
+ 0001:0001df20       ?StringValidateDestW@@YGJPB_WII@Z 1001ef20 f   ConEmuCheckEx.obj
+ 0001:0001df50       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001ef50 f   ConEmuCheckEx.obj
+ 0001:0001e080       ?StringValidateDestAndLengthW@@YGJPB_WIPAII@Z 1001f080 f   ConEmuCheckEx.obj
+ 0001:0001e0d0       ?StringLengthWorkerW@@YGJPB_WIPAI@Z 1001f0d0 f   ConEmuCheckEx.obj
+ 0001:0001e3d0       ?StringValidateDestA@@YGJPBDII@Z 1001f3d0 f   Memory.obj
+ 0001:0001e400       ?StringCopyWorkerA@@YGJPADIPAIPBDI@Z 1001f400 f   Memory.obj
+ 0001:0001e510       ?StringValidateDestW@@YGJPB_WII@Z 1001f510 f   Memory.obj
+ 0001:0001e540       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 1001f540 f   Memory.obj
+ 0001:00022dd0       ?StringValidateDestW@@YGJPB_WII@Z 10023dd0 f   WinObjects.obj
+ 0001:00022e00       ?StringCopyWorkerW@@YGJPA_WIPAIPB_WI@Z 10023e00 f   WinObjects.obj
+ 0001:00026090       ?StringValidateDestAndLengthW@@YGJPB_WIPAII@Z 10027090 f   WinObjects.obj
+ 0001:000260e0       ?StringLengthWorkerW@@YGJPB_WIPAI@Z 100270e0 f   WinObjects.obj
+ 0001:0002924a       _cmpResult                 1002a24a f   LIBCMT:memcmp.obj
+ 0001:0002925c       _cmpBYTE                   1002a25c f   LIBCMT:memcmp.obj
+ 0001:00029274       _cmpWORD                   1002a274 f   LIBCMT:memcmp.obj
+ 0001:000292b4       _cmpDWORD                  1002a2b4 f   LIBCMT:memcmp.obj
+ 0001:0002932c       _unaligned_memcmp          1002a32c f   LIBCMT:memcmp.obj
+ 0001:0002c72d       _fastzero_I                1002d72d f   LIBCMT:p4_memset.obj
+ 0001:0002c813       _has_osfxsr_set            1002d813 f   LIBCMT:cpu_disp.obj
+ 0001:0002c8d2       _fastcopy_I                1002d8d2 f   LIBCMT:p4_memcpy.obj
+ 0001:0002caa0       _ValidateLocalCookies      1002daa0 f   LIBCMT:chandler4.obj
+ 0001:0002ccfc       __unwind_handler4          1002dcfc f   LIBCMT:exsup4.obj
+ 0001:0002d034       __unwind_handler           1002e034 f   LIBCMT:exsup.obj
