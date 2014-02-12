@@ -68,8 +68,11 @@ LONG DESCRIPTION
 
     ShellForwardWord         (Cmd: unbound              Emacs: unbound)
 
-        Like ForwardWord in Emacs mode or NextWord in WIndows mode except word boundaries
-        are defined by PowerShell token boundaries.
+        Like ForwardWord except word boundaries are defined by PowerShell token boundaries.
+
+    ShellNextWord            (Cmd: unbound              Emacs: unbound)
+
+        Like NextWord except word boundaries are defined by PowerShell token boundaries.
 
     ShellBackwardWord        (Cmd: unbound              Emacs: unbound)
 
@@ -149,6 +152,10 @@ LONG DESCRIPTION
     SelectShellForwardWord   (Cmd: unbound              Emacs: unbound)
 
         Adjust the current selection to include the next word using ShellForwardWord.
+
+    SelectShellNextWord      (Cmd: unbound              Emacs: unbound)
+
+        Adjust the current selection to include the next word using ShellNextWord.
 
     SelectShellBackwardWord  (Cmd: unbound              Emacs: unbound)
 
@@ -368,6 +375,13 @@ LONG DESCRIPTION
         Alt+- toggles the argument to be negative/non-negative.  To enter 80 '*' characters,
         you could type Alt+8 Alt+0 *.
 
+    CaptureScreen            (Cmd: unbound              Emacs: unbound)
+
+        Copies selected lines to the clipboard in both text and rtf formats.  Use up/down
+        arrow keys to the first line to select, then Shift+UpArrow/Shift+DownArrow to select
+        multiple lines.  After selecting, press Enter to copy the text.  Escape/Ctrl+C/Ctrl+G
+        will cancel so nothing is copied to the clipboard.
+
     DisableDemoMode          (Cmd: unbound              Emacs: unbound)
 
         Turn off demo mode.
@@ -377,6 +391,12 @@ LONG DESCRIPTION
         Turn on demo mode.  Displays a window below the input line that shows which
         keys are typed.
 
+    InvokePrompt             (Cmd: unbound              Emacs: unbound)
+
+        Erases the current prompt and calls the prompt function to redisplay
+        the prompt.  Useful for custom key handlers that change state, e.g.
+        change the current directory.
+
     WhatIsKey                (Cmd: <Alt+?>              Emacs: <Alt+?>)
 
         Read a key or chord and display the key binding.
@@ -384,6 +404,22 @@ LONG DESCRIPTION
     ShowKeyBindings          (Cmd: <Ctrl+Alt+?>         Emacs: <Ctrl+Alt+?>)
 
         Show all of the currently bound keys.
+
+    ScrollDisplayUp          (Cmd: <PageUp>             Emacs: <PageUp>)
+
+        Scroll the display up one screen.
+
+    ScrollDisplayDown        (Cmd: <PageDown>           Emacs: <PageDown>)
+
+        Scroll the display down one screen.
+
+    ScrollDisplayTop         (Cmd: unbound              Emacs: <Ctrl+Home>)
+
+        Scroll the display to the top.
+
+    ScrollDisplayToCursor    (Cmd: unbound              Emacs: <Ctrl+End>)
+
+        Scroll the display to the cursor.
 
   Custom Key Binding Support
   --------------------------
