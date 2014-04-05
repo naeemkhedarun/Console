@@ -1,6 +1,6 @@
  ConEmuLn
 
- Timestamp is 53162d68 (Tue Mar 04 23:45:44 2014)
+ Timestamp is 533fb40c (Sat Apr 05 11:43:08 2014)
 
  Preferred load address is 10000000
 
@@ -63,25 +63,25 @@
  0001:00001a62       ?SettingsLoadW1900@@YIXXZ  10002a62 f   ConEmuLn1900.obj
  0001:00001b53       ?SettingsSaveW1900@@YIXXZ  10002b53 f   ConEmuLn1900.obj
  0001:00001c1c       _GetGlobalInfoW@4          10002c1c f   ConEmuLn2800.obj
- 0001:00001cac       ?GetPluginInfoW2800@@YIXPAX@Z 10002cac f   ConEmuLn2800.obj
- 0001:00001cfc       ?SetStartupInfoW2800@@YIXPAX@Z 10002cfc f   ConEmuLn2800.obj
- 0001:00001dea       ?ExitFARW2800@@YIXXZ       10002dea f   ConEmuLn2800.obj
- 0001:00001e19       ?GetMsgW2800@@YIPB_WH@Z    10002e19 f   ConEmuLn2800.obj
- 0001:00002463       ?ConfigureW2800@@YIHH@Z    10003463 f   ConEmuLn2800.obj
- 0001:00002474       ?SettingsLoadW2800@@YIXXZ  10003474 f   ConEmuLn2800.obj
- 0001:00002554       ?SettingsSaveW2800@@YIXXZ  10003554 f   ConEmuLn2800.obj
- 0001:00002613       _GetMinFarVersion@0        10003613 f   ConEmuLnA.obj
- 0001:00002642       _SetStartupInfo@4          10003642 f   ConEmuLnA.obj
- 0001:000027b4       _GetPluginInfo@4           100037b4 f   ConEmuLnA.obj
- 0001:00002814       _ExitFAR@0                 10003814 f   ConEmuLnA.obj
- 0001:00002eb9       _Configure@4               10003eb9 f   ConEmuLnA.obj
- 0001:00002ece       _OpenPlugin@8              10003ece f   ConEmuLnA.obj
- 0001:00002ee4       ?SettingsLoadA@@YIXXZ      10003ee4 f   ConEmuLnA.obj
- 0001:00002eef       ?SettingsSaveA@@YIXXZ      10003eef f   ConEmuLnA.obj
- 0001:00002efa       ?HeapInitialize@@YI_NXZ    10003efa f   Memory.obj
- 0001:00002f20       ?HeapDeinitialize@@YIXXZ   10003f20 f   Memory.obj
- 0001:00002f38       ?xf_calloc@@YAPAXII@Z      10003f38 f   Memory.obj
- 0001:00002f51       ?xf_free@@YAXPAX@Z         10003f51 f   Memory.obj
+ 0001:00001caa       ?GetPluginInfoW2800@@YIXPAX@Z 10002caa f   ConEmuLn2800.obj
+ 0001:00001cfa       ?SetStartupInfoW2800@@YIXPAX@Z 10002cfa f   ConEmuLn2800.obj
+ 0001:00001de8       ?ExitFARW2800@@YIXXZ       10002de8 f   ConEmuLn2800.obj
+ 0001:00001e17       ?GetMsgW2800@@YIPB_WH@Z    10002e17 f   ConEmuLn2800.obj
+ 0001:00002461       ?ConfigureW2800@@YIHH@Z    10003461 f   ConEmuLn2800.obj
+ 0001:00002472       ?SettingsLoadW2800@@YIXXZ  10003472 f   ConEmuLn2800.obj
+ 0001:00002552       ?SettingsSaveW2800@@YIXXZ  10003552 f   ConEmuLn2800.obj
+ 0001:00002611       _GetMinFarVersion@0        10003611 f   ConEmuLnA.obj
+ 0001:00002640       _SetStartupInfo@4          10003640 f   ConEmuLnA.obj
+ 0001:000027b2       _GetPluginInfo@4           100037b2 f   ConEmuLnA.obj
+ 0001:00002812       _ExitFAR@0                 10003812 f   ConEmuLnA.obj
+ 0001:00002eb7       _Configure@4               10003eb7 f   ConEmuLnA.obj
+ 0001:00002ecc       _OpenPlugin@8              10003ecc f   ConEmuLnA.obj
+ 0001:00002ee2       ?SettingsLoadA@@YIXXZ      10003ee2 f   ConEmuLnA.obj
+ 0001:00002eed       ?SettingsSaveA@@YIXXZ      10003eed f   ConEmuLnA.obj
+ 0001:00002ef8       ?HeapInitialize@@YI_NXZ    10003ef8 f   Memory.obj
+ 0001:00002f1e       ?HeapDeinitialize@@YIXXZ   10003f1e f   Memory.obj
+ 0001:00002f36       ?xf_calloc@@YAPAXII@Z      10003f36 f   Memory.obj
+ 0001:00002f4f       ?xf_free@@YAXPAX@Z         10003f4f f   Memory.obj
  0001:00002f70       _memmove                   10003f70 f   libCRT:memmove.obj
  0001:00003170       _wcstoul                   10004170 f   libCRT:strtol.obj
  0001:00003190       _memset                    10004190 f   libCRT:memset.obj
@@ -192,10 +192,10 @@
  0001:00000d8d       ?ConfigureProc@@YIHH@Z     10001d8d f   ConEmuLn995.obj
  0001:0000144b       ?ConfigDlgProc@@YGHPAXHH0@Z 1000244b f   ConEmuLn1900.obj
  0001:000014fc       ?ConfigureProc@@YIHH@Z     100024fc f   ConEmuLn1900.obj
- 0001:00001e38       ?ConfigDlgProc@@YGHPAXHH0@Z 10002e38 f   ConEmuLn2800.obj
- 0001:00001ee9       ?ConfigureProc@@YIHH@Z     10002ee9 f   ConEmuLn2800.obj
- 0001:0000285f       ?GetMsg@@YIPADH@Z          1000385f f   ConEmuLnA.obj
- 0001:00002877       ?ConfigDlgProc@@YGJPAXHHJ@Z 10003877 f   ConEmuLnA.obj
- 0001:0000292c       ?ConfigureProc@@YIHH@Z     1000392c f   ConEmuLnA.obj
+ 0001:00001e36       ?ConfigDlgProc@@YGHPAXHH0@Z 10002e36 f   ConEmuLn2800.obj
+ 0001:00001ee7       ?ConfigureProc@@YIHH@Z     10002ee7 f   ConEmuLn2800.obj
+ 0001:0000285d       ?GetMsg@@YIPADH@Z          1000385d f   ConEmuLnA.obj
+ 0001:00002875       ?ConfigDlgProc@@YGJPAXHHJ@Z 10003875 f   ConEmuLnA.obj
+ 0001:0000292a       ?ConfigureProc@@YIHH@Z     1000392a f   ConEmuLnA.obj
  0001:00002fd0       ?strtoxl@@YAKPB_WPAPA_WHH@Z 10003fd0 f   libCRT:strtol.obj
  0001:000031d0       ?strtoxl@@YAKPBDPAPADHH@Z  100041d0 f   libCRT:strtol.obj
