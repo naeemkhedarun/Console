@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2014-06-14 20:27:01" build="140505">
+		<key name=".Vanilla" modified="2014-06-24 23:34:14" build="140505">
 			<value name="ColorTable00" type="dword" data="00423607"/>
 			<value name="ColorTable01" type="dword" data="00e12e49"/>
 			<value name="ColorTable02" type="dword" data="0024bc25"/>
@@ -266,7 +266,7 @@
 			<value name="SleepInBackground" type="hex" data="01"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data="&amp; $env:windir\system32\inetsrv\appcmd.exe unlock config -section:system.webserver/security/authentication/anonymousauthentication&amp; $env:windir\system32\inetsrv\appcmd.exe unlock config -section:system.webserver/security/authentication/anonymousauthentication"/>
+			<value name="FindText" type="string" data="[System.IO.File]::"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="00"/>
