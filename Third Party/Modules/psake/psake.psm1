@@ -87,7 +87,7 @@ function Invoke-Task
                         Assert ((test-path "variable:$variable") -and ((get-variable $variable).Value -ne $null)) ($msgs.required_variable_not_set -f $variable, $taskName)
                     }
 
-					& $task.Action
+                    & $task.Action
 
                     if ($task.PostAction) {
                         & $task.PostAction
@@ -296,7 +296,7 @@ function Framework {
         [Parameter(Position=0,Mandatory=1)][string]$framework
     )
     $psake.context.Peek().config.framework = $framework
-	ConfigureBuildEnvironment
+    ConfigureBuildEnvironment
 }
 
 # .ExternalHelp  psake.psm1-help.xml
